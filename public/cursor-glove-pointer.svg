@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Gant rouge incliné en position de punch -->
+  <g transform="rotate(-25 16 16)">
+    <!-- Corps du gant -->
+    <path d="M10 7c0-2.5 2-4.5 4.5-4.5h3C20 2.5 22 4.5 22 7v6c0 2.2-1 3.8-2.5 4.8L18 19v5.5c0 1-.8 1.8-1.8 1.8h-3.4c-1 0-1.8-.8-1.8-1.8V19l-1.5-1.2C8 16.5 8 14.8 8 13V7h2z" fill="#C8102E"/>
+    <!-- Reflet -->
+    <path d="M12 6.5c0-1.2.8-2 2-2h4c1.2 0 2 .8 2 2v5.5c0 1.5-.8 2.8-2 3.6l-.8.5h-2.4l-.8-.5c-1.2-.8-2-2.1-2-3.6V6.5z" fill="#E63950"/>
+    <!-- Doigts -->
+    <line x1="13.5" y1="7" x2="13.5" y2="11" stroke="#A00D22" stroke-width="1" stroke-linecap="round"/>
+    <line x1="16" y1="6.5" x2="16" y2="11" stroke="#A00D22" stroke-width="1" stroke-linecap="round"/>
+    <line x1="18.5" y1="7" x2="18.5" y2="11" stroke="#A00D22" stroke-width="1" stroke-linecap="round"/>
+    <!-- Poignet -->
+    <rect x="12.5" y="18.5" width="7" height="4.5" rx="1" fill="#8C0B20"/>
+  </g>
+  <!-- Lignes d'impact / explosion -->
+  <line x1="5" y1="5" x2="2" y2="2" stroke="#D9A441" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="4" y1="10" x2="1" y2="10" stroke="#D9A441" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="6" y1="14" x2="3" y2="16" stroke="#D9A441" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="8" y1="3" x2="7" y2="0" stroke="#D9A441" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Petite étoile d'impact -->
+  <path d="M3 7l1.2-.4L4.6 5.4 5 6.6 6.2 7 5 7.4 4.6 8.6 4.2 7.4z" fill="#D9A441"/>
+</svg>
