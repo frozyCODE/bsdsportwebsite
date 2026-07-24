@@ -3,6 +3,11 @@
     
     <!-- 01 CROSS HEAT -->
     <section class="univers" id="u-cross" style="--accent: var(--c-cross)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/crossheat.png'" alt="Cross Heat Background" class="u-bg-img" />
+        <div class="u-bg-overlay"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 01</span>
       
@@ -24,13 +29,18 @@
         <div class="ghost reveal">Univers 01 · Cross Training</div>
         <h2 class="reveal d1">Cross Heat</h2>
         <p class="reveal d2">Force, cardio, dépassement. Des WOD collectifs où chacun avance à son rythme, mais jamais seul.</p>
-        <BaseButton class="reveal d3" accent="var(--c-cross)" to="/cross-heat">Découvrir</BaseButton>
+        <BaseButton class="reveal d3" accent="var(--c-cross)" page="Cross Heat" :soon="true">Découvrir</BaseButton>
       </div>
       <div class="num" aria-hidden="true">01</div>
     </section>
 
     <!-- 02 STEPP TRAINING -->
     <section class="univers" id="u-stepp" style="--accent: var(--c-stepp)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/stepp.png'" alt="Stepp Training Background" class="u-bg-img u-bg-stepp" />
+        <div class="u-bg-overlay u-bg-overlay-stepp"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 02</span>
 
@@ -62,6 +72,11 @@
 
     <!-- 03 ARTS MARTIAUX -->
     <section class="univers" id="u-arts" style="--accent: var(--c-arts)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/art-martiaux.webp'" alt="Arts Martiaux Background" class="u-bg-img u-bg-arts" />
+        <div class="u-bg-overlay u-bg-overlay-arts"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 03</span>
 
@@ -92,6 +107,11 @@
 
     <!-- 04 OMNISPORTS -->
     <section class="univers" id="u-omni" style="--accent: var(--c-omni)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/omnisport.png'" alt="Omnisports Background" class="u-bg-img u-bg-omni" />
+        <div class="u-bg-overlay u-bg-overlay-omni"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 04</span>
 
@@ -127,6 +147,11 @@
 
     <!-- 05 AQUA-TRAINING -->
     <section class="univers" id="u-aqua" style="--accent: var(--c-aqua)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/aqua-training.png'" alt="Aqua-Training Background" class="u-bg-img u-bg-aqua" />
+        <div class="u-bg-overlay u-bg-overlay-aqua"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 05</span>
 
@@ -156,6 +181,11 @@
 
     <!-- 06 ACCOMPAGNEMENT INDIVIDUEL -->
     <section class="univers" id="u-accomp" style="--accent: var(--c-accomp)">
+      <div class="u-bg-art" aria-hidden="true">
+        <img :src="'/coach.png'" alt="Accompagnement individuel Background" class="u-bg-img u-bg-accomp" />
+        <div class="u-bg-overlay u-bg-overlay-accomp"></div>
+        <div class="u-bg-grain"></div>
+      </div>
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 06</span>
 

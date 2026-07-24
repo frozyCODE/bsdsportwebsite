@@ -50,17 +50,6 @@ a *, button *, [role="button"] *, .card *, .dogtag *, .faq-filter *, .faq-questi
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-#hero,
-.univers,
-#terrains,
-#partenaires,
-#faq,
-#contact {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 body {
@@ -323,8 +312,9 @@ body {
   text-shadow: 2px 2px 0 var(--ink);
 }
 #hero h1 .sm-ici {
-  align-self: flex-end;
-  margin-bottom: .12em;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: .05em;
 }
 
 /* ==================================================== */
@@ -372,7 +362,7 @@ body {
 /* Coureur : traverse, trébuche, chute libre hors cadre, pause, rejaillit par en bas avec magie */
 .runner {
   width: .4em;
-  top: -.46em;
+  top: -.30em;
   left: -14%;
   animation: runacross 11s linear infinite;
 }
@@ -514,7 +504,7 @@ body {
 }
 .e-bag .boxer {
   width: .6em;
-  right: -.6em;
+  right: -.52em;
   top: .28em;
 }
 .jbent { animation: jshow 2.4s steps(1) infinite; }
@@ -539,19 +529,57 @@ body {
   50% { transform: translateY(2.5px); }
 }
 
-/* Responsive ajustements stickmen */
+/* Responsive ajustements Hero et Stickmen */
 @media (max-width: 860px) {
-  #hero h1 .l1 .sm:last-child { display: none; }
-  .stick path { stroke-width: 4.4; }
+  #hero {
+    padding: 6.5rem 4vw 4rem;
+  }
+  #hero h1 .l1, #hero h1 .l2 {
+    gap: 2.2vw;
+  }
+  #hero h1 .big {
+    font-size: clamp(3.2rem, 13vw, 7.5rem);
+    text-shadow: 3px 3px 0 var(--ink), 5px 5px 0 var(--cardinal);
+  }
+  #hero h1 .l2 .big {
+    font-size: clamp(2.8rem, 11.5vw, 6.8rem);
+    text-shadow: 3px 3px 0 var(--ink), 5px 5px 0 var(--navy);
+  }
+  .stick path { stroke-width: 4; }
 }
 
 @media (max-width: 480px) {
+  #hero {
+    padding: 5.2rem 4vw 3rem;
+  }
+  #hero h1 .l1, #hero h1 .l2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5vw;
+  }
+  #hero h1 .sm-ici {
+    font-size: clamp(0.75rem, 3.8vw, 1.1rem);
+    margin-bottom: 0.12em;
+  }
+  #hero h1 .big {
+    font-size: clamp(2.3rem, 11.5vw, 3.8rem);
+    text-shadow: 2px 2px 0 var(--ink), 4px 4px 0 var(--cardinal);
+  }
+  #hero h1 .l2 .big {
+    font-size: clamp(2.1rem, 10.5vw, 3.4rem);
+    text-shadow: 2px 2px 0 var(--ink), 4px 4px 0 var(--navy);
+  }
   .runner {
-    width: 0.45em;
-    top: -0.42em;
+    width: 0.44em;
+    top: -0.28em;
+  }
+  .e-bag .boxer {
+    width: 0.58em;
+    right: -0.42em;
+    top: 0.24em;
   }
   .stick path {
-    stroke-width: 4.5;
+    stroke-width: 4.2;
   }
 }
 
@@ -607,6 +635,14 @@ body {
   padding: 3.2rem 3.5rem;
   box-shadow: 0 30px 70px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.16), 0 0 40px var(--accent-shadow, rgba(0,0,0,0));
   transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+}
+.univers .inner-wide {
+  max-width: 1250px;
+  width: 100%;
+}
+.univers-sec {
+  min-height: auto !important;
+  padding: 6rem 6vw !important;
 }
 .univers:hover .inner {
   border-color: rgba(241, 231, 208, .32);
@@ -687,13 +723,122 @@ body {
   .univers .corner-stamp, .univers .side-label { display: none; }
 }
 
+/* Background Artwork Layer for Univers Sections */
+.u-bg-art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 140px, black calc(100% - 140px), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 140px, black calc(100% - 140px), transparent 100%);
+}
+.u-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 5%;
+  opacity: 0.28;
+  filter: contrast(1.3) brightness(0.65) saturate(1.2);
+  mix-blend-mode: luminosity;
+  transform: scale(1.04);
+  transition: opacity .5s ease, transform .6s ease;
+}
+.u-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1100px 600px at 75% 35%, rgba(255, 75, 46, 0.28), transparent 70%),
+    linear-gradient(180deg, #150A0B 0%, rgba(28, 13, 8, 0.5) 20%, rgba(45, 16, 9, 0.5) 50%, rgba(23, 9, 20, 0.7) 82%, #100B1D 100%),
+    linear-gradient(90deg, rgba(21, 10, 11, 0.8) 0%, transparent 45%, rgba(21, 10, 11, 0.55) 100%);
+}
+.u-bg-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 160px 160px;
+  mix-blend-mode: overlay;
+}
+
+/* Stepp Training Artwork & Overlay Colorimetry */
+.u-bg-stepp {
+  object-position: center 25%;
+  opacity: 0.26;
+  filter: contrast(1.25) brightness(0.6) saturate(1.25);
+  mix-blend-mode: luminosity;
+}
+.u-bg-overlay-stepp {
+  background:
+    radial-gradient(1100px 600px at 25% 40%, rgba(140, 92, 255, 0.32), transparent 70%),
+    linear-gradient(180deg, #100B1D 0%, rgba(21, 14, 40, 0.5) 20%, rgba(36, 20, 69, 0.5) 50%, rgba(24, 11, 34, 0.7) 82%, #150911 100%),
+    linear-gradient(90deg, rgba(16, 11, 29, 0.8) 0%, transparent 45%, rgba(16, 11, 29, 0.55) 100%);
+}
+
+/* Arts Martiaux Artwork & Overlay Colorimetry */
+.u-bg-arts {
+  object-position: center 20%;
+  opacity: 0.25;
+  filter: contrast(1.3) brightness(0.6) saturate(1.2);
+  mix-blend-mode: luminosity;
+}
+.u-bg-overlay-arts {
+  background:
+    radial-gradient(1100px 600px at 75% 30%, rgba(224, 25, 47, 0.32), transparent 70%),
+    linear-gradient(180deg, #150911 0%, rgba(28, 9, 15, 0.5) 20%, rgba(43, 9, 18, 0.5) 50%, rgba(19, 12, 16, 0.7) 82%, #0B1410 100%),
+    linear-gradient(90deg, rgba(21, 9, 17, 0.8) 0%, transparent 45%, rgba(21, 9, 17, 0.55) 100%);
+}
+
+/* Aqua-Training Artwork & Overlay Colorimetry */
+.u-bg-aqua {
+  object-position: center 30%;
+  opacity: 0.26;
+  filter: contrast(1.25) brightness(0.65) saturate(1.25);
+  mix-blend-mode: luminosity;
+}
+.u-bg-overlay-aqua {
+  background:
+    radial-gradient(1100px 600px at 50% 80%, rgba(46, 196, 214, 0.3), transparent 70%),
+    linear-gradient(180deg, #06121B 0%, rgba(7, 25, 38, 0.5) 20%, rgba(13, 44, 59, 0.5) 50%, rgba(16, 31, 37, 0.7) 82%, #18150B 100%),
+    linear-gradient(90deg, rgba(6, 18, 27, 0.8) 0%, transparent 45%, rgba(6, 18, 27, 0.55) 100%);
+}
+
+/* Omnisports Artwork & Overlay Colorimetry */
+.u-bg-omni {
+  object-position: center 25%;
+  opacity: 0.25;
+  filter: contrast(1.25) brightness(0.6) saturate(1.25);
+  mix-blend-mode: luminosity;
+}
+.u-bg-overlay-omni {
+  background:
+    radial-gradient(1100px 600px at 15% 45%, rgba(47, 169, 107, 0.3), transparent 70%),
+    linear-gradient(180deg, #0B1410 0%, rgba(12, 26, 18, 0.5) 20%, rgba(19, 46, 31, 0.5) 50%, rgba(11, 26, 23, 0.7) 82%, #06121B 100%),
+    linear-gradient(90deg, rgba(11, 20, 16, 0.8) 0%, transparent 45%, rgba(11, 20, 16, 0.55) 100%);
+}
+
+/* Accompagnement Individuel Artwork & Overlay Colorimetry */
+.u-bg-accomp {
+  object-position: center 20%;
+  opacity: 0.25;
+  filter: contrast(1.3) brightness(0.6) saturate(1.2);
+  mix-blend-mode: luminosity;
+}
+.u-bg-overlay-accomp {
+  background:
+    radial-gradient(1100px 600px at 75% 30%, rgba(217, 164, 65, 0.3), transparent 70%),
+    linear-gradient(180deg, #18150B 0%, rgba(34, 26, 10, 0.5) 20%, rgba(51, 39, 12, 0.5) 50%, rgba(31, 25, 10, 0.7) 82%, #0F160B 100%),
+    linear-gradient(90deg, rgba(24, 21, 11, 0.8) 0%, transparent 45%, rgba(24, 21, 11, 0.55) 100%);
+}
+
 /* 01 CROSS HEAT (Red / Orange) */
 #u-cross {
   --accent: var(--c-cross);
   --accent-shadow: rgba(255, 75, 46, .35);
-  background:
-    radial-gradient(1000px 500px at 80% 30%, rgba(255, 75, 46, 0.22), transparent 65%),
-    linear-gradient(180deg, #150A0B 0%, #1C0D08 18%, #2D1009 50%, #170914 82%, #100B1D 100%);
+  background: linear-gradient(180deg, #0A0E16 0%, #150A0B 15%, #1C0D08 35%, #2D1009 50%, #170914 70%, #100B1D 85%, #100B1D 100%);
 }
 
 /* 02 STEPP TRAINING (Violet) */
@@ -702,7 +847,7 @@ body {
   --accent-shadow: rgba(140, 92, 255, .35);
   background:
     radial-gradient(950px 500px at 20% 40%, rgba(140, 92, 255, 0.22), transparent 65%),
-    linear-gradient(180deg, #100B1D 0%, #150E28 18%, #241445 50%, #180B22 82%, #150911 100%);
+    linear-gradient(180deg, #100B1D 0%, #150E28 20%, #241445 50%, #180B22 80%, #150911 100%);
 }
 
 /* 03 ARTS MARTIAUX (Crimson Combat) */
@@ -711,7 +856,7 @@ body {
   --accent-shadow: rgba(224, 25, 47, .35);
   background:
     radial-gradient(1000px 550px at 85% 25%, rgba(224, 25, 47, 0.26), transparent 65%),
-    linear-gradient(180deg, #150911 0%, #1C090F 18%, #2B0912 50%, #130C10 82%, #0B1410 100%);
+    linear-gradient(180deg, #150911 0%, #1C090F 20%, #2B0912 50%, #130C10 80%, #0B1410 100%);
 }
 
 /* 04 OMNISPORTS (Emerald Green) */
@@ -720,7 +865,7 @@ body {
   --accent-shadow: rgba(47, 169, 107, .35);
   background:
     radial-gradient(900px 500px at 15% 45%, rgba(47, 169, 107, 0.22), transparent 65%),
-    linear-gradient(180deg, #0B1410 0%, #0C1A12 18%, #132E1F 50%, #0B1A17 82%, #06121B 100%);
+    linear-gradient(180deg, #0B1410 0%, #0C1A12 20%, #132E1F 50%, #0B1A17 80%, #06121B 100%);
 }
 
 /* 05 AQUA-TRAINING (Cyan Water) */
@@ -729,7 +874,7 @@ body {
   --accent-shadow: rgba(46, 196, 214, .35);
   background:
     radial-gradient(1100px 550px at 50% 85%, rgba(46, 196, 214, 0.25), transparent 65%),
-    linear-gradient(180deg, #06121B 0%, #071926 18%, #0D2C3B 50%, #101F25 82%, #18150B 100%);
+    linear-gradient(180deg, #06121B 0%, #071926 20%, #0D2C3B 50%, #101F25 80%, #18150B 100%);
 }
 
 /* 06 ACCOMPAGNEMENT INDIVIDUEL (Gold) */
@@ -738,7 +883,7 @@ body {
   --accent-shadow: rgba(217, 164, 65, .35);
   background:
     radial-gradient(900px 500px at 75% 30%, rgba(217, 164, 65, 0.22), transparent 65%),
-    linear-gradient(180deg, #18150B 0%, #221A0A 18%, #33270C 50%, #1F190A 82%, #0F160B 100%);
+    linear-gradient(180deg, #18150B 0%, #221A0A 20%, #33270C 50%, #1F190A 80%, #0F160B 100%);
 }
 
 /* 07 STAGES (Natural Forest Green) */
@@ -747,7 +892,7 @@ body {
   --accent-shadow: rgba(123, 160, 91, .35);
   background:
     radial-gradient(950px 500px at 25% 50%, rgba(123, 160, 91, 0.22), transparent 65%),
-    linear-gradient(180deg, #0F160B 0%, #111A0C 18%, #1F3216 50%, #131A12 82%, #10141D 100%);
+    linear-gradient(180deg, #0F160B 0%, #111A0C 20%, #1F3216 50%, #131A12 80%, #10141D 100%);
 }
 
 /* 08 PROGRAMMES (Steel Blue) */
@@ -755,8 +900,8 @@ body {
   --accent: var(--c-prog);
   --accent-shadow: rgba(139, 152, 173, .35);
   background:
-    radial-gradient(900px 500px at 75% 35%, rgba(139, 152, 173, 0.2), transparent 65%),
-    linear-gradient(180deg, #10141D 0%, #121824 18%, #1E2737 50%, #121824 82%, #0A0E16 100%);
+    radial-gradient(1000px 550px at 80% 40%, rgba(139, 152, 173, 0.22), transparent 65%),
+    linear-gradient(180deg, #10141D 0%, #121B2A 20%, #1B283E 50%, #101724 80%, #0A0E16 100%);
 }
 
 .tag-soon {
@@ -1275,29 +1420,128 @@ footer .stars { color: var(--cardinal); }
 /* ==================================================== */
 /* OPTIMISATIONS RESPONSIVE MOBILE & TABLETTES PERFECTION */
 /* ==================================================== */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   #hero {
-    padding-top: 6.5rem;
-    padding-bottom: 3.5rem;
+    min-height: 85svh;
+    padding: 7rem 1.2rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #hero h1 .l1, #hero h1 .l2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    width: 100%;
+  }
+  #hero h1 .sm-ici {
+    align-self: center;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    letter-spacing: 0.35em;
+    margin-bottom: 0.2rem;
+  }
+  #hero h1 .sm:last-child {
+    display: none;
   }
   #hero h1 .big {
-    font-size: clamp(2.8rem, 13.5vw, 6rem);
+    font-size: clamp(2.8rem, 12.5vw, 4.5rem);
+    line-height: 0.95;
+    text-shadow: 3px 3px 0 var(--ink), 6px 6px 0 var(--cardinal);
+    letter-spacing: -0.02em;
   }
   #hero h1 .l2 .big {
-    font-size: clamp(2.5rem, 12vw, 5.5rem);
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
+    text-shadow: 3px 3px 0 var(--ink), 6px 6px 0 var(--navy);
   }
+
+  /* Stickmen position & proportion adjustments on mobile */
+  .runner {
+    width: 0.34em;
+    top: -0.38em;
+  }
+  .n-climb .climber {
+    width: 0.3em;
+    left: -0.26em;
+  }
+  .n-climb .holds {
+    width: 0.13em;
+    left: -0.08em;
+  }
+  .e-bag .boxer {
+    width: 0.5em;
+    right: -0.5em;
+    top: 0.2em;
+  }
+
+  /* Univers sections on mobile - 100% height per screen */
+  .univers {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 4.5rem 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .univers .inner {
+    padding: 1.8rem 1.3rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .univers h2 {
+    font-size: clamp(2rem, 8.5vw, 3.6rem);
+  }
+  .univers p {
+    font-size: clamp(0.88rem, 3.8vw, 1.05rem);
+    margin-bottom: 1.2rem;
+  }
+  .univers .num {
+    font-size: clamp(4.5rem, 22vw, 8rem);
+    right: 1rem;
+    bottom: 1rem;
+    opacity: 0.15;
+  }
+  .sico {
+    position: static;
+    transform: none;
+    width: 95px;
+    height: 95px;
+    margin-bottom: 1rem;
+    display: block;
+    align-self: center;
+  }
+
+  /* Cards on mobile */
   .cards {
     gap: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
   .card {
     width: 100%;
+    padding: 2rem 1.4rem;
   }
   .contact-grid {
     margin-top: 2rem;
+    gap: 1.5rem;
   }
   #contact-form, .infos {
-    padding: 1.6rem 1.2rem;
+    padding: 1.8rem 1.3rem;
+    border-radius: 20px;
+  }
+  form input, form textarea, form select {
+    font-size: 16px !important;
   }
   footer {
     flex-direction: column;

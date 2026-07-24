@@ -2,8 +2,8 @@
   <main class="overflow-x-hidden">
     <NavbarHeader />
     <HeroStickmen />
-    <UniversSection />
     <TerrainsSection />
+    <UniversSection />
     <PartenairesSection />
     <ContactSection />
   </main>
@@ -16,7 +16,4 @@ import UniversSection from '@/components/sections/UniversSection.vue'
 import TerrainsSection from '@/components/sections/TerrainsSection.vue'
 import PartenairesSection from '@/components/sections/PartenairesSection.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
-import { useSectionScroll } from '@/composables/useSectionScroll'
-
-useSectionScroll()
 </script>

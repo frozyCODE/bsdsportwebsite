@@ -6,7 +6,7 @@
         <span class="sm sm-ici">Ici,</span>
         <span class="big lw1">
           Le sport
-          <!-- RUNNER STICKMAN FROM BSD-SPORT-ACCUEIL_8 (2).HTML -->
+          <!-- RUNNER STICKMAN WITH FALL & RECOVERY -->
           <svg class="stick runner" viewBox="0 0 60 50" aria-hidden="true">
             <g class="rg">
               <g class="magic">
@@ -34,34 +34,17 @@
             </g>
           </svg>
         </span>
-        <span class="sm">★</span>
       </span>
 
       <!-- Line 2: Nous rassemble -->
       <span class="l2 reveal d2">
         <span class="big it">
-          <!-- CLIMBER & HOLDS FROM BSD-SPORT-ACCUEIL_8 (2).HTML -->
-          <span class="ltr n-climb">
-            N
-            <svg class="holds" viewBox="0 0 20 100" aria-hidden="true">
-              <path d="M6 10 q6 -3 9 2 q2 5 -4 6 q-6 0 -5 -8Z" fill="#C8102E" stroke="#0A0E16" stroke-width="1.6"/>
-              <path d="M8 32 q7 -1 7 5 q-1 5 -7 4 q-5 -2 0 -9Z" fill="#2EC4D6" stroke="#0A0E16" stroke-width="1.6"/>
-              <path d="M5 54 q6 -4 10 1 q2 6 -5 7 q-7 -1 -5 -8Z" fill="#D9A441" stroke="#0A0E16" stroke-width="1.6"/>
-              <path d="M8 76 q6 -2 8 3 q1 6 -6 6 q-6 -1 -2 -9Z" fill="#C8102E" stroke="#0A0E16" stroke-width="1.6"/>
-              <path d="M6 93 q5 -3 9 1 q2 5 -4 6 q-7 0 -5 -7Z" fill="#7BA05B" stroke="#0A0E16" stroke-width="1.6"/>
-            </svg>
-            <svg class="stick climber" viewBox="0 0 40 70" aria-hidden="true">
-              <g class="q1"><circle class="head" cx="22" cy="10" r="5.2"/><path d="M21 16 Q24 27 21 40 M22 20 L29 13 L33 5 M21 25 L27 30 L29 37 M21 40 L27 45 L26 55 M21 40 L15 48 L16 60"/></g>
-              <g class="q2"><circle class="head" cx="22" cy="9" r="5.2"/><path d="M21 15 Q23 27 20 40 M22 19 L28 16 L31 10 M21 24 L28 25 L32 19 M20 40 L27 43 L28 52 M20 40 L14 50 L13 60"/></g>
-              <g class="q3"><circle class="head" cx="23" cy="10" r="5.2"/><path d="M22 16 Q25 27 21 40 M22 25 L28 29 L30 36 M23 20 L30 14 L34 6 M21 40 L15 45 L14 55 M21 40 L27 47 L28 58"/></g>
-              <g class="q4"><circle class="head" cx="22" cy="9" r="5.2"/><path d="M21 15 Q22 27 20 40 M22 19 L29 17 L33 11 M21 24 L27 27 L31 22 M20 40 L26 44 L25 53 M20 40 L14 49 L15 59"/></g>
-            </svg>
-          </span>ous
+          Nous
         </span>
 
         <span class="big">
           rassembl<span class="ltr e-bag">e
-            <!-- BOXER FROM BSD-SPORT-ACCUEIL_8 (2).HTML -->
+            <!-- BOXER STICKMAN -->
             <svg class="stick boxer" viewBox="0 0 54 62" aria-hidden="true">
               <g class="bod">
                 <circle class="head" cx="34" cy="11" r="5.4"/>
@@ -75,6 +58,15 @@
         </span>
       </span>
     </h1>
+
+    <div class="hero-cta reveal d3">
+      <a href="#terrains" class="btn btn-primary">
+        Choisis ton terrain ↓
+      </a>
+      <a href="#u-cross" class="btn btn-ghost">
+        Découvrir les Univers
+      </a>
+    </div>
   </section>
 </template>
 
@@ -82,3 +74,44 @@
 import { useReveal } from '@/composables/useReveal'
 useReveal()
 </script>
+
+<style scoped>
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 4.8rem;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3.2rem;
+  }
+}
+
+.btn-primary {
+  background: var(--cardinal);
+  border-color: var(--cardinal);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(241, 231, 208, 0.3);
+  color: var(--cream);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0.1);
+}
+</style>

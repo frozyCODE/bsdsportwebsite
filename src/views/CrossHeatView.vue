@@ -1,236 +1,242 @@
 <template>
   <div class="crossheat-page min-h-screen bg-[#0A0E16] text-[#F1E7D0] relative overflow-hidden">
     
-    <!-- Background Gradient Spheres & Grid -->
-    <div class="absolute inset-0 bg-[radial-gradient(rgba(241,231,208,0.05)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(255,75,46,0.25),transparent_70%)] pointer-events-none"></div>
+    <!-- Top Navigation Bar -->
+    <NavbarHeader />
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0A0E16]/80 border-b border-[#F1E7D0]/10 px-6 py-4 flex justify-between items-center">
-      <router-link to="/" class="btn !py-2 !px-4 !text-xs !bg-transparent border-[#FF4B2E]/40 hover:border-[#FF4B2E]">
-        ← RETOUR À L'ACCUEIL
-      </router-link>
-      <div class="flex items-center gap-3">
-        <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs py-1 px-3">UNITE 01</span>
-        <span class="font-display text-xl text-[#F1E7D0] tracking-wider hidden sm:inline">BSD SPORT</span>
+    <!-- Sticky Sub-Nav with Back Button & Unit Stamp -->
+    <div class="sticky top-0 z-40 backdrop-blur-xl bg-[#0A0E16]/85 border-b border-[#F1E7D0]/15 px-6 py-4 transition-all">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <BaseButton to="/#u-cross" accent="var(--c-cross)" class="!py-2 !px-4 !text-xs">
+          ← RETOUR AUX UNIVERS
+        </BaseButton>
+        <div class="flex items-center gap-3">
+          <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs py-1 px-3">UNITÉ 01</span>
+          <span class="font-varsity text-xs uppercase tracking-[0.2em] text-[#D9A441] hidden sm:inline-block">CROSS HEAT</span>
+        </div>
       </div>
-    </header>
+    </div>
 
-    <!-- Main Content Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+    <!-- MAIN PAGE FLOW: Exact Univers 01 Section Framework -->
+    <main class="relative z-10">
       
-      <!-- Hero Banner -->
-      <section class="text-center mb-16">
-        <div class="eyebrow justify-center mb-4 text-[#D9A441] text-xs sm:text-sm tracking-[0.3em] uppercase">
-          PROGRAMME ATHLÉTIQUE HAUTE INTENSITÉ
+      <!-- HERO SECTION: Identical structure to Univers 01 on homepage -->
+      <section class="univers" id="u-cross" style="--accent: var(--c-cross)">
+        <div class="u-bg-art" aria-hidden="true">
+          <img :src="crossheatBg" alt="Cross Heat Background" class="u-bg-img" />
+          <div class="u-bg-overlay"></div>
+          <div class="u-bg-grain"></div>
         </div>
-        
-        <h1 class="font-display text-6xl sm:text-8xl md:text-9xl uppercase tracking-tight text-[#F1E7D0] drop-shadow-[0_4px_24px_rgba(255,75,46,0.3)] mb-6">
-          CROSS <span class="text-[#FF4B2E]">HEAT</span>
-        </h1>
-        
-        <p class="max-w-2xl mx-auto text-lg sm:text-xl text-[#F1E7D0]/80 font-body leading-relaxed mb-8">
-          Force, cardio, et dépassement collectif. Des WODs intenses conçus pour repousser vos limites dans une ambiance universitaire et solidaire.
-        </p>
+        <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
+        <span class="corner-stamp stamp" aria-hidden="true">Unité 01</span>
 
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#reservation" class="btn !bg-[#FF4B2E] !text-[#F1E7D0] hover:!bg-[#E0192F] shadow-[0_10px_30px_rgba(255,75,46,0.4)]">
-            RÉSERVER UNE SÉANCE D'ESSAI
-          </a>
-          <a href="#galerie" class="btn !bg-white/5 border-[#F1E7D0]/30 hover:border-[#FF4B2E]">
-            VOIR LES PHOTOS DU CLUB
-          </a>
+        <!-- Animated Kettlebell SVG (.sico) from landing page -->
+        <svg class="sico" viewBox="0 0 120 120" aria-hidden="true">
+          <g class="fl"><path d="M26 40 q-7 -13 2 -20 q-1 9 6 11 q-2 7 -8 9Z" fill="#FF4B2E"/></g>
+          <g class="fl fl2"><path d="M94 36 q8 -12 2 -20 q0 9 -7 10 q0 8 5 10Z" fill="#D9A441"/></g>
+          <g class="fl fl3"><path d="M60 14 q-4 -8 1 -13 q0 6 4 7 q-1 5 -5 6Z" fill="#F1E7D0"/></g>
+          <g class="kb">
+            <path d="M42 44 a18 18 0 0 1 36 0" fill="none" stroke="#F1E7D0" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="60" cy="76" r="31" fill="#FF4B2E" stroke="#F1E7D0" stroke-width="5"/>
+            <path d="M44 62 q5 -5 10 -3" stroke="#F1E7D0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7"/>
+            <circle cx="51" cy="72" r="3.6" fill="#0A0E16"/>
+            <circle cx="69" cy="72" r="3.6" fill="#0A0E16"/>
+            <path d="M50 83 q10 8 20 0" fill="none" stroke="#0A0E16" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+
+        <div class="inner">
+          <div class="ghost reveal">Univers 01 · Cross Training</div>
+          <h2 class="reveal d1">Cross Heat</h2>
+          <p class="reveal d2">Force, cardio, dépassement. Des WOD collectifs où chacun avance à son rythme, mais jamais seul. Équipement d'entraînement haute intensité, coachs diplômés et ambiance d'entraide universitaire.</p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <BaseButton class="reveal d3" accent="var(--c-cross)" href="#reservation">Réserver une séance d'essai</BaseButton>
+            <BaseButton class="reveal d3" href="#galerie">Voir les photos</BaseButton>
+          </div>
         </div>
+        <div class="num" aria-hidden="true">01</div>
       </section>
 
-      <!-- Photos Bento Gallery (Featuring crossheat1.JPG & crossheat2.JPG) -->
-      <section id="galerie" class="mb-20">
-        <div class="flex items-center justify-between mb-8 border-b border-[#F1E7D0]/10 pb-4">
-          <div>
-            <span class="font-stencil text-xs text-[#D9A441] tracking-[0.2em] uppercase">IMMERSION TERRAIN</span>
-            <h2 class="font-display text-3xl sm:text-4xl text-[#F1E7D0] uppercase">EN ACTION SUR LE WOD</h2>
-          </div>
-          <span class="stamp border-[#D9A441] text-[#D9A441] text-xs hidden sm:inline-block">PHOTOS OFFICIELLES</span>
+      <!-- SECTION 2: IMMERSION TERRAIN (Photos Bento Cards) -->
+      <section class="univers univers-sec" id="galerie" style="--accent: var(--c-cross)">
+        <div class="u-bg-art" aria-hidden="true">
+          <div class="u-bg-overlay"></div>
+          <div class="u-bg-grain"></div>
         </div>
+        <span class="side-label" aria-hidden="true">Immersion Terrain</span>
+        <span class="corner-stamp stamp" aria-hidden="true">Photos Officielles</span>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div class="inner inner-wide">
+          <div class="ghost reveal">Terrain · En Action</div>
+          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4.5rem)">Photos du WOD</h2>
+          <p class="reveal d2">Découvrez l'ambiance et l'énergie brute de nos séances Cross Heat sur le terrain.</p>
           
-          <!-- Photo 1 Large Bento Card -->
-          <div class="md:col-span-7 group relative rounded-3xl overflow-hidden border-2 border-[#F1E7D0]/20 bg-[#152238]/60 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-[#FF4B2E]/60">
-            <div class="aspect-[4/3] sm:aspect-[16/10] overflow-hidden relative">
-              <img 
-                :src="crossheat1" 
-                alt="Cross Heat WOD Tirez à la corde BSD Sport" 
-                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E16] via-[#0A0E16]/20 to-transparent"></div>
-            </div>
-            
-            <div class="p-6 sm:p-8 relative z-10 -mt-16 sm:-mt-20">
-              <div class="inline-flex items-center gap-2 bg-[#FF4B2E]/90 text-white font-stencil text-xs px-3 py-1 rounded-full mb-3 shadow-lg">
-                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                ÉPREUVE EN ÉQUIPE
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-8">
+            <div class="md:col-span-7 card group relative overflow-hidden rounded-3xl !p-0 !bg-transparent border-1.5 border-[#F1E7D0]/25 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-[#FF4B2E]">
+              <span class="rivet tl"></span><span class="rivet tr"></span>
+              <span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="aspect-[16/10] overflow-hidden relative">
+                <img :src="crossheat1" alt="Tir à la corde Cross Heat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E16] via-[#0A0E16]/30 to-transparent"></div>
               </div>
-              <h3 class="font-varsity text-xl sm:text-2xl text-[#F1E7D0] uppercase tracking-wider mb-2">
-                TIR À LA CORDE & DÉPASSEMENT
-              </h3>
-              <p class="text-sm text-[#F1E7D0]/80">
-                La force mentale et l'effort collectif au cœur du WOD Cross Heat. Ici, personne n'abandonne.
-              </p>
+              <div class="p-6 relative z-10 bg-[#0A0E16]/85 border-t border-[#F1E7D0]/15">
+                <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs py-0.5 px-2.5 mb-2 inline-block">ÉPREUVE EN ÉQUIPE</span>
+                <h3 class="font-varsity text-xl text-[#F1E7D0] uppercase tracking-wider mb-2">Tir à la corde & Dépassement</h3>
+                <p class="text-sm text-[#F1E7D0]/80 font-body">La force mentale et l'effort collectif au cœur du WOD Cross Heat. Ici, personne n'abandonne.</p>
+              </div>
+            </div>
+
+            <div class="md:col-span-5 card group relative overflow-hidden rounded-3xl !p-0 !bg-transparent border-1.5 border-[#F1E7D0]/25 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-[#FF4B2E] flex flex-col justify-between">
+              <span class="rivet tl"></span><span class="rivet tr"></span>
+              <span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="aspect-[16/10] md:aspect-auto md:h-full overflow-hidden relative">
+                <img :src="crossheat2" alt="Coaching Cross Heat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E16] via-[#0A0E16]/30 to-transparent"></div>
+              </div>
+              <div class="p-6 relative z-10 bg-[#0A0E16]/85 border-t border-[#F1E7D0]/15">
+                <span class="stamp border-[#D9A441] text-[#D9A441] text-xs py-0.5 px-2.5 mb-2 inline-block">100% ADAPTÉ</span>
+                <h3 class="font-varsity text-lg text-[#F1E7D0] uppercase tracking-wider mb-1">Coaching Intensif</h3>
+                <p class="text-xs text-[#F1E7D0]/80 font-body">Encadrement rapproché par nos coachs diplômés pour perfectionner chaque mouvement en toute sécurité.</p>
+              </div>
             </div>
           </div>
-
-          <!-- Photo 2 Bento Card -->
-          <div class="md:col-span-5 group relative rounded-3xl overflow-hidden border-2 border-[#F1E7D0]/20 bg-[#152238]/60 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-[#FF4B2E]/60 flex flex-col">
-            <div class="aspect-[4/3] sm:aspect-[16/10] md:aspect-auto md:h-full overflow-hidden relative">
-              <img 
-                :src="crossheat2" 
-                alt="Entraînement Cross Heat BSD Sport" 
-                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E16] via-[#0A0E16]/30 to-transparent"></div>
-            </div>
-
-            <div class="p-6 relative z-10">
-              <div class="inline-flex items-center gap-2 bg-[#D9A441] text-[#0A0E16] font-stencil text-xs px-3 py-1 rounded-full mb-2 font-bold">
-                100% ADAPTÉ
-              </div>
-              <h3 class="font-varsity text-lg text-[#F1E7D0] uppercase tracking-wider mb-1">
-                COACHING INTENSIF
-              </h3>
-              <p class="text-xs text-[#F1E7D0]/80">
-                Encadrement rapproché par nos coachs diplômés pour perfectionner chaque mouvement en toute sécurité.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 
-      <!-- Program Features (Bento Grid 4 Cards) -->
-      <section class="mb-20">
-        <div class="text-center mb-12">
-          <span class="font-stencil text-xs text-[#FF4B2E] tracking-[0.3em] uppercase">STRUCTURE DU WOD</span>
-          <h2 class="font-display text-4xl sm:text-5xl text-[#F1E7D0] uppercase mt-2">DÉROULÉ D'UNE SÉANCE</h2>
+      <!-- SECTION 3: STRUCTURE DU WOD -->
+      <section class="univers univers-sec" style="--accent: var(--c-cross)">
+        <div class="u-bg-art" aria-hidden="true">
+          <div class="u-bg-overlay"></div>
+          <div class="u-bg-grain"></div>
         </div>
+        <span class="side-label" aria-hidden="true">Méthodologie</span>
+        <span class="corner-stamp stamp" aria-hidden="true">Programme WOD</span>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <div class="bg-[#152238]/40 border border-[#F1E7D0]/20 rounded-2xl p-6 backdrop-blur-md hover:border-[#FF4B2E]/50 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-[#FF4B2E]/20 text-[#FF4B2E] border border-[#FF4B2E]/40 grid place-items-center font-display text-xl mb-4">
-              01
+        <div class="inner inner-wide">
+          <div class="ghost reveal">Structure du WOD</div>
+          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4.5rem)">Déroulé d'une séance</h2>
+          <p class="reveal d2">Un programme structuré de 60 minutes conçu pour progresser à chaque entraînement.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div class="card !p-6 group hover:border-[#FF4B2E]/70 transition-all">
+              <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="w-12 h-12 rounded-xl bg-[#FF4B2E]/20 text-[#FF4B2E] border border-[#FF4B2E]/40 grid place-items-center font-display text-xl mb-4">01</div>
+              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Warm-up & Mobilité</h4>
+              <span class="baseline text-[#D9A441]">15 MINUTES</span>
+              <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body">Préparation articulaire et montée en température cardiaque pour aborder l'effort en toute sécurité.</p>
             </div>
-            <h4 class="font-varsity text-lg text-[#F1E7D0] mb-2 uppercase">WARM-UP & MOBILITÉ</h4>
-            <p class="text-xs text-[#F1E7D0]/70 leading-relaxed">
-              15 minutes pour réveiller les articulations, augmenter le rythme cardiaque et préparer le corps aux charges.
-            </p>
-          </div>
 
-          <div class="bg-[#152238]/40 border border-[#F1E7D0]/20 rounded-2xl p-6 backdrop-blur-md hover:border-[#FF4B2E]/50 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-[#D9A441]/20 text-[#D9A441] border border-[#D9A441]/40 grid place-items-center font-display text-xl mb-4">
-              02
+            <div class="card !p-6 group hover:border-[#D9A441]/70 transition-all">
+              <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="w-12 h-12 rounded-xl bg-[#D9A441]/20 text-[#D9A441] border border-[#D9A441]/40 grid place-items-center font-display text-xl mb-4">02</div>
+              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Skill & Technique</h4>
+              <span class="baseline text-[#D9A441]">15 MINUTES</span>
+              <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body">Apprentissage et perfectionnement des mouvements (Haltérophilie, Kettlebells, MedBall, Ropes).</p>
             </div>
-            <h4 class="font-varsity text-lg text-[#F1E7D0] mb-2 uppercase">SKILL & TECHNIQUE</h4>
-            <p class="text-xs text-[#F1E7D0]/70 leading-relaxed">
-              Apprentissage et répétition des gestes clés (haltérophilie, Kettlebell, médecine ball) sous le contrôle du coach.
-            </p>
-          </div>
 
-          <div class="bg-[#152238]/40 border border-[#F1E7D0]/20 rounded-2xl p-6 backdrop-blur-md hover:border-[#FF4B2E]/50 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-[#FF4B2E]/20 text-[#FF4B2E] border border-[#FF4B2E]/40 grid place-items-center font-display text-xl mb-4">
-              03
+            <div class="card !p-6 group hover:border-[#FF4B2E]/70 transition-all">
+              <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="w-12 h-12 rounded-xl bg-[#FF4B2E]/20 text-[#FF4B2E] border border-[#FF4B2E]/40 grid place-items-center font-display text-xl mb-4">03</div>
+              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Le WOD du Jour</h4>
+              <span class="baseline text-[#FF4B2E]">25 MINUTES</span>
+              <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body">Circuit haute intensité en AMRAP ou EMOM. Maximiser la dépense et se dépasser ensemble.</p>
             </div>
-            <h4 class="font-varsity text-lg text-[#F1E7D0] mb-2 uppercase">LE WOD DU JOUR</h4>
-            <p class="text-xs text-[#F1E7D0]/70 leading-relaxed">
-              25 minutes de circuit à haute intensité (AMRAP ou EMOM) pour faire exploser le compteur de calories.
-            </p>
-          </div>
 
-          <div class="bg-[#152238]/40 border border-[#F1E7D0]/20 rounded-2xl p-6 backdrop-blur-md hover:border-[#FF4B2E]/50 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-[#8C5CFF]/20 text-[#8C5CFF] border border-[#8C5CFF]/40 grid place-items-center font-display text-xl mb-4">
-              04
+            <div class="card !p-6 group hover:border-[#8C5CFF]/70 transition-all">
+              <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+              <div class="w-12 h-12 rounded-xl bg-[#8C5CFF]/20 text-[#8C5CFF] border border-[#8C5CFF]/40 grid place-items-center font-display text-xl mb-4">04</div>
+              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Retour au calme</h4>
+              <span class="baseline text-[#8C5CFF]">5 MINUTES</span>
+              <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body">Étirements guidés, conseils de récupération et débrief d'équipe en fin de séance.</p>
             </div>
-            <h4 class="font-varsity text-lg text-[#F1E7D0] mb-2 uppercase">RETOUR AU CALME</h4>
-            <p class="text-xs text-[#F1E7D0]/70 leading-relaxed">
-              Étirements profonds, conseils de récupération et débrief collectif autour de la gourde d'eau.
-            </p>
           </div>
-
         </div>
       </section>
 
-      <!-- Reservation Form Section -->
-      <section id="reservation" class="max-w-3xl mx-auto bg-[#152238]/70 border-2 border-[#FF4B2E]/40 rounded-3xl p-8 sm:p-12 backdrop-blur-2xl shadow-2xl relative">
-        <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs absolute -top-4 right-8 bg-[#0A0E16] px-3">SÉANCE DE TEST</span>
-        
-        <h3 class="font-display text-3xl sm:text-4xl text-[#F1E7D0] uppercase text-center mb-2">
-          REJOINDRE UN CRENEAU CROSS HEAT
-        </h3>
-        <p class="text-sm text-center text-[#F1E7D0]/70 mb-8">
-          Réservez votre séance d'essai gratuite. Places limitées à 12 personnes par WOD.
-        </p>
+      <!-- SECTION 4: FORMULAIRE DE RÉSERVATION -->
+      <section class="univers univers-sec" id="reservation" style="--accent: var(--c-cross)">
+        <div class="u-bg-art" aria-hidden="true">
+          <div class="u-bg-overlay"></div>
+          <div class="u-bg-grain"></div>
+        </div>
+        <span class="side-label" aria-hidden="true">Inscription</span>
+        <span class="corner-stamp stamp" aria-hidden="true">Séance de Test</span>
 
-        <form @submit.prevent="handleBooking" class="space-y-4">
-          <div>
-            <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Nom & Prénom</label>
-            <input 
-              v-model="bookingForm.name" 
-              type="text" 
-              placeholder="Ex: Jean Dupont" 
-              required 
-              class="w-full bg-[#0A0E16]/80 border border-[#F1E7D0]/30 rounded-xl px-4 py-3 text-[#F1E7D0] focus:border-[#FF4B2E] focus:outline-none"
-            />
-          </div>
+        <div class="inner" style="max-width: 800px; margin: 0 auto">
+          <div class="ghost reveal">S'entraîner à BSD Sport</div>
+          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4rem)">Rejoindre un créneau</h2>
+          <p class="reveal d2">Réservez votre séance d'essai gratuite. Les places sont limitées à 12 personnes par WOD.</p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Email</label>
+          <form @submit.prevent="handleBooking" class="mt-8">
+            <div class="mb-4">
+              <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Nom & Prénom</label>
               <input 
-                v-model="bookingForm.email" 
-                type="email" 
-                placeholder="votre@email.com" 
+                v-model="bookingForm.name" 
+                type="text" 
+                placeholder="Ex: Alexandre Martin" 
                 required 
-                class="w-full bg-[#0A0E16]/80 border border-[#F1E7D0]/30 rounded-xl px-4 py-3 text-[#F1E7D0] focus:border-[#FF4B2E] focus:outline-none"
+                class="w-full bg-[#0A0E16]/70 border border-[#F1E7D0]/30 rounded-xl px-4 py-3.5 text-[#F1E7D0] focus:border-[#D9A441] focus:outline-none transition-colors font-body"
               />
             </div>
-            <div>
-              <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Créneau souhaité</label>
-              <select 
-                v-model="bookingForm.slot" 
-                required 
-                class="w-full bg-[#0A0E16]/80 border border-[#F1E7D0]/30 rounded-xl px-4 py-3 text-[#F1E7D0] focus:border-[#FF4B2E] focus:outline-none"
-              >
-                <option value="" disabled selected>Choisissez un créneau</option>
-                <option value="lundi-19h">Lundi 19h00 (WOD Explosif)</option>
-                <option value="mercredi-18h30">Mercredi 18h30 (WOD Endurance)</option>
-                <option value="vendredi-19h">Vendredi 19h00 (WOD Team Sync)</option>
-                <option value="samedi-10h30">Samedi 10h30 (WOD Hero)</option>
-              </select>
-            </div>
-          </div>
 
-          <button 
-            type="submit" 
-            class="btn w-full !bg-[#FF4B2E] !text-[#F1E7D0] !py-4 hover:!bg-[#E0192F] shadow-[0_10px_30px_rgba(255,75,46,0.4)] mt-6 font-varsity tracking-widest text-sm"
-          >
-            CONFIRMER MA RÉSERVATION →
-          </button>
-        </form>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Adresse Email</label>
+                <input 
+                  v-model="bookingForm.email" 
+                  type="email" 
+                  placeholder="votre@email.com" 
+                  required 
+                  class="w-full bg-[#0A0E16]/70 border border-[#F1E7D0]/30 rounded-xl px-4 py-3.5 text-[#F1E7D0] focus:border-[#D9A441] focus:outline-none transition-colors font-body"
+                />
+              </div>
+              <div>
+                <label class="block font-varsity text-xs uppercase tracking-widest text-[#D9A441] mb-2">Créneau souhaité</label>
+                <select 
+                  v-model="bookingForm.slot" 
+                  required 
+                  class="w-full bg-[#0A0E16]/90 border border-[#F1E7D0]/30 rounded-xl px-4 py-3.5 text-[#F1E7D0] focus:border-[#D9A441] focus:outline-none transition-colors font-body"
+                >
+                  <option value="" disabled selected>Choisissez un créneau</option>
+                  <option value="lundi-19h">Lundi 19h00 (WOD Explosif)</option>
+                  <option value="mercredi-18h30">Mercredi 18h30 (WOD Endurance)</option>
+                  <option value="vendredi-19h">Vendredi 19h00 (WOD Team Sync)</option>
+                  <option value="samedi-10h30">Samedi 10h30 (WOD Hero)</option>
+                </select>
+              </div>
+            </div>
+
+            <BaseButton type="submit" accent="var(--c-cross)" class="w-full justify-center !py-4">
+              Confirmer ma réservation
+            </BaseButton>
+          </form>
+        </div>
       </section>
 
     </main>
 
-    <!-- Footer Simple -->
-    <footer class="border-t border-[#F1E7D0]/10 py-8 text-center text-xs text-[#F1E7D0]/50 font-body mt-12">
-      BSD SPORT © 2026 — UNIVERS CROSS HEAT · DEPASSMENT & ESPRIT D'ÉQUIPE
+    <!-- Footer matching landing page design -->
+    <footer class="border-t border-[#F1E7D0]/15 py-10 px-6 sm:px-12 text-center sm:flex sm:justify-between sm:items-center text-xs text-[#F1E7D0]/70 font-body max-w-7xl mx-auto mt-12">
+      <div>
+        BSD ATHLETIC PROGRAM © 2026 — UNIVERS 01 · CROSS HEAT
+      </div>
+      <div class="stars mt-2 sm:mt-0">
+        ★ ★ ★ ★ ★
+      </div>
     </footer>
   </div>
 </template>
 
 <script setup>
 import { reactive } from 'vue'
+import NavbarHeader from '@/components/common/NavbarHeader.vue'
+import BaseButton from '@/components/common/BaseButton.vue'
+import { useReveal } from '@/composables/useReveal'
 import { useUiStore } from '@/stores/uiStore'
 
+useReveal()
+
+const crossheatBg = '/crossheat.png'
 const crossheat1 = '/crossheat1.JPG'
 const crossheat2 = '/crossheat2.JPG'
 
