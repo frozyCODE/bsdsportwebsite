@@ -2,7 +2,6 @@
   <div class="univers-wrapper">
     
     <!-- 01 CROSS HEAT -->
-    <TapeMarquee title="Cross Heat" tape-color="var(--c-cross)" />
     <section class="univers" id="u-cross" style="--accent: var(--c-cross)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 01</span>
@@ -31,7 +30,6 @@
     </section>
 
     <!-- 02 STEPP TRAINING -->
-    <TapeMarquee title="Stepp Training" tape-color="var(--c-stepp)" />
     <section class="univers" id="u-stepp" style="--accent: var(--c-stepp)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 02</span>
@@ -63,7 +61,6 @@
     </section>
 
     <!-- 03 ARTS MARTIAUX -->
-    <TapeMarquee title="Arts Martiaux" tape-color="var(--c-arts)" />
     <section class="univers" id="u-arts" style="--accent: var(--c-arts)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 03</span>
@@ -94,7 +91,6 @@
     </section>
 
     <!-- 04 OMNISPORTS -->
-    <TapeMarquee title="Omnisports" tape-color="var(--c-omni)" />
     <section class="univers" id="u-omni" style="--accent: var(--c-omni)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 04</span>
@@ -130,7 +126,6 @@
     </section>
 
     <!-- 05 AQUA-TRAINING -->
-    <TapeMarquee title="Aqua-Training" tape-color="var(--c-aqua)" />
     <section class="univers" id="u-aqua" style="--accent: var(--c-aqua)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 05</span>
@@ -160,7 +155,6 @@
     </section>
 
     <!-- 06 ACCOMPAGNEMENT INDIVIDUEL -->
-    <TapeMarquee title="Accompagnement individuel" tape-color="var(--c-accomp)" />
     <section class="univers" id="u-accomp" style="--accent: var(--c-accomp)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 06</span>
@@ -191,7 +185,6 @@
     </section>
 
     <!-- 07 STAGES -->
-    <TapeMarquee title="Stages" tape-color="var(--c-stages)" />
     <section class="univers" id="u-stages" style="--accent: var(--c-stages)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 07</span>
@@ -223,7 +216,6 @@
     </section>
 
     <!-- 08 PROGRAMMES -->
-    <TapeMarquee title="Programmes" tape-color="#3A4356" />
     <section class="univers" id="u-prog" style="--accent: var(--c-prog)">
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 08</span>
@@ -261,7 +253,6 @@
 
 <script setup>
 import { useReveal } from '@/composables/useReveal'
-import TapeMarquee from '@/components/common/TapeMarquee.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 
 useReveal()
