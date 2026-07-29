@@ -29,7 +29,9 @@
         >
           <span class="notch-icon" aria-hidden="true" v-html="currentProfile.badgeIcon"></span>
           <span class="notch-label">{{ currentProfile.badgeLabel }}</span>
-          <span class="notch-arrow">▾</span>
+          <svg class="w-3.5 h-3.5 ml-1 transition-transform duration-200" :class="{ 'rotate-180': showProfileMenu }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+          </svg>
         </button>
 
         <!-- Dropdown Menu Switcher -->

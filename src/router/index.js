@@ -15,6 +15,31 @@ const routes = [
     component: CrossHeatView
   },
   {
+    path: '/entreprise',
+    name: 'entreprise',
+    component: () => import('@/views/EntrepriseView.vue')
+  },
+  {
+    path: '/territoire',
+    name: 'territoire',
+    component: () => import('@/views/TerritoireView.vue')
+  },
+  {
+    path: '/mentions-legales',
+    name: 'mentions-legales',
+    component: () => import('@/views/MentionsLegalesView.vue')
+  },
+  {
+    path: '/plan-du-site',
+    name: 'plan-du-site',
+    component: () => import('@/views/PlanDuSiteView.vue')
+  },
+  {
+    path: '/politique-de-confidentialite',
+    name: 'politique-de-confidentialite',
+    component: () => import('@/views/PolitiqueConfidentialiteView.vue')
+  },
+  {
     path: '/faq',
     name: 'faq',
     component: FaqView

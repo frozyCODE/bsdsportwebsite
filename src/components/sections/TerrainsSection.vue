@@ -40,8 +40,11 @@
           </span>
         </div>
 
-        <button class="go-btn">
-          <span>{{ currentProfileId === p.id ? 'Terrain Sélectionné ✓' : 'Activer ce terrain' }}</span>
+        <button class="go-btn inline-flex items-center justify-center gap-2 group">
+          <span>{{ p.id === 'entreprises' ? 'Découvrir l\'espace Pro' : (p.id === 'territoires' ? 'Découvrir l\'espace Territoire' : (currentProfileId === p.id ? 'Terrain Sélectionné ✓' : 'Choisir ce terrain')) }}</span>
+          <svg v-if="p.id === 'entreprises' || p.id === 'territoires'" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -50,12 +53,14 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useReveal } from '@/composables/useReveal'
 import { useProfile } from '@/composables/useProfile'
 import { useUiStore } from '@/stores/uiStore'
 
 useReveal()
 
+const router = useRouter()
 const { profiles, currentProfileId, currentProfile, setProfile } = useProfile()
 const uiStore = useUiStore()
 
@@ -71,6 +76,8 @@ function getFeatures(id) {
   }
 }
 
+const baseRotates = [-7, 1, 7]
+
 function handleMouseMove(e, index) {
   const card = cardRefs.value[index]
   if (!card) return
@@ -81,22 +88,32 @@ function handleMouseMove(e, index) {
   const centerX = rect.width / 2
   const centerY = rect.height / 2
 
+  const baseRot = baseRotates[index] || 0
   const rotateX = ((y - centerY) / centerY) * -8
   const rotateY = ((x - centerX) / centerX) * 8
 
-  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.025, 1.025, 1.025)`
+  card.style.transform = `perspective(1000px) rotate(${baseRot}deg) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.025, 1.025, 1.025)`
 }
 
 function handleMouseLeave(index) {
   const card = cardRefs.value[index]
   if (card) {
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)'
+    const baseRot = baseRotates[index] || 0
+    card.style.transform = `perspective(1000px) rotate(${baseRot}deg) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`
   }
 }
 
 function selectProfile(p) {
   setProfile(p.id)
-  uiStore.showToast(`Terrain activé : ${p.title}`)
+  if (p.id === 'entreprises') {
+    uiStore.showToast(`Redirection vers l'espace BSD Entreprises...`)
+    router.push('/entreprise')
+  } else if (p.id === 'territoires') {
+    uiStore.showToast(`Redirection vers l'espace Territoire & Social...`)
+    router.push('/territoire')
+  } else {
+    uiStore.showToast(`Terrain activé : ${p.title}`)
+  }
 }
 </script>
 
@@ -185,6 +202,26 @@ function selectProfile(p) {
   max-width: 390px;
   box-shadow: 0 20px 50px rgba(0,0,0,.45);
   overflow: hidden;
+  isolation: isolate;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.14), transparent);
+  transform: skewX(-18deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: left 0.6s ease-in-out, opacity 0.25s ease;
+}
+
+.card:hover::after {
+  left: 130%;
+  opacity: 1;
 }
 
 .card:hover {
@@ -323,6 +360,11 @@ function selectProfile(p) {
   transition: all .3s ease;
   width: 100%;
   z-index: 1;
+}
+
+.go-btn::after {
+  content: none !important;
+  display: none !important;
 }
 
 .card:hover .go-btn,

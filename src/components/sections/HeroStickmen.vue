@@ -6,29 +6,55 @@
         <span class="sm sm-ici">Ici,</span>
         <span class="big lw1">
           Le sport
-          <!-- RUNNER STICKMAN WITH FALL & RECOVERY -->
-          <svg class="stick runner" viewBox="0 0 60 50" aria-hidden="true">
-            <g class="rg">
-              <g class="magic">
-                <circle class="mring" cx="21" cy="22" r="7"/>
-                <path class="ms ms1" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
-                <path class="ms ms2" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
-                <path class="ms ms3" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
-                <path class="ms ms4" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
-                <path class="ms ms5" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
-                <path class="ms ms6" d="M21 17 L22.2 20.8 L26 22 L22.2 23.2 L21 27 L19.8 23.2 L16 22 L19.8 20.8 Z"/>
+          <!-- ATHLETIC RUNNER WITH BENT KNEES, DEPOP & RESPAWN FX -->
+          <svg class="stick runner" viewBox="0 0 50 50" aria-hidden="true">
+            <g class="runner-body">
+              <!-- Clean fine pure white sparkle pop on respawn -->
+              <g class="magic-pop">
+                <circle class="mring-pop" cx="25" cy="25" r="7"/>
+                <path class="msp" d="M25 16 L26 22 L32 25 L26 28 L25 34 L24 28 L18 25 L24 22 Z"/>
               </g>
-              <g class="rf">
-                <g class="qcycle">
-                  <g class="q1"><circle class="head" cx="17" cy="8" r="5"/><path d="M16 13 L21 25 M18 16 L26 14 L30 8 M18 17 L12 22 L6 18 M21 25 L31 28 L36 36 M21 25 L14 32 L7 30"/></g>
-                  <g class="q2"><circle class="head" cx="17" cy="8" r="5"/><path d="M16 13 L21 25 M18 16 L25 19 L31 16 M18 17 L12 15 L7 10 M21 25 L29 33 L27 41 M21 25 L15 34 L18 41"/></g>
-                  <g class="q3"><circle class="head" cx="17" cy="8" r="5"/><path d="M16 13 L21 25 M18 16 L24 21 L29 25 M18 17 L13 12 L9 6 M21 25 L26 35 L24 43 M21 25 L18 33 L11 38"/></g>
-                  <g class="q4"><circle class="head" cx="17" cy="8" r="5"/><path d="M16 13 L21 25 M18 16 L27 12 L33 15 M18 17 L10 20 L4 14 M21 25 L32 25 L40 31 M21 25 L16 35 L10 41"/></g>
+
+              <!-- Pronounced white pop burst on end depop -->
+              <g class="magic-end-pop">
+                <circle class="mring-end" cx="25" cy="25" r="10"/>
+                <path class="msp-end msp-e1" d="M25 12 L26.5 21 L35 25 L26.5 29 L25 38 L23.5 29 L15 25 L23.5 21 Z"/>
+                <path class="msp-end msp-e2" d="M25 12 L26.5 21 L35 25 L26.5 29 L25 38 L23.5 29 L15 25 L23.5 21 Z"/>
+              </g>
+
+              <!-- Left Leg (Background Leg - Behind Torso) -->
+              <g class="r-leg-left r-back">
+                <g class="r-thigh-l">
+                  <line x1="22" y1="27" x2="28" y2="35" class="r-limb"/>
+                  <g class="r-shin-l">
+                    <line x1="28" y1="35" x2="33" y2="43" class="r-limb"/>
+                  </g>
                 </g>
-                <g class="qf">
-                  <g class="fx"><path d="M8 -34 V-10 M18 -44 V-14 M28 -38 V-10 M38 -30 V-8"/></g>
-                  <circle class="head" cx="19" cy="10" r="5"/>
-                  <path d="M18 15 L21 27 M19 18 L10 10 L5 3 M19 18 L28 9 L33 3 M21 27 L12 36 L8 43 M21 27 L30 35 L34 43"/>
+              </g>
+
+              <!-- Left Arm (Background Arm) -->
+              <g class="r-arm-left r-back">
+                <path d="M24 15 L30 20 L35 16" class="r-limb"/>
+              </g>
+
+              <!-- Torso / Spine -->
+              <line x1="25" y1="13.5" x2="22" y2="27" class="r-limb r-torso"/>
+
+              <!-- Head -->
+              <circle cx="25" cy="9" r="4.5" class="r-head"/>
+
+              <!-- Right Arm (Foreground Arm - In Front) -->
+              <g class="r-arm-right r-front">
+                <path d="M24 15 L18 20 L13 24" class="r-limb"/>
+              </g>
+
+              <!-- Right Leg (Foreground Leg - In Front) -->
+              <g class="r-leg-right r-front">
+                <g class="r-thigh-r">
+                  <line x1="22" y1="27" x2="16" y2="35" class="r-limb"/>
+                  <g class="r-shin-r">
+                    <line x1="16" y1="35" x2="11" y2="42" class="r-limb"/>
+                  </g>
                 </g>
               </g>
             </g>
@@ -44,7 +70,7 @@
 
         <span class="big">
           rassembl<span class="ltr e-bag">e
-            <!-- BOXER STICKMAN -->
+            <!-- BOXER STICKMAN ORIGINAL -->
             <svg class="stick boxer" viewBox="0 0 54 62" aria-hidden="true">
               <g class="bod">
                 <circle class="head" cx="34" cy="11" r="5.4"/>
@@ -60,8 +86,11 @@
     </h1>
 
     <div class="hero-cta reveal d3">
-      <a href="#terrains" class="btn btn-primary">
-        Choisis ton terrain ↓
+      <a href="#terrains" class="btn btn-primary inline-flex items-center gap-2 group">
+        <span>Choisis ton terrain</span>
+        <svg class="w-4 h-4 transition-transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
       </a>
       <a href="#u-cross" class="btn btn-ghost">
         Découvrir les Univers
@@ -97,6 +126,10 @@ useReveal()
   background: var(--cardinal);
   border-color: var(--cardinal);
   color: var(--cream);
+}
+.btn-primary::after {
+  content: none !important;
+  display: none !important;
 }
 .btn-primary:hover {
   background: var(--gold);

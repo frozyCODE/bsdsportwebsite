@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD SPORT — Territoire & Social · Grenoble, Isère</title>
+<meta name="description" content="Association loi 1901 à Grenoble : déploiement d'actions sportives à fort impact social co-construites avec les collectivités et institutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-main: #FFFFFF;
+  --bg-alt: #F8FAFC;
+  --text-black: #0F172A;
+  --text-grey: #64748B;
+  --border-light: #E2E8F0;
+  --border-dark: #0F172A;
+  --font-corporate: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--bg-main);
+  color: var(--text-black);
+  font-family: var(--font-corporate);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  cursor: auto !important;
+}
+a, button, select, input[type="submit"], [role="button"] { cursor: pointer !important; }
+input, textarea { cursor: text !important; }
+
+/* Header Navbar Monochrome */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1rem 2rem;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-black);
+}
+.logo-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--text-black);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-title { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; }
+.logo-sub { font-size: 0.62rem; font-weight: 700; color: var(--text-grey); text-transform: uppercase; letter-spacing: 0.08em; display: block; }
+
+nav.main-nav { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+nav.main-nav a {
+  text-decoration: none;
+  color: var(--text-grey);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+nav.main-nav a:hover, nav.main-nav a.active { color: var(--text-black); }
+
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  background: var(--text-black);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid var(--text-black);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-black:hover { background: #334155; border-color: #334155; }
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-black);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  transition: all 0.2s;
+}
+.btn-white:hover { background: #F1F5F9; border-color: #94A3B8; }
+
+/* Hero Section */
+.hero {
+  padding: 5rem 2rem 6rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border-light);
+}
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .hero-inner { grid-template-columns: 1.2fr 0.8fr; }
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  background: #E2E8F0;
+  color: var(--text-black);
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: 2.5rem;
+}
+.metric-val { font-size: 2rem; font-weight: 800; display: block; color: var(--text-black); }
+.metric-lbl { font-size: 0.65rem; font-weight: 700; color: var(--text-grey); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Sections */
+section.sec {
+  padding: 5rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.sec-header { text-align: center; max-width: 700px; margin: 0 auto 3.5rem; }
+.sec-tag { font-size: 0.7rem; font-weight: 800; color: var(--text-grey); letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+.sec-title { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; }
+.sec-sub { color: var(--text-grey); font-size: 0.95rem; margin-top: 0.5rem; }
+
+/* Cards Grid */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card-mono {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+.card-mono:hover { border-color: var(--text-black); }
+
+/* Form Container */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  border: 1px solid #CBD5E1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) { .form-row { grid-template-columns: 1fr 1fr; } }
+.field-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.field-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--text-black); }
+.field-input, .field-select, .field-textarea {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.field-input:focus, .field-select:focus, .field-textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--text-black);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border-light);
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-grey);
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-box">
+      <div class="logo-badge">B</div>
+      <div>
+        <div class="logo-title">BSD SPORT</div>
+        <span class="logo-sub">Territoire & Social · Grenoble, Isère</span>
+      </div>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="#demarche">La Démarche</a>
+      <a href="#actions">Nos Actions</a>
+      <a href="#publics">Nos Publics</a>
+      <a href="#contact-terr">Contact</a>
+    </nav>
+
+    <div>
+      <a href="index.html" class="btn-white" style="margin-right:.5rem;font-weight:800">← RETOUR AU SITE PRINCIPAL</a>
+      <a href="#contact-terr" class="btn-black">Collaborer avec nous ↗</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="tag-pill">Association loi 1901 — Grenoble, Isère</span>
+      <h1>BSD SPORT — <u>AU SERVICE DES POPULATIONS</u></h1>
+      <p style="color:var(--text-grey);font-size:1.1rem;margin-bottom:2rem">
+        BSD Sport, créée il y a plus de 10 ans, est une association grenobloise spécialisée dans le déploiement d'actions sportives à fort impact social. Chaque dispositif est co-construit avec les acteurs du territoire.
+      </p>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#actions" class="btn-black">Découvrir nos actions ↗</a>
+        <a href="#contact-terr" class="btn-white">Collaborer avec nous ↗</a>
+      </div>
+
+      <div class="metrics-grid">
+        <div>
+          <span class="metric-val">10+</span>
+          <span class="metric-lbl">Années d'ancrage</span>
+        </div>
+        <div>
+          <span class="metric-val">0</span>
+          <span class="metric-lbl">Condition de niveau</span>
+        </div>
+        <div>
+          <span class="metric-val">9+</span>
+          <span class="metric-lbl">Publics accompagnés</span>
+        </div>
+        <div>
+          <span class="metric-val">10</span>
+          <span class="metric-lbl">Actions disponibles</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card-mono" style="padding:2.5rem 2rem">
+        <span class="tag-pill" style="margin-bottom:1rem">PARTENAIRES INSTITUTIONNELS</span>
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:1rem">Ils soutiennent nos actions</h3>
+
+        <div style="display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;font-size:.85rem;font-weight:700">
+          <div><span style="font-weight:bold">•</span> Grenoble Alpes Métropole</div>
+          <div><span style="font-weight:bold">•</span> Préfecture de l'Isère</div>
+          <div><span style="font-weight:bold">•</span> Ville de Pont-de-Claix</div>
+          <div><span style="font-weight:bold">•</span> Fondation Décathlon</div>
+          <div><span style="font-weight:bold">•</span> CAF Isère</div>
+        </div>
+
+        <a href="#contact-terr" class="btn-black" style="width:100%">Co-construire un projet ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section: Notre Démarche -->
+<section class="sec" id="demarche">
+  <div class="sec-header">
+    <span class="sec-tag">NOTRE DÉMARCHE</span>
+    <h2 class="sec-title">Co-construire par le sport et pour le territoire</h2>
+    <p class="sec-sub">Des actions sportives ancrées dans le territoire, conçues avec ses acteurs, pour ses populations.</p>
+  </div>
+
+  <div class="grid-cards">
+    <div class="card-mono">
+      <div style="width:40px;height:40px;background:#000;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:1.5rem">01</div>
+      <h3 style="font-size:1.25rem;font-weight:800;margin-bottom:.8rem">Sans compétition</h3>
+      <p style="font-size:.9rem;color:var(--text-grey)">
+        Nos actions favorisent la progression individuelle et la coopération collective. La performance n'est pas un critère d'accès ni d'évaluation.
+      </p>
+    </div>
+
+    <div class="card-mono">
+      <div style="width:40px;height:40px;background:#000;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:1.5rem">02</div>
+      <h3 style="font-size:1.25rem;font-weight:800;margin-bottom:.8rem">Approche co-construite</h3>
+      <p style="font-size:.9rem;color:var(--text-grey)">
+        Chaque dispositif est co-construit avec les structures partenaires en fonction du public ciblé : âge, condition physique, contexte social. Aucun format n'est déployé sans concertation préalable.
+      </p>
+    </div>
+
+    <div class="card-mono">
+      <div style="width:40px;height:40px;background:#000;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:1.5rem">03</div>
+      <h3 style="font-size:1.25rem;font-weight:800;margin-bottom:.8rem">Le sport comme vecteur</h3>
+      <p style="font-size:.9rem;color:var(--text-grey)">
+        Le sport est un vecteur de transmission de valeurs, de savoir-être et de savoir-vivre. Découverte, apprentissage, ouverture — nos actions accompagnent la construction des citoyens de demain.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Notre Boussole (4 axes) -->
+<section class="sec" id="actions" style="border-top:1px solid var(--border-light);background:var(--bg-alt)">
+  <div class="sec-header">
+    <span class="sec-tag">NOTRE BOUSSOLE</span>
+    <h2 class="sec-title">4 axes qui orientent chaque action</h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;text-align:center">
+    <div style="background:#fff;padding:2rem;border-radius:16px;border:1px solid #CBD5E1">
+      <div style="font-size:2rem;margin-bottom:0.5rem">🫀</div>
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:.3rem">Santé</h3>
+      <p style="font-size:.85rem;color:var(--text-grey)">Prévention & bien-être physique</p>
+    </div>
+    <div style="background:#fff;padding:2rem;border-radius:16px;border:1px solid #CBD5E1">
+      <div style="font-size:2rem;margin-bottom:0.5rem">🏃</div>
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:.3rem">Pratique sportive</h3>
+      <p style="font-size:.85rem;color:var(--text-grey)">Accès & inclusion</p>
+    </div>
+    <div style="background:#fff;padding:2rem;border-radius:16px;border:1px solid #CBD5E1">
+      <div style="font-size:2rem;margin-bottom:0.5rem">🤝</div>
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:.3rem">Socialisation</h3>
+      <p style="font-size:.85rem;color:var(--text-grey)">Lien social & cohésion</p>
+    </div>
+    <div style="background:#fff;padding:2rem;border-radius:16px;border:1px solid #CBD5E1">
+      <div style="font-size:2rem;margin-bottom:0.5rem">🌿</div>
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:.3rem">Environnement</h3>
+      <p style="font-size:.85rem;color:var(--text-grey)">Territoire & citoyenneté</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Nos Publics Cibles -->
+<section class="sec" id="publics">
+  <div class="sec-header">
+    <span class="sec-tag">NOS PUBLICS</span>
+    <h2 class="sec-title">Nos publics cibles</h2>
+    <p class="sec-sub">BSD Sport s'adresse à toute personne souhaitant pratiquer dans un cadre inclusif et bienveillant, avec une attention particulière aux populations éloignées de la pratique sportive.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;max-width:900px;margin:0 auto">
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Pratique sportive féminine</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Étudiants</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Jeunes en décrochage</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Publics issus de QPV</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Seniors</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Publics APA (Activité Physique Adaptée)</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Personnes en recherche d'emploi</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Familles</div>
+    <div style="background:#fff;padding:1.2rem 1.5rem;border-radius:12px;border:1px solid #CBD5E1;font-weight:700;font-size:.9rem">Enfants</div>
+  </div>
+</section>
+
+<!-- Section Formulaire Contact Territoire -->
+<section class="sec" id="contact-terr" style="border-top:1px solid var(--border-light);background:var(--bg-alt)">
+  <div class="form-card">
+    <div style="text-align:center;margin-bottom:2.5rem">
+      <span class="sec-tag">COLLABORATION</span>
+      <h2 style="font-size:2rem;font-weight:800">Construisons quelque chose ensemble</h2>
+      <p style="color:var(--text-grey);font-size:.9rem;margin-top:.4rem">Déployons ensemble un dispositif adapté à vos publics et à votre territoire.</p>
+    </div>
+
+    <form id="terrForm">
+      <div class="form-row">
+        <div class="field-group">
+          <label class="field-label" for="nom">Nom / Prénom *</label>
+          <input type="text" id="nom" required placeholder="ex: Jean Dupont" class="field-input">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="email">Email professionnel *</label>
+          <input type="email" id="email" required placeholder="contact@structure.fr" class="field-input">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field-group">
+          <label class="field-label" for="structure">Structure / Collectivité *</label>
+          <input type="text" id="structure" required placeholder="ex: Mairie / CCAS / Association" class="field-input">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="public">Public ciblé *</label>
+          <select id="public" required class="field-select">
+            <option value="" disabled selected>Choisir un public</option>
+            <option value="Féminin">Pratique sportive féminine</option>
+            <option value="Étudiants">Étudiants</option>
+            <option value="Jeunes">Jeunes en décrochage</option>
+            <option value="QPV">Publics issus de QPV</option>
+            <option value="Seniors">Seniors</option>
+            <option value="APA">Publics APA</option>
+            <option value="Autre">Autre projet territorial</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-group" style="margin-bottom:2rem">
+        <label class="field-label" for="msg">Message & Description du projet</label>
+        <textarea id="msg" rows="4" placeholder="Décrivez vos attentes ou les contours de la collaboration..." class="field-textarea"></textarea>
+      </div>
+
+      <div style="text-align:center">
+        <button type="submit" class="btn-black" style="padding:.9rem 2.5rem;font-size:0.8rem">
+          Collaborer avec nous ↗
+        </button>
+      </div>
+    </form>
+    <div id="terrAlert" style="display:none;margin-top:1.5rem;padding:1rem;background:#F1F5F9;border:1px solid #CBD5E1;color:#0F172A;border-radius:8px;font-weight:700;text-align:center;font-size:.85rem">
+      ✓ Demande transmise avec succès ! Nous vous recontactons rapidement.
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="padding: 3rem 2rem; border-top: 1px solid var(--border-light); background: #fff; text-align: center;">
+  <div style="font-weight:800;color:var(--text-black);margin-bottom:.5rem">BSD SPORT • TERRITOIRE & SOCIAL — GRENOBLE, ISÈRE</div>
+  <div style="display:flex;justify-content:center;gap:1.5rem;margin:.8rem 0;font-size:0.8rem;font-weight:700">
+    <a href="bsd-mentions-legales.html" style="color:var(--text-grey);text-decoration:underline">Mentions légales</a>
+    <a href="bsd-plan-du-site.html" style="color:var(--text-grey);text-decoration:underline">Plan du site</a>
+    <a href="bsd-politique-de-confidentialite.html" style="color:var(--text-grey);text-decoration:underline">Politique de confidentialité</a>
+  </div>
+  <div style="font-size:0.75rem;color:var(--text-grey)">© 2026 BSD Sport. Association loi 1901. Tous droits réservés.</div>
+</footer>
+
+<!-- Legal Modal Overlay -->
+<div id="legalModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;">
+  <div style="background:#fff;border-radius:16px;max-width:600px;width:100%;padding:2rem;position:relative;max-height:85vh;overflow-y:auto;box-shadow:0 20px 50px rgba(0,0,0,0.3)">
+    <button onclick="closeLegalModal()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;font-weight:bold;cursor:pointer">✕</button>
+    <div id="modalContent"></div>
+    <div style="text-align:right;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #E2E8F0">
+      <button onclick="closeLegalModal()" class="btn-black" style="padding:.5rem 1.2rem;font-size:.75rem">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('terrForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('terrAlert').style.display = 'block';
+  this.reset();
+});
+
+function openLegalModal(type) {
+  const content = document.getElementById('modalContent');
+  if (type === 'mentions') {
+    content.innerHTML = '<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:1rem">Mentions Légales</h3>' +
+      '<p style="font-size:0.85rem;color:#475569;line-height:1.6">' +
+      '<strong>Éditeur du site :</strong> BSD Sport (Association loi 1901 à but non lucratif).<br>' +
+      '<strong>Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère.<br>' +
+      '<strong>Directeur de la publication :</strong> Équipe de Direction BSD Sport.<br>' +
+      '<strong>Hébergement :</strong> Vercel Inc. / Serveurs sécurisés.<br>' +
+      '<strong>Propriété intellectuelle :</strong> L\'ensemble des contenus et éléments graphiques sont protégés par le droit d\'auteur.' +
+      '</p>';
+  } else if (type === 'plan') {
+    content.innerHTML = '<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:1rem">Plan du Site</h3>' +
+      '<ul style="font-size:0.85rem;color:#475569;line-height:1.8;padding-left:1.2rem">' +
+      '<li><strong>Accueil :</strong> Mission Territoriale & Ancrage Grenoble</li>' +
+      '<li><strong>La Démarche :</strong> 3 Piliers (Sans compétition, Co-construction)</li>' +
+      '<li><strong>Notre Boussole :</strong> 4 Axes Santé, Pratique, Socialisation, Environnement</li>' +
+      '<li><strong>Nos Publics :</strong> QPV, Féminin, Seniors, APA, Décrochage, Familles</li>' +
+      '<li><strong>Collaboration :</strong> Formulaire de projet territorial</li>' +
+      '</ul>';
+  } else if (type === 'confidentialite') {
+    content.innerHTML = '<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:1rem">Politique de Confidentialité</h3>' +
+      '<p style="font-size:0.85rem;color:#475569;line-height:1.6">' +
+      '<strong>Collecte des données :</strong> Vos informations transmises via le formulaire sont destinées uniquement au suivi de votre projet territorial.<br><br>' +
+      '<strong>Protection :</strong> Vos données ne sont jamais cédées ni vendues à des tiers.<br><br>' +
+      '<strong>Droits RGPD :</strong> Vous pouvez demander l\'accès, la modification ou la suppression de vos données sur contact@bsdsport.fr.' +
+      '</p>';
+  }
+  document.getElementById('legalModal').style.display = 'flex';
+}
+
+function closeLegalModal() {
+  document.getElementById('legalModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

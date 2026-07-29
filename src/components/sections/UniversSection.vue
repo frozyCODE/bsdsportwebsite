@@ -44,22 +44,41 @@
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 02</span>
 
-      <svg class="sico" viewBox="0 0 120 120" aria-hidden="true">
-        <g class="nt"><text x="16" y="48" font-size="17" fill="#F1E7D0">♪</text></g>
-        <g class="nt nt2"><text x="96" y="42" font-size="15" fill="#8C5CFF">♫</text></g>
-        <g class="nt nt3"><text x="28" y="30" font-size="13" fill="#D9A441">♪</text></g>
-        <rect x="26" y="92" width="80" height="12" fill="#8C5CFF" stroke="#F1E7D0" stroke-width="4"/>
-        <rect x="36" y="80" width="60" height="12" fill="#152238" stroke="#F1E7D0" stroke-width="4"/>
-        <g class="snk">
-          <path d="M34 72 q0 -15 12 -17 q9 -1 13 6 q5 8 18 9 q12 1 12 9 v2 q0 5 -5 5 H40 q-7 0 -6 -8 Z" fill="#F1E7D0" stroke="#0A0E16" stroke-width="3.5"/>
-          <path d="M35 76 h63" stroke="#8C5CFF" stroke-width="4"/>
-          <path d="M56 62 l6 8 M64 60 l6 8" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round"/>
-          <circle cx="45" cy="62" r="1.8" fill="#0A0E16"/><circle cx="50" cy="66" r="1.8" fill="#0A0E16"/>
-          <circle cx="80" cy="68" r="2.3" fill="#0A0E16"/>
-          <circle cx="88" cy="69" r="2.3" fill="#0A0E16"/>
-          <path d="M80 74 q5 4 10 0" fill="none" stroke="#0A0E16" stroke-width="2.6" stroke-linecap="round"/>
-        </g>
-      </svg>
+      <!-- CONTENEUR ANIMÉ D'ATMOSPHÈRE MUSICALE STEPP TRAINING -->
+      <div class="sico-wrap sico-wrap-stepp">
+        <img :src="'/stepman.png'" alt="Stepp Training Icon" class="sico sico-stepp" />
+        
+        <!-- PETITES NOTES DE MUSIQUE PARFAITEMENT POSITIONNÉES (SANS OVERRIDE CSS) -->
+        <svg class="sico-fx" viewBox="0 0 160 160" aria-hidden="true">
+          <!-- 1. Note Double ♫ (Haut Gauche - Violet) -->
+          <g class="n-pos np1" transform="translate(4, 10) scale(0.65)">
+            <g class="m-note n1">
+              <path d="M12 28 A4.5 4.5 0 1 1 7.5 23.5 A4.5 4.5 0 0 1 12 28 V10 H26 V28 A4.5 4.5 0 1 1 21.5 23.5 A4.5 4.5 0 0 1 26 28 V14 H12 Z" fill="#8C5CFF" stroke="#F1E7D0" stroke-width="2"/>
+            </g>
+          </g>
+
+          <!-- 2. Note Simple ♪ (Haut Droite - Or) -->
+          <g class="n-pos np2" transform="translate(138, 12) scale(0.65)">
+            <g class="m-note n2">
+              <path d="M12 26 A4.5 4.5 0 1 1 7.5 21.5 A4.5 4.5 0 0 1 12 26 V8 C18 8, 22 12, 22 15 C18 13, 14 13, 12 15 Z" fill="#D9A441" stroke="#F1E7D0" stroke-width="2"/>
+            </g>
+          </g>
+
+          <!-- 3. Note Simple ♪ (Bas Gauche - Turquoise) -->
+          <g class="n-pos np3" transform="translate(4, 120) scale(0.65)">
+            <g class="m-note n3">
+              <path d="M12 26 A4.5 4.5 0 1 1 7.5 21.5 A4.5 4.5 0 0 1 12 26 V8 C18 8, 22 12, 22 15 C18 13, 14 13, 12 15 Z" fill="#2EC4D6" stroke="#F1E7D0" stroke-width="2"/>
+            </g>
+          </g>
+
+          <!-- 4. Note Double ♫ (Bas Droite - Rouge) -->
+          <g class="n-pos np4" transform="translate(138, 120) scale(0.65)">
+            <g class="m-note n4">
+              <path d="M12 28 A4.5 4.5 0 1 1 7.5 23.5 A4.5 4.5 0 0 1 12 28 V10 H26 V28 A4.5 4.5 0 1 1 21.5 23.5 A4.5 4.5 0 0 1 26 28 V14 H12 Z" fill="#FF4B26" stroke="#F1E7D0" stroke-width="2"/>
+            </g>
+          </g>
+        </svg>
+      </div>
 
       <div class="inner">
         <div class="ghost reveal">Univers 02 · Cardio</div>
@@ -80,25 +99,53 @@
       <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
       <span class="corner-stamp stamp" aria-hidden="true">Unité 03</span>
 
-      <svg class="sico" viewBox="0 0 120 120" aria-hidden="true">
-        <path d="M6 46 h13 M4 58 h17 M8 70 h11" stroke="#F1E7D0" stroke-width="3.5" stroke-linecap="round" opacity=".55"/>
-        <g class="pow">
-          <path d="M100 52 l4 -11 l3 11 l11 3 l-11 4 l-3 11 l-4 -11 l-11 -3Z" fill="#D9A441" stroke="#0A0E16" stroke-width="2.5"/>
-        </g>
-        <g class="glv">
-          <path d="M30 42 q-2 -17 17 -19 q23 -2 31 11 q6 9 2 20 q-3 10 -15 12 l-19 3 q-13 1 -15 -12 q-2 -8 -1 -15Z" fill="#E0192F" stroke="#F1E7D0" stroke-width="5"/>
-          <path d="M32 64 q-9 6 -3 15 q6 8 15 3" fill="#E0192F" stroke="#F1E7D0" stroke-width="5" stroke-linecap="round"/>
-          <rect x="22" y="80" width="32" height="15" fill="#152238" stroke="#F1E7D0" stroke-width="4"/>
-          <path d="M40 32 q6 -4 12 -2" stroke="#F1E7D0" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7"/>
-          <circle cx="52" cy="44" r="3.4" fill="#0A0E16"/>
-          <circle cx="66" cy="46" r="3.4" fill="#0A0E16"/>
-          <path d="M52 55 q8 6 15 1" fill="none" stroke="#0A0E16" stroke-width="3.8" stroke-linecap="round"/>
-        </g>
-      </svg>
+      <!-- CONTENEUR ANIMÉ D'ATMOSPHÈRE ENFLAMMÉE POUR BOXE -->
+      <div class="sico-wrap">
+        <img :src="'/boxe-emoji.png'" alt="Arts Martiaux Boxe Emoji" class="sico sico-boxe" />
+        
+        <!-- PETITES FLAMMES ANIMÉES & ÉTINCELLES D'ÉNERGIE -->
+        <svg class="sico-fx" viewBox="0 0 160 160" aria-hidden="true">
+          <defs>
+            <linearGradient id="flame-grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#C8102E"/>
+              <stop offset="60%" stop-color="#FF4B26"/>
+              <stop offset="100%" stop-color="#FFD60A"/>
+            </linearGradient>
+            <linearGradient id="flame-grad2" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#E0192F"/>
+              <stop offset="50%" stop-color="#FF9500"/>
+              <stop offset="100%" stop-color="#F1E7D0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Flamme 1 (Gauche) -->
+          <g class="flame f1">
+            <path d="M22 92 C12 78, 16 62, 24 50 C26 62, 34 68, 30 78 C36 70, 38 58, 34 46 C44 58, 42 78, 32 90 C28 94, 24 94, 22 92 Z" fill="url(#flame-grad1)"/>
+            <path d="M24 90 C18 80, 20 70, 26 62 C28 70, 32 74, 30 80 C32 86, 28 90, 24 90 Z" fill="#FFD60A"/>
+          </g>
+
+          <!-- Flamme 2 (Droite) -->
+          <g class="flame f2">
+            <path d="M138 90 C148 76, 144 60, 136 48 C134 60, 126 66, 130 76 C124 68, 122 56, 126 44 C116 56, 118 76, 128 88 C132 92, 136 92, 138 90 Z" fill="url(#flame-grad2)"/>
+            <path d="M136 88 C142 78, 140 68, 134 60 C132 68, 128 72, 130 78 C128 84, 132 88, 136 88 Z" fill="#FFD60A"/>
+          </g>
+
+          <!-- Petite Flamme 3 (Haut Droite) -->
+          <g class="flame f3">
+            <path d="M128 36 C134 26, 130 18, 124 10 C124 18, 118 22, 120 28 C116 22, 114 16, 116 12 C108 20, 110 32, 120 38 Z" fill="url(#flame-grad1)"/>
+          </g>
+
+          <!-- Étincelles de feu qui montent -->
+          <circle cx="28" cy="40" r="2.5" fill="#FFD60A" class="spark sp1"/>
+          <circle cx="132" cy="30" r="2.2" fill="#FF9500" class="spark sp2"/>
+          <circle cx="18" cy="68" r="1.8" fill="#FF4B26" class="spark sp3"/>
+          <circle cx="142" cy="72" r="2" fill="#FFD60A" class="spark sp4"/>
+        </svg>
+      </div>
 
       <div class="inner">
         <div class="ghost reveal">Univers 03 · Combat</div>
-        <h2 class="reveal d1">Arts Martiaux</h2>
+        <h2 class="reveal d1">Sports de combat</h2>
         <p class="reveal d2">Boxe, boxe junior, grappling, techniques de défense. La rigueur du ring, le respect en héritage.</p>
         <BaseButton class="reveal d3" accent="var(--c-arts)" page="Cours collectifs" :soon="true">Découvrir</BaseButton>
       </div>

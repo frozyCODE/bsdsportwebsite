@@ -40,7 +40,7 @@
                   <option value="" disabled selected>Choisis un univers...</option>
                   <option value="Cross Heat">01 · Cross Heat (Cross Training)</option>
                   <option value="Stepp Training">02 · Stepp Training (Cardio)</option>
-                  <option value="Arts Martiaux">03 · Arts Martiaux (Combat / Ring)</option>
+                  <option value="Sports de combat">03 · Sports de combat (Combat / Ring)</option>
                   <option value="Omnisports">04 · Omnisports (Multisports)</option>
                   <option value="Aqua-Training">05 · Aqua-Training (Aquatique)</option>
                   <option value="Accompagnement">06 · Coaching Individuel</option>
@@ -187,21 +187,101 @@
     </div>
 
     <!-- Footer -->
-    <footer class="reveal d3">
-      <span>© {{ new Date().getFullYear() }} BSD Sport</span>
-      <span>Grenoble · Pont-de-Claix · Isère</span>
+    <footer class="reveal d3 flex flex-col sm:flex-row items-center justify-between gap-4 py-8 border-t border-[#F1E7D0]/15 text-xs text-[#F1E7D0]/70">
+      <div>
+        <span>© {{ new Date().getFullYear() }} BSD Sport</span>
+        <span class="ml-2">• Grenoble · Pont-de-Claix · Isère</span>
+      </div>
+
+      <div class="flex items-center gap-6 font-semibold">
+        <router-link to="/mentions-legales" class="hover:text-white transition-colors underline-offset-4 hover:underline">
+          Mentions légales
+        </router-link>
+        <router-link to="/plan-du-site" class="hover:text-white transition-colors underline-offset-4 hover:underline">
+          Plan du site
+        </router-link>
+        <router-link to="/politique-de-confidentialite" class="hover:text-white transition-colors underline-offset-4 hover:underline">
+          Politique de confidentialité
+        </router-link>
+      </div>
     </footer>
+
+    <!-- LEGAL MODAL OVERLAY -->
+    <div v-if="activeLegalModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-[#101622] border border-[#F1E7D0]/30 rounded-2xl max-w-2xl w-full p-6 sm:p-8 text-[#F1E7D0] shadow-2xl relative max-h-[85vh] overflow-y-auto">
+        <button @click="activeLegalModal = null" class="absolute top-4 right-4 text-[#F1E7D0]/60 hover:text-white font-bold text-xl p-2">
+          ✕
+        </button>
+
+        <!-- MENTIONS LÉGALES -->
+        <div v-if="activeLegalModal === 'mentions'" class="space-y-4">
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Mentions Légales</h3>
+          <p class="text-xs text-[#F1E7D0]/80 leading-relaxed">
+            <strong class="text-white">Éditeur du site :</strong> BSD Sport (Association loi 1901 à but non lucratif).<br>
+            <strong class="text-white">Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère, France.<br>
+            <strong class="text-white">Téléphone :</strong> 07 51 62 29 92 · 06 46 02 53 71<br>
+            <strong class="text-white">Email :</strong> contact@bsdsport.fr<br>
+            <strong class="text-white">Directeur de la publication :</strong> Équipe de Direction BSD Sport.<br>
+            <strong class="text-white">Hébergement :</strong> Vercel Inc., 440 N Barranca Ave #4133 Covina, CA 91723.<br>
+            <strong class="text-white">Propriété intellectuelle :</strong> L'ensemble des contenus, visuels et éléments graphiques de BSD Sport sont protégés.
+          </p>
+        </div>
+
+        <!-- PLAN DU SITE -->
+        <div v-if="activeLegalModal === 'plan'" class="space-y-4">
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Plan du Site</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#F1E7D0]/90">
+            <div>
+              <strong class="text-white uppercase block mb-1">Campus Sportif</strong>
+              <ul class="space-y-1 text-[#F1E7D0]/70">
+                <li>• Hero & Présentation</li>
+                <li>• Section Terrains de Jeu</li>
+                <li>• 8 Univers Athlétiques (Cross Heat, Step, Combat...)</li>
+                <li>• Le Mot du Fondateur</li>
+                <li>• Horaires & Planning</li>
+              </ul>
+            </div>
+            <div>
+              <strong class="text-white uppercase block mb-1">Espaces Dédiés</strong>
+              <ul class="space-y-1 text-[#F1E7D0]/70">
+                <li>• Espace Entreprises B2B</li>
+                <li>• Espace Territoire & Social</li>
+                <li>• Formulaire de Contact</li>
+                <li>• FAQ & Questions Fréquentes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- POLITIQUE DE CONFIDENTIALITÉ -->
+        <div v-if="activeLegalModal === 'confidentialite'" class="space-y-4">
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Politique de Confidentialité</h3>
+          <p class="text-xs text-[#F1E7D0]/80 leading-relaxed">
+            <strong class="text-white">Collecte des données :</strong> Vos informations (nom, email, message) collectées via notre formulaire sont uniquement utilisées pour traiter votre demande.<br><br>
+            <strong class="text-white">Protection :</strong> Vos données restent strictement confidentielles et ne sont jamais cédées à des tiers.<br><br>
+            <strong class="text-white">Droits RGPD :</strong> Vous bénéficiez d'un droit d'accès et de suppression de vos informations personnelles en nous écrivant à <em>contact@bsdsport.fr</em>.
+          </p>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-[#F1E7D0]/20 text-right">
+          <button @click="activeLegalModal = null" class="px-5 py-2 rounded-lg bg-[#D9A441] text-black font-bold text-xs uppercase tracking-wider hover:bg-[#E5B555] transition-colors">
+            Fermer
+          </button>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { useProfile } from '@/composables/useProfile'
 import { useUiStore } from '@/stores/uiStore'
 import { useReveal } from '@/composables/useReveal'
 
 useReveal()
 
+const activeLegalModal = ref(null)
 const { currentProfile } = useProfile()
 const uiStore = useUiStore()
 

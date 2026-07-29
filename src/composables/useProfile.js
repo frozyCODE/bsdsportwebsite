@@ -16,21 +16,6 @@ const defaultProfile = {
 
 const profiles = [
   {
-    id: 'particuliers',
-    title: 'Particuliers',
-    shortName: 'Particulier / Licencié',
-    badgeLabel: 'Particulier',
-    badgeIcon: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
-    baseline: 'BSD, votre terrain de jeu',
-    description: 'Cours collectifs, coaching perso, stages et programmes. Trouve ta discipline.',
-    icon: '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>',
-    styleClass: 'part',
-    accentColor: '#FF4B2E',
-    formTitle: 'Rejoins la communauté BSD',
-    formSubtitle: 'Renseignements, séance d\'essai & inscription.',
-    submitLabel: 'Envoyer ma demande →'
-  },
-  {
     id: 'entreprises',
     title: 'Entreprises',
     shortName: 'Entreprise / B2B',
@@ -44,6 +29,21 @@ const profiles = [
     formTitle: 'Devenir Partenaire BSD',
     formSubtitle: 'Sponsoring, événements sur-mesure & mécénat.',
     submitLabel: 'Proposer un partenariat →'
+  },
+  {
+    id: 'particuliers',
+    title: 'Particuliers',
+    shortName: 'Particulier / Licencié',
+    badgeLabel: 'Particulier',
+    badgeIcon: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+    baseline: 'BSD, votre terrain de jeu',
+    description: 'Cours collectifs, coaching perso, stages et programmes. Trouve ta discipline.',
+    icon: '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>',
+    styleClass: 'part',
+    accentColor: '#FF4B2E',
+    formTitle: 'Rejoins la communauté BSD',
+    formSubtitle: 'Renseignements, séance d\'essai & inscription.',
+    submitLabel: 'Envoyer ma demande →'
   },
   {
     id: 'territoires',
