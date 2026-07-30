@@ -4,23 +4,22 @@
     <!-- Top Navigation Bar -->
     <NavbarHeader />
 
-    <!-- Sticky Sub-Nav with Back Button & Unit Stamp -->
+    <!-- Sticky Sub-Nav with Back Button -->
     <div class="sticky top-0 z-40 backdrop-blur-xl bg-[#0A0E16]/85 border-b border-[#F1E7D0]/15 px-6 py-4 transition-all">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <BaseButton to="/#u-cross" accent="var(--c-cross)" class="!py-2 !px-4 !text-xs">
           ← RETOUR AUX UNIVERS
         </BaseButton>
         <div class="flex items-center gap-3">
-          <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs py-1 px-3">UNITÉ 01</span>
-          <span class="font-varsity text-xs uppercase tracking-[0.2em] text-[#D9A441] hidden sm:inline-block">CROSS HEAT</span>
+          <span class="font-varsity text-xs uppercase tracking-[0.2em] text-[#D9A441] hidden sm:inline-block">CROSS HEAT & CROSS TRAINING</span>
         </div>
       </div>
     </div>
 
-    <!-- MAIN PAGE FLOW: Exact Univers 01 Section Framework -->
+    <!-- MAIN PAGE FLOW -->
     <main class="relative z-10">
       
-      <!-- HERO SECTION: Identical structure to Univers 01 on homepage -->
+      <!-- HERO SECTION -->
       <section class="univers" id="u-cross" style="--accent: var(--c-cross)">
         <div class="u-bg-art" aria-hidden="true">
           <img :src="crossheatBg" alt="Cross Heat Background" class="u-bg-img" />
@@ -28,9 +27,8 @@
           <div class="u-bg-grain"></div>
         </div>
         <span class="side-label" aria-hidden="true">BSD Athletic Program</span>
-        <span class="corner-stamp stamp" aria-hidden="true">Unité 01</span>
 
-        <!-- Animated Kettlebell SVG (.sico) from landing page -->
+        <!-- Animated Kettlebell SVG (.sico) -->
         <svg class="sico" viewBox="0 0 120 120" aria-hidden="true">
           <g class="fl"><path d="M26 40 q-7 -13 2 -20 q-1 9 6 11 q-2 7 -8 9Z" fill="#FF4B2E"/></g>
           <g class="fl fl2"><path d="M94 36 q8 -12 2 -20 q0 9 -7 10 q0 8 5 10Z" fill="#D9A441"/></g>
@@ -46,15 +44,14 @@
         </svg>
 
         <div class="inner">
-          <div class="ghost reveal">Univers 01 · Cross Training</div>
+          <div class="ghost reveal">Cross Training & WOD</div>
           <h2 class="reveal d1">Cross Heat</h2>
-          <p class="reveal d2">Force, cardio, dépassement. Des WOD collectifs où chacun avance à son rythme, mais jamais seul. Équipement d'entraînement haute intensité, coachs diplômés et ambiance d'entraide universitaire.</p>
+          <p class="reveal d2">Force, cardio, dépassement & Cross Training. Des WOD collectifs où chacun avance à son rythme, mais jamais seul.</p>
           <div class="flex flex-wrap gap-4 mt-6">
             <BaseButton class="reveal d3" accent="var(--c-cross)" href="#reservation">Réserver une séance d'essai</BaseButton>
             <BaseButton class="reveal d3" href="#galerie">Voir les photos</BaseButton>
           </div>
         </div>
-        <div class="num" aria-hidden="true">01</div>
       </section>
 
       <!-- SECTION 2: IMMERSION TERRAIN (Photos Bento Cards) -->

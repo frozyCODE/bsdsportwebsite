@@ -183,10 +183,10 @@ function selectProfile(p) {
 
 .card {
   position: relative;
-  background: rgba(255, 255, 255, .04);
-  backdrop-filter: blur(24px) saturate(1.2);
-  -webkit-backdrop-filter: blur(24px) saturate(1.2);
-  border: 1.5px solid rgba(241, 231, 208, .18);
+  background: linear-gradient(145deg, rgba(14, 23, 42, 0.85) 0%, rgba(9, 14, 26, 0.95) 100%);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1.5px solid rgba(248, 244, 234, .18);
   border-radius: 26px;
   padding: 2.8rem 2rem 2.2rem;
   cursor: pointer;
@@ -200,7 +200,7 @@ function selectProfile(p) {
   text-align: center;
   flex: 1 1 310px;
   max-width: 390px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
   overflow: hidden;
   isolation: isolate;
 }
@@ -212,7 +212,7 @@ function selectProfile(p) {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,.14), transparent);
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.18), transparent);
   transform: skewX(-18deg);
   pointer-events: none;
   opacity: 0;
@@ -225,15 +225,15 @@ function selectProfile(p) {
 }
 
 .card:hover {
-  border-color: var(--accent-card, rgba(241, 231, 208, 0.45));
-  box-shadow: 0 32px 75px rgba(0,0,0,0.65);
-  background: rgba(255, 255, 255, 0.065);
+  border-color: var(--accent-card, #FFC436);
+  box-shadow: 0 0 35px var(--accent-card, rgba(255, 196, 54, 0.25)), 0 30px 75px rgba(0,0,0,0.75);
+  background: linear-gradient(145deg, rgba(20, 32, 58, 0.92) 0%, rgba(12, 19, 36, 0.98) 100%);
 }
 
 .card.active {
   border-color: var(--accent-card, var(--gold));
-  background: rgba(255, 255, 255, 0.085);
-  box-shadow: 0 0 35px var(--accent-card, rgba(217, 164, 65, .25)), 0 28px 65px rgba(0,0,0,.65);
+  background: linear-gradient(145deg, rgba(22, 36, 66, 0.95) 0%, rgba(14, 22, 40, 1) 100%);
+  box-shadow: 0 0 40px var(--accent-card, rgba(255, 196, 54, .35)), 0 28px 65px rgba(0,0,0,.75);
 }
 
 .active-tag {

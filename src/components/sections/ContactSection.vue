@@ -304,7 +304,7 @@
         <span class="ml-2">• Grenoble · Pont-de-Claix · Isère</span>
       </div>
 
-      <div class="flex items-center gap-6 font-semibold">
+      <div class="flex flex-wrap items-center gap-6 font-semibold">
         <router-link to="/mentions-legales" class="hover:text-white transition-colors underline-offset-4 hover:underline">
           Mentions légales
         </router-link>
@@ -314,6 +314,9 @@
         <router-link to="/politique-de-confidentialite" class="hover:text-white transition-colors underline-offset-4 hover:underline">
           Politique de confidentialité
         </router-link>
+        <button @click="activeLegalModal = 'reglement'" class="hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer">
+          Règlement intérieur
+        </button>
       </div>
     </footer>
 
@@ -372,6 +375,17 @@
             <strong class="text-white">Protection :</strong> Vos données restent strictement confidentielles et ne sont jamais cédées à des tiers.<br><br>
             <strong class="text-white">Droits RGPD :</strong> Vous bénéficiez d'un droit d'accès et de suppression de vos informations personnelles en nous écrivant à <em>contact@bsdsport.fr</em>.
           </p>
+        </div>
+
+        <!-- RÈGLEMENT INTÉRIEUR -->
+        <div v-if="activeLegalModal === 'reglement'" class="space-y-4">
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Règlement Intérieur BSD Sport</h3>
+          <div class="text-xs text-[#F1E7D0]/80 leading-relaxed space-y-3 font-body">
+            <p><strong class="text-white">1. Accès & Tenue :</strong> L'accès aux séances et installations exige une tenue sportive propre et appropriée (chaussures de salle d'intérieur réservées aux cours, serviette obligatoire).</p>
+            <p><strong class="text-white">2. Respect & Esprit d'Équipe :</strong> Le respect mutuel entre pratiquants et coachs est la valeur fondamentale du club. Aucune discrimination, incivilité ou comportement inapproprié ne sera toléré.</p>
+            <p><strong class="text-white">3. Matériel & Sécurité :</strong> Le matériel (kettlebells, haltères, sacs de frappe) doit être nettoyé et rangé après chaque utilisation. Il convient de respecter strictement les consignes de sécurité énoncées par les éducateurs diplômés.</p>
+            <p><strong class="text-white">4. Santé & Certificat :</strong> Chaque pratiquant doit s'assurer que sa condition physique est compatible avec la pratique du sport choisi et fournir un certificat médical si requis par la discipline.</p>
+          </div>
         </div>
 
         <div class="mt-6 pt-4 border-t border-[#F1E7D0]/20 text-right">

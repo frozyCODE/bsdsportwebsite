@@ -134,28 +134,32 @@ useReveal()
 }
 
 .btn-primary {
-  background: var(--cardinal);
-  border-color: var(--cardinal);
+  background: linear-gradient(135deg, var(--cardinal) 0%, #A30B24 100%);
+  border: 1.5px solid rgba(255, 196, 54, 0.5);
   color: var(--cream);
+  box-shadow: 0 10px 30px rgba(224, 16, 53, 0.4);
 }
 .btn-primary::after {
   content: none !important;
   display: none !important;
 }
 .btn-primary:hover {
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold) 0%, #E09E1B 100%);
   border-color: var(--gold);
   color: var(--ink);
+  box-shadow: 0 12px 35px rgba(255, 196, 54, 0.5);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid rgba(241, 231, 208, 0.3);
+  background: rgba(14, 23, 42, 0.7);
+  border: 1.5px solid rgba(248, 244, 234, 0.3);
   color: var(--cream);
+  backdrop-filter: blur(12px);
 }
 .btn-ghost:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 196, 54, 0.12);
+  box-shadow: 0 10px 30px rgba(255, 196, 54, 0.25);
 }
 </style>
