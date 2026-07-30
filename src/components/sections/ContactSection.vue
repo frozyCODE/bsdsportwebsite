@@ -184,6 +184,117 @@
           </div>
         </div>
       </div>
+
+      <!-- SECTION REJOIGNEZ-NOUS & GOOGLE MAPS -->
+      <div class="rejoignez-nous-section reveal d2 mt-20 pt-16 border-t border-[#F1E7D0]/10">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8102E]/20 border border-[#C8102E]/40 text-[#D9A441] text-xs font-varsity tracking-[0.25em] uppercase mb-3">
+            <span class="w-2 h-2 rounded-full bg-[#C8102E] animate-ping"></span>
+            <span>Localisation & Accès</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-varsity tracking-wider uppercase text-[#F1E7D0] mb-4">
+            Rejoignez-nous à Pont-de-Claix
+          </h2>
+          <p class="text-sm text-[#F1E7D0]/80 font-body leading-relaxed max-w-2xl mx-auto">
+            Venez vous entraîner avec les équipes de BSD Sport. Nos installations et terrains vous accueillent à Pont-de-Claix, aux portes de Grenoble.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+          <!-- Carte Google Maps (Bleu foncé profond & haut contraste) -->
+          <div class="lg:col-span-2 relative rounded-2xl overflow-hidden border border-[#F1E7D0]/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-[#0E1626] min-h-[350px] sm:min-h-[400px] group">
+            <iframe
+              class="w-full h-full min-h-[350px] sm:min-h-[400px] border-0 filter brightness-65 contrast-160 grayscale-[70%] invert-[95%] hue-rotate-[195deg] opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+              src="https://maps.google.com/maps?q=Pont-de-Claix+BSD+Sport+Is%C3%A8re&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Carte Google Maps BSD Sport Pont-de-Claix"
+            ></iframe>
+
+            <!-- Overlays Bleu Foncé Profond & Haut Contraste (#152238 / #0E1626) -->
+            <div class="absolute inset-0 bg-[#0E1626]/60 mix-blend-multiply pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[#152238]/30 mix-blend-color pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E16] via-transparent to-[#0A0E16]/50 pointer-events-none"></div>
+
+            <!-- Floating Action Button -->
+            <div class="absolute bottom-4 right-4 z-10">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=BSD+Sport+Pont-de-Claix"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#C8102E] hover:bg-[#D9A441] text-[#F1E7D0] hover:text-[#0A0E16] text-xs font-varsity tracking-wider uppercase shadow-xl transition-all duration-300 border border-white/20"
+              >
+                <span>Obtenir l'itinéraire 🗺️</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Informations Pratiques au Design BSD -->
+          <div class="flex flex-col gap-4 justify-between">
+            <div class="p-5 rounded-2xl bg-[#152238]/90 border border-[#F1E7D0]/10 hover:border-[#D9A441]/60 hover:shadow-[0_10px_30px_rgba(217,164,65,0.15)] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-[#C8102E]/20 border border-[#C8102E]/40 text-[#C8102E] flex items-center justify-center text-base">
+                  📍
+                </div>
+                <div>
+                  <h3 class="font-varsity text-sm text-[#F1E7D0] uppercase tracking-wider">Adresse Principale</h3>
+                  <p class="text-[11px] text-[#D9A441] font-mono">38800 Pont-de-Claix</p>
+                </div>
+              </div>
+              <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body pl-12">
+                BSD Sport — Campus Athlétique & Stades<br>
+                Pont-de-Claix · Isère, France
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-[#152238]/90 border border-[#F1E7D0]/10 hover:border-[#D9A441]/60 hover:shadow-[0_10px_30px_rgba(217,164,65,0.15)] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-[#D9A441]/20 border border-[#D9A441]/40 text-[#D9A441] flex items-center justify-center text-base">
+                  🚌
+                </div>
+                <div>
+                  <h3 class="font-varsity text-sm text-[#F1E7D0] uppercase tracking-wider">Accès & Transports</h3>
+                  <p class="text-[11px] text-[#D9A441] font-mono">Bus & Tram TAG</p>
+                </div>
+              </div>
+              <ul class="text-xs text-[#F1E7D0]/80 space-y-1 font-body pl-12">
+                <li>• Tram & Bus du réseau TAG</li>
+                <li>• Accès direct A480 & Route Napoléon (N85)</li>
+                <li>• Parking gratuit sur place</li>
+              </ul>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-[#152238]/90 border border-[#F1E7D0]/10 hover:border-[#D9A441]/60 hover:shadow-[0_10px_30px_rgba(217,164,65,0.15)] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2.5">
+                <div class="w-9 h-9 rounded-xl bg-[#2FA96B]/20 border border-[#2FA96B]/40 text-[#2FA96B] flex items-center justify-center text-base">
+                  🕒
+                </div>
+                <div>
+                  <h3 class="font-varsity text-sm text-[#F1E7D0] uppercase tracking-wider">Horaires du Club</h3>
+                  <p class="text-[11px] text-[#2FA96B] font-mono">Ouvert 6j/7</p>
+                </div>
+              </div>
+              <ul class="text-xs text-[#F1E7D0]/80 space-y-1 font-body pl-12">
+                <li>• Lun – Ven : 08h00 – 21h30</li>
+                <li>• Samedi : 09h00 – 19h00</li>
+                <li>• Dimanche : Événements & Stages</li>
+              </ul>
+            </div>
+
+            <!-- Call to action direct -->
+            <div class="p-5 rounded-2xl bg-gradient-to-r from-[#C8102E]/25 via-[#152238] to-[#152238] border border-[#C8102E]/50 flex items-center justify-between shadow-xl">
+              <div>
+                <p class="text-[11px] font-varsity text-[#D9A441] uppercase tracking-wider">Besoin d'un renseignement ?</p>
+                <p class="text-xs font-semibold text-[#F1E7D0]">07 51 62 29 92</p>
+              </div>
+              <a href="tel:+33751622992" class="px-4 py-2 rounded-xl bg-[#C8102E] hover:bg-[#D9A441] text-white hover:text-black font-varsity text-xs tracking-wider uppercase transition-all duration-300 border border-white/10">
+                Appeler
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->

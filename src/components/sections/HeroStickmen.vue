@@ -1,5 +1,10 @@
 <template>
-  <section id="hero">
+  <section id="hero" class="relative">
+    <!-- Video Widget Preview du Club (Positionné en haut à droite sous le bouton CHOISIR UN TERRAIN) -->
+    <div class="hero-video-top-right reveal d4 hidden lg:block absolute top-20 right-6 xl:right-16 z-20 w-[300px] xl:w-[340px]">
+      <ClubVideoWidget />
+    </div>
+
     <h1>
       <!-- Line 1: Ici, Le sport -->
       <span class="l1 reveal d1">
@@ -96,10 +101,16 @@
         Découvrir les Univers
       </a>
     </div>
+
+    <!-- Mobile / Tablet Fallback Version -->
+    <div class="lg:hidden reveal d4 w-full flex justify-center mt-8 z-10 px-4">
+      <ClubVideoWidget />
+    </div>
   </section>
 </template>
 
 <script setup>
+import ClubVideoWidget from '@/components/common/ClubVideoWidget.vue'
 import { useReveal } from '@/composables/useReveal'
 useReveal()
 </script>
