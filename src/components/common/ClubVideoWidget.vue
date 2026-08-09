@@ -24,6 +24,7 @@
 
       <!-- Silent Looping YouTube Preview Background -->
       <iframe
+        ref="iframeRef"
         class="w-full h-full pointer-events-none opacity-85 group-hover:opacity-100 transition-opacity duration-300 scale-105"
         :src="miniEmbedUrl"
         title="Vidéo du club BSD Sport en boucle"
@@ -44,6 +45,23 @@
       >
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+        </svg>
+      </button>
+
+      <!-- Play/Pause Button -->
+      <button
+        type="button"
+        @click.stop="togglePlay"
+        class="absolute top-1.5 right-8 p-1 rounded bg-black/70 hover:bg-black/90 border border-white/20 text-[#F1E7D0] hover:text-[#D9A441] transition-all duration-200 z-20 opacity-80 group-hover:opacity-100"
+        :title="isPlaying ? 'Mettre en pause' : 'Lire la vidéo'"
+      >
+        <!-- Pause Icon -->
+        <svg v-if="isPlaying" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+        <!-- Play Icon -->
+        <svg v-else class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
         </svg>
       </button>
 
@@ -127,6 +145,21 @@ const isExpanded = ref(false)
 const isDragging = ref(false)
 const position = ref({ x: 0, y: 0 })
 const dragStart = { x: 0, y: 0 }
+
+// Video Control state
+const iframeRef = ref(null)
+const isPlaying = ref(true)
+
+const togglePlay = () => {
+  isPlaying.value = !isPlaying.value
+  if (iframeRef.value && iframeRef.value.contentWindow) {
+    iframeRef.value.contentWindow.postMessage(JSON.stringify({
+      event: 'command',
+      func: isPlaying.value ? 'playVideo' : 'pauseVideo',
+      args: []
+    }), '*')
+  }
+}
 
 // Resizing state
 const isResizing = ref(false)

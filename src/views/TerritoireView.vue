@@ -160,7 +160,7 @@
           <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-bold text-sm mb-6">
             01
           </div>
-          <h3 class="text-xl font-bold text-black mb-3">Sans compétition</h3>
+          <h3 class="text-xl font-bold text-black mb-3">Sans competition</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             Nos actions favorisent la progression individuelle et la coopération collective. La performance n'est pas un critère d'accès ni d'évaluation.
           </p>
@@ -202,7 +202,7 @@
         
         <div class="bg-white rounded-xl p-6 border border-slate-300 shadow-sm text-center">
           <div class="text-3xl mb-3">🫀</div>
-          <h3 class="text-lg font-bold text-black mb-1">Santé</h3>
+          <h3 class="text-lg font-bold text-black mb-1">Sante</h3>
           <p class="text-slate-600 text-xs font-semibold">Prévention & bien-être physique</p>
         </div>
 
@@ -353,6 +353,9 @@
           <router-link to="/politique-de-confidentialite" class="hover:text-black transition-colors underline-offset-4 hover:underline">
             Politique de confidentialité
           </router-link>
+          <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-black transition-colors underline-offset-4 hover:underline">
+            Règlement intérieur
+          </a>
         </div>
 
         <div class="font-medium text-slate-400">
@@ -370,7 +373,7 @@
 
         <!-- MENTIONS LÉGALES -->
         <div v-if="activeModal === 'mentions'" class="space-y-4">
-          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Mentions Légales</h3>
+          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Mentions Legales</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             <strong>Éditeur du site :</strong> BSD Sport (Association loi 1901 à but non lucratif).<br>
             <strong>Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère, France.<br>
@@ -410,7 +413,7 @@
 
         <!-- POLITIQUE DE CONFIDENTIALITÉ -->
         <div v-if="activeModal === 'confidentialite'" class="space-y-4">
-          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Politique de Confidentialité</h3>
+          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Politique de Confidentialite</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             <strong>Collecte des données :</strong> Les données personnelles recueillies via les formulaires de ce site (nom, prénom, email, structure, public ciblé) sont strictement destinées au traitement de vos demandes de partenariats institutionnels ou territoriaux.<br><br>
             <strong>Protection & Usage :</strong> Vos données ne sont en aucun cas vendues, louées ni transmises à des tiers à des fins commerciales.<br><br>

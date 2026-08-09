@@ -129,7 +129,7 @@
       <!-- BOTTOM SUPPORT BAR -->
       <div class="mt-12 bg-[#101622]/80 backdrop-blur-md rounded-2xl p-8 border border-[#F1E7D0]/20 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
-          <h3 class="font-black text-[#F1E7D0] text-lg uppercase tracking-wider font-heading">Informations Légales & RGPD</h3>
+          <h3 class="font-black text-[#F1E7D0] text-lg uppercase tracking-wider font-heading">Informations Legales & RGPD</h3>
           <p class="text-xs text-[#F1E7D0]/70 mt-1">Consultez le cadre juridique et nos engagements de confidentialité.</p>
         </div>
         <div class="flex items-center gap-4">
@@ -152,9 +152,10 @@
           <span>• Plan du Site</span>
         </div>
 
-        <div class="flex items-center gap-6 font-bold">
+        <div class="flex flex-wrap items-center justify-center gap-6 font-bold">
           <router-link to="/mentions-legales" class="hover:text-[#D9A441] transition-colors">Mentions légales</router-link>
           <router-link to="/politique-de-confidentialite" class="hover:text-[#D9A441] transition-colors">Politique de confidentialité</router-link>
+          <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-[#D9A441] transition-colors">Règlement intérieur</a>
         </div>
 
         <div>

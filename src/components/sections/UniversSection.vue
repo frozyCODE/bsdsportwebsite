@@ -252,7 +252,7 @@
 
       <div class="inner">
         <div class="ghost reveal">Évasion & Immersion Athlétique</div>
-        <h2 class="reveal d1">Horizon Sport<span class="tag-soon" style="background: #FF7043;">Projet & Séjours à venir</span></h2>
+        <h2 class="reveal d1">Horizon Sport<span class="tag-soon" style="background: #FF7043;">Projet & Sejours a venir</span></h2>
         <p class="reveal d2">Séjours sportifs immersifs à l'étranger (notamment en Thaïlande). Emmenons des groupes vivre une véritable aventure sportive et culturelle hors du commun.</p>
         <BaseButton class="reveal d3" accent="#FF7043" page="Horizon Sport" :soon="true">Découvrir le projet</BaseButton>
       </div>
@@ -286,7 +286,7 @@
 
       <div class="inner">
         <div class="ghost reveal">Entraînement à distance</div>
-        <h2 class="reveal d1">Programmes<span class="tag-soon">Bientôt disponible</span></h2>
+        <h2 class="reveal d1">Programmes<span class="tag-soon">Bientot disponible</span></h2>
         <p class="reveal d2">Des programmes conçus par nos coachs pour s'entraîner partout. Consultables dès maintenant, souscription à l'ouverture.</p>
         <BaseButton class="reveal d3" accent="var(--c-prog)" page="Programmes" :soon="true">Découvrir</BaseButton>
       </div>

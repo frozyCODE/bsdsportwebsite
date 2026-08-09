@@ -8,22 +8,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
 :root {
   --ink: #0A0E16;
   --ink-alt: #101622;
   --cream: #F1E7D0;
   --gold: #D9A441;
-  --font-varsity: 'Barlow Condensed', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-varsity: 'Futura', sans-serif;
+  --font-body: 'Futura', sans-serif;
+  --font-corporate: 'Futura', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  background: var(--ink);
-  color: var(--cream);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+body { background: linear-gradient(160deg, #FFF9C4 0%, #FFE0B2 30%, #F8BBD0 65%, #E1BEE7 100%); background-attachment: fixed; color: var(--text-black); font-family: var(--font-corporate); line-height: 1.6; }
 header {
   position: sticky; top: 0; z-index: 50;
   background: rgba(10, 14, 22, 0.9);

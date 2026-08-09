@@ -35,10 +35,10 @@ export default {
         }
       },
       fontFamily: {
-        display: ['Anton', 'sans-serif'],
-        varsity: ['Graduate', 'serif'],
-        stencil: ['"Saira Stencil One"', 'sans-serif'],
-        body: ['Barlow', 'sans-serif'],
+        display: ['"Futura Display"', 'sans-serif'],
+        varsity: ['"Futura Display"', 'sans-serif'],
+        stencil: ['"Futura Display"', 'sans-serif'],
+        body: ['Futura', 'sans-serif'],
       }
     },
   },

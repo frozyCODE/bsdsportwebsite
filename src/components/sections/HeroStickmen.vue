@@ -10,9 +10,9 @@
       <span class="l1 reveal d1">
         <span class="sm sm-ici">Ici,</span>
         <span class="big lw1">
-          Le sport
+          <span class="inline-block" style="transform: scaleY(1.1); transform-origin: bottom;">Le sport</span>
           <!-- ATHLETIC RUNNER WITH BENT KNEES, DEPOP & RESPAWN FX -->
-          <svg class="stick runner" viewBox="0 0 50 50" aria-hidden="true">
+          <svg v-if="false" class="stick runner" viewBox="0 0 50 50" aria-hidden="true">
             <g class="runner-body">
               <!-- Clean fine pure white sparkle pop on respawn -->
               <g class="magic-pop">
@@ -70,13 +70,13 @@
       <!-- Line 2: Nous rassemble -->
       <span class="l2 reveal d2">
         <span class="big it">
-          Nous
+          <span class="inline-block" style="transform: scaleY(1.1); transform-origin: bottom;">Nous</span>
         </span>
 
         <span class="big">
-          rassembl<span class="ltr e-bag">e
+          <span class="inline-block" style="transform: scaleY(1.1); transform-origin: bottom;">rassembl</span><span class="ltr e-bag"><span class="inline-block" style="transform: scaleY(1.1); transform-origin: bottom;">e</span>
             <!-- BOXER STICKMAN ORIGINAL -->
-            <svg class="stick boxer" viewBox="0 0 54 62" aria-hidden="true">
+            <svg v-if="false" class="stick boxer" viewBox="0 0 54 62" aria-hidden="true">
               <g class="bod">
                 <circle class="head" cx="34" cy="11" r="5.4"/>
                 <path d="M34 17 L33 36 M33 36 L27 44 L25 52 M33 36 L40 44 L42 52"/>
@@ -134,32 +134,46 @@ useReveal()
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--cardinal) 0%, #A30B24 100%);
-  border: 1.5px solid rgba(255, 196, 54, 0.5);
+  background: transparent;
+  border: 1px solid rgba(241, 231, 208, 0.3);
   color: var(--cream);
-  box-shadow: 0 10px 30px rgba(224, 16, 53, 0.4);
+  box-shadow: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  text-transform: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
 }
-.btn-primary::after {
+.btn-primary::after, .btn-ghost::after {
   content: none !important;
   display: none !important;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--gold) 0%, #E09E1B 100%);
-  border-color: var(--gold);
-  color: var(--ink);
-  box-shadow: 0 12px 35px rgba(255, 196, 54, 0.5);
+  background: rgba(241, 231, 208, 0.1);
+  border-color: var(--cream);
+  color: var(--cream);
+  box-shadow: none;
+  transform: translateY(-2px);
 }
 
 .btn-ghost {
-  background: rgba(14, 23, 42, 0.7);
-  border: 1.5px solid rgba(248, 244, 234, 0.3);
-  color: var(--cream);
-  backdrop-filter: blur(12px);
+  background: transparent;
+  border: none;
+  color: rgba(241, 231, 208, 0.7);
+  box-shadow: none;
+  backdrop-filter: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  text-transform: none;
+  padding: 0.8rem 1.5rem;
 }
 .btn-ghost:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(255, 196, 54, 0.12);
-  box-shadow: 0 10px 30px rgba(255, 196, 54, 0.25);
+  background: transparent;
+  color: var(--cream);
+  border: none;
+  box-shadow: none;
+  transform: translateY(-2px);
 }
 </style>

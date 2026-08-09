@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura Display';
+  src: url('/Futura Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --ink: #070B12;
+  --ink: #151D2A;
+  --ink-alt: #1F2937;
   --navy: #0E172A;
   --navy-2: #090E1A;
   --cardinal: #E01035;
   --cardinal-d: #A30B24;
   --cream: #F8F4EA;
   --cream-d: #E5DEC9;
-  --gold: #FFC436;
+  --gold: #FF7043;
   --olive: #545E35;
 
   --c-cross: #FF3B30;
@@ -22,10 +43,10 @@
   --c-stages: #84CC16;
   --c-prog: #94A3B8;
 
-  --display: 'Anton', sans-serif;
-  --varsity: 'Graduate', serif;
-  --stencil: 'Saira Stencil One', sans-serif;
-  --body: 'Barlow', sans-serif;
+  --display: 'Futura Display', sans-serif;
+  --varsity: 'Futura Display', sans-serif;
+  --stencil: 'Futura Display', sans-serif;
+  --body: 'Futura', sans-serif;
 }
 
 * {
@@ -34,50 +55,11 @@
   box-sizing: border-box;
   -webkit-user-select: none;
   user-select: none;
-  cursor: url('/cursor-glove.svg') 16 6, default !important;
 }
 
 input, textarea {
   -webkit-user-select: text;
   user-select: text;
-  cursor: text !important;
-}
-
-a, button, [role="button"], .card, .dogtag, .faq-filter, .faq-question, .btn, .go, .brand,
-a *, button *, [role="button"] *, .card *, .dogtag *, .faq-filter *, .faq-question *, .btn *, .go *, .brand * {
-  cursor: url('/cursor-glove-pointer.svg') 16 4, pointer !important;
-}
-
-/* Override cursor for Corporate B2B pages to use normal system cursor */
-.corporate-monochrome,
-.corporate-monochrome *,
-.corporate-page,
-.corporate-page * {
-  cursor: auto !important;
-}
-
-.corporate-monochrome a,
-.corporate-monochrome button,
-.corporate-monochrome select,
-.corporate-monochrome input[type="submit"],
-.corporate-monochrome [role="button"],
-.corporate-monochrome a *,
-.corporate-monochrome button *,
-.corporate-page a,
-.corporate-page button,
-.corporate-page select,
-.corporate-page input[type="submit"],
-.corporate-page [role="button"],
-.corporate-page a *,
-.corporate-page button * {
-  cursor: pointer !important;
-}
-
-.corporate-monochrome input,
-.corporate-monochrome textarea,
-.corporate-page input,
-.corporate-page textarea {
-  cursor: text !important;
 }
 
 html {
@@ -258,26 +240,30 @@ body {
   position: relative;
   padding: 7.5rem 3vw 5rem;
   background:
-    radial-gradient(1200px 700px at 70% 10%, rgba(224, 16, 53, 0.32), transparent 65%),
-    radial-gradient(900px 600px at 15% 85%, rgba(255, 196, 54, 0.2), transparent 65%),
-    linear-gradient(180deg, #0A101D 0%, #070B12 65%, #120709 100%);
+    linear-gradient(180deg, rgba(12, 16, 34, 0.6) 0%, rgba(55, 20, 45, 0.5) 55%, rgba(105, 25, 45, 0.55) 100%),
+    url('/senior-woman-electric-mountainbike.jpg') center/cover no-repeat;
   transition: background .5s ease-in-out;
+  overflow: hidden;
 }
 #hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(248, 244, 234, .08) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='256' height='256' viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.14;
+  mix-blend-mode: overlay;
   pointer-events: none;
+  z-index: 0;
 }
 #hero::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 220px;
-  background: linear-gradient(180deg, transparent, #120709);
+  height: 350px;
+  background: linear-gradient(to bottom, rgba(10, 14, 22, 0), #0A0E16);
   pointer-events: none;
+  z-index: 1;
 }
 
 /* marque haut gauche */
@@ -308,15 +294,30 @@ body {
   color: var(--gold);
 }
 
+@keyframes floatSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes pulseShadow {
+  0%, 100% { text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal), 0 0 30px rgba(224, 16, 53, 0.3); }
+  50% { text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal), 0 0 50px rgba(224, 16, 53, 0.6); }
+}
+@keyframes pulseShadowGold {
+  0%, 100% { text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal-d), 0 0 30px rgba(255, 112, 67, 0.4); }
+  50% { text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal-d), 0 0 50px rgba(255, 112, 67, 0.7); }
+}
+
 #hero h1 {
   font-family: var(--display);
   text-transform: uppercase;
+  font-size: 15rem;
   line-height: .86;
   letter-spacing: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  animation: floatSubtle 8s ease-in-out infinite;
 }
 #hero h1 .l1, #hero h1 .l2 {
   display: flex;
@@ -328,7 +329,7 @@ body {
 #hero h1 .big {
   font-size: clamp(4rem, 15.5vw, 15rem);
   color: var(--cream);
-  text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal), 0 0 35px rgba(224, 16, 53, 0.3);
+  animation: pulseShadow 6s ease-in-out infinite;
 }
 #hero h1 .l2 .big {
   font-size: clamp(3.6rem, 13.5vw, 13rem);
@@ -337,20 +338,18 @@ body {
   transform: skewX(-9deg);
   display: inline-block;
   color: var(--gold);
-  text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 var(--cardinal-d), 0 0 35px rgba(255, 196, 54, 0.4);
+  animation: pulseShadowGold 6s ease-in-out infinite reverse;
 }
 #hero h1 .sm {
   font-family: var(--varsity);
   font-size: clamp(.85rem, 2.4vw, 1.8rem);
   letter-spacing: .25em;
   color: var(--gold);
-  align-self: center;
-  text-shadow: 2px 2px 0 var(--ink), 0 0 15px rgba(255, 196, 54, 0.4);
+  animation: pulseShadowGold 6s ease-in-out infinite reverse;
 }
 #hero h1 .sm-ici {
-  align-self: center;
   margin-top: 0;
-  margin-bottom: .05em;
+  margin-bottom: .2em;
 }
 
 /* ==================================================== */
@@ -581,7 +580,6 @@ body {
 /* Boxeur contre la lettre E : garde pliée / bras tendu */
 .e-bag {
   display: inline-block;
-  animation: bagshake 2.4s ease-in-out infinite;
 }
 @keyframes bagshake {
   0%, 26%, 40%, 66%, 80%, 100% { transform: translateX(0) rotate(0); }

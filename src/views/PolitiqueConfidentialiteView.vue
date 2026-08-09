@@ -72,7 +72,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             02
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Données Collectées & Finalités</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Donnees Collectees & Finalites</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-3">
           <p>Les informations personnelles recueillies sur le site sont :</p>
@@ -99,7 +99,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             03
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Conservation, Sécurité & Non-Cession</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Conservation, Securite & Non-Cession</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-3">
           <p>
@@ -122,7 +122,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             04
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Vos Droits (Accès & Suppression)</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Vos Droits (Acces & Suppression)</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-3">
           <p>
@@ -142,9 +142,10 @@
           <span>• Politique de Confidentialité</span>
         </div>
 
-        <div class="flex items-center gap-6 font-bold">
+        <div class="flex flex-wrap items-center justify-center gap-6 font-bold">
           <router-link to="/mentions-legales" class="hover:text-[#D9A441] transition-colors">Mentions légales</router-link>
           <router-link to="/plan-du-site" class="hover:text-[#D9A441] transition-colors">Plan du site</router-link>
+          <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-[#D9A441] transition-colors">Règlement intérieur</a>
         </div>
 
         <div>

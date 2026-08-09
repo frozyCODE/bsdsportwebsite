@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col bg-[#0A0E16] text-[#F1E7D0] font-body selection:bg-[#C8102E] selection:text-[#F1E7D0]">
+    <Preloader />
     <div class="grain-overlay" aria-hidden="true" />
     <router-view />
     <ToastNotification />
@@ -8,6 +9,7 @@
 
 <script setup>
 import ToastNotification from '@/components/common/ToastNotification.vue'
+import Preloader from '@/components/common/Preloader.vue'
 import { useClickSpark } from '@/composables/useClickSpark'
 
 useClickSpark()

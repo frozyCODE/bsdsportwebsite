@@ -9,6 +9,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura Display';
+  src: url('/Futura Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --bg-main: #FFFFFF;
   --bg-alt: #F8FAFC;
@@ -16,18 +34,11 @@
   --text-grey: #64748B;
   --border-light: #E2E8F0;
   --border-dark: #0F172A;
-  --font-corporate: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-corporate: 'Futura', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  background-color: var(--bg-main);
-  color: var(--text-black);
-  font-family: var(--font-corporate);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  cursor: auto !important;
-}
+body { background: linear-gradient(160deg, #FFF9C4 0%, #FFE0B2 30%, #F8BBD0 65%, #E1BEE7 100%); background-attachment: fixed; color: var(--text-black); font-family: var(--font-corporate); line-height: 1.6; -webkit-font-smoothing: antialiased; cursor: auto !important; }
 a, button, select, input[type="submit"], [role="button"] { cursor: pointer !important; }
 input, textarea { cursor: text !important; }
 
@@ -157,6 +168,9 @@ nav.main-nav a:hover, nav.main-nav a.active { color: var(--text-black); }
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
+  transform: scaleY(1.15);
+  transform-origin: left;
+  display: inline-block;
 }
 
 .metrics-grid {
@@ -178,7 +192,7 @@ section.sec {
 }
 .sec-header { text-align: center; max-width: 700px; margin: 0 auto 3.5rem; }
 .sec-tag { font-size: 0.7rem; font-weight: 800; color: var(--text-grey); letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
-.sec-title { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; }
+.sec-title { font-size: 2.25rem; font-weight: normal; letter-spacing: -0.02em; font-family: 'Futura Display', sans-serif; transform: scaleY(1.15); display: inline-block; transform-origin: left; margin-bottom: 0.5rem; }
 .sec-sub { color: var(--text-grey); font-size: 0.95rem; margin-top: 0.5rem; }
 
 /* Cards Grid */
@@ -198,6 +212,7 @@ section.sec {
   transition: all 0.2s;
 }
 .card-mono:hover { border-color: var(--text-black); }
+.card-title { font-size: 1.4rem; font-weight: normal; margin-bottom: 0.5rem; font-family: 'Futura Display', sans-serif; }
 
 /* Form Container */
 .form-card {
@@ -309,7 +324,7 @@ footer {
     <div>
       <div class="card-mono" style="padding:2.5rem 2rem">
         <span class="tag-pill" style="margin-bottom:1rem">PARTENAIRES INSTITUTIONNELS</span>
-        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:1rem">Ils soutiennent nos actions</h3>
+        <h3 class="card-title">Ils soutiennent nos actions</h3>
 
         <div style="display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;font-size:.85rem;font-weight:700">
           <div><span style="font-weight:bold">•</span> Grenoble Alpes Métropole</div>

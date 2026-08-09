@@ -1,7 +1,7 @@
 <template>
   <section id="partenaires">
     <p class="eyebrow reveal">Partenaires</p>
-    <h2 class="reveal d1">Ils nous font déjà confiance</h2>
+    <h2 class="reveal d1">Ils nous font deja confiance</h2>
     
     <div class="orbit-groups reveal d2">
       <div v-for="group in partnerGroups" :key="group.category">

@@ -50,7 +50,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             01
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Éditeur du Site</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Editeur du Site</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-2">
           <p><strong class="text-white">Dénomination sociale :</strong> BSD SPORT (Association régie par la loi du 1er juillet 1901).</p>
@@ -72,7 +72,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             02
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Hébergement du Site</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Hebergement du Site</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-2">
           <p><strong class="text-white">Hébergeur :</strong> Vercel Inc.</p>
@@ -93,7 +93,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             03
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Propriété Intellectuelle</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Propriete Intellectuelle</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-3">
           <p>
@@ -113,7 +113,7 @@
           <div class="w-9 h-9 rounded-lg bg-[#D9A441] text-black font-black text-sm flex items-center justify-center font-heading">
             04
           </div>
-          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Limitation de Responsabilité</h2>
+          <h2 class="text-2xl font-black text-[#F1E7D0] uppercase tracking-wider font-heading">Limitation de Responsabilite</h2>
         </div>
         <div class="text-sm text-[#F1E7D0]/80 leading-relaxed space-y-3">
           <p>
@@ -133,9 +133,10 @@
           <span>• Mentions Légales</span>
         </div>
 
-        <div class="flex items-center gap-6 font-bold">
+        <div class="flex flex-wrap items-center justify-center gap-6 font-bold">
           <router-link to="/plan-du-site" class="hover:text-[#D9A441] transition-colors">Plan du site</router-link>
           <router-link to="/politique-de-confidentialite" class="hover:text-[#D9A441] transition-colors">Politique de confidentialité</router-link>
+          <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-[#D9A441] transition-colors">Règlement intérieur</a>
         </div>
 
         <div>

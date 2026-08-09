@@ -8,16 +8,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
 :root {
   --bg-main: #FFFFFF;
   --bg-alt: #F8FAFC;
   --text-black: #0F172A;
   --text-grey: #64748B;
   --border-light: #E2E8F0;
-  --font-corporate: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-corporate: 'Futura', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg-main); color: var(--text-black); font-family: var(--font-corporate); line-height: 1.6; }
+body { background: linear-gradient(160deg, #FFF9C4 0%, #FFE0B2 30%, #F8BBD0 65%, #E1BEE7 100%); background-attachment: fixed; color: var(--text-black); font-family: var(--font-corporate); line-height: 1.6; }
 header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-light); padding: 1rem 2rem; }
 .header-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .logo-box { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-black); }

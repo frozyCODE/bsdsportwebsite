@@ -112,7 +112,7 @@
                 ESPACE CORPORATE B2B
               </span>
 
-              <h3 class="text-2xl font-extrabold text-black mb-3">Sport & Santé en Entreprise</h3>
+              <h3 class="text-2xl font-extrabold text-black mb-3">Sport & Sante en Entreprise</h3>
               <p class="text-sm text-slate-600 leading-relaxed mb-6">
                 Team Building sur-mesure, pauses actives, prévention des TMS et séminaires d'exception en Isère.
               </p>
@@ -266,7 +266,7 @@
         <div class="bg-white rounded-2xl p-8 border border-slate-300 flex flex-col justify-between hover:border-black transition-all">
           <div>
             <span class="text-[0.65rem] font-extrabold text-slate-500 tracking-widest uppercase block mb-2">SANS ENGAGEMENT</span>
-            <h3 class="text-2xl font-bold text-black mb-2">À la séance</h3>
+            <h3 class="text-2xl font-bold text-black mb-2">A la seance</h3>
             <p class="text-slate-500 text-xs mb-6">Paiement sur place, directement au cours, aucune réservation. Idéal pour tester.</p>
           </div>
           <a href="#contact-b2b" class="block text-center py-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-black font-bold text-xs tracking-wider uppercase transition-colors">
@@ -329,14 +329,14 @@
       <div class="mt-16">
         <div class="text-center max-w-xl mx-auto mb-10">
           <span class="text-slate-500 font-extrabold text-[0.7rem] tracking-widest uppercase mb-2 block">NOTRE ÉQUIPE</span>
-          <h3 class="text-2xl font-extrabold text-black">Des coachs passionnés</h3>
+          <h3 class="text-2xl font-extrabold text-black">Des coachs passionnes</h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div class="bg-white p-6 rounded-xl border border-slate-300 flex items-start gap-4">
             <div class="w-10 h-10 rounded-lg bg-black text-white font-extrabold flex items-center justify-center text-sm shrink-0">ÉS</div>
             <div>
-              <h4 class="font-bold text-black text-base">Éducateurs sportifs</h4>
+              <h4 class="font-bold text-black text-base">Educateurs sportifs</h4>
               <p class="text-xs text-slate-600 mt-1">Diplômés d'État, approches complémentaires</p>
             </div>
           </div>
@@ -468,7 +468,7 @@
         <!-- Side B2B info -->
         <div class="lg:col-span-4 space-y-6">
           <div class="bg-slate-50 p-6 rounded-2xl border border-slate-300">
-            <h4 class="text-xs font-extrabold uppercase tracking-wider text-black mb-3">Pôle B2B Direct</h4>
+            <h4 class="text-xs font-extrabold uppercase tracking-wider text-black mb-3">Pole B2B Direct</h4>
             <div class="text-xs text-slate-700 space-y-2">
               <div><strong>Téléphone :</strong><br>07 51 62 29 92 · 06 46 02 53 71</div>
               <div><strong>Email Pro :</strong><br>b2b@bsdsport.fr</div>
@@ -514,6 +514,9 @@
           <router-link to="/politique-de-confidentialite" class="hover:text-black transition-colors underline-offset-4 hover:underline">
             Politique de confidentialité
           </router-link>
+          <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-black transition-colors underline-offset-4 hover:underline">
+            Règlement intérieur
+          </a>
         </div>
 
         <div class="font-medium text-slate-400">
@@ -531,7 +534,7 @@
 
         <!-- MENTIONS LÉGALES -->
         <div v-if="activeModal === 'mentions'" class="space-y-4">
-          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Mentions Légales</h3>
+          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Mentions Legales</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             <strong>Éditeur du site :</strong> BSD Sport (Association loi 1901 à but non lucratif).<br>
             <strong>Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère, France.<br>
@@ -572,7 +575,7 @@
 
         <!-- POLITIQUE DE CONFIDENTIALITÉ -->
         <div v-if="activeModal === 'confidentialite'" class="space-y-4">
-          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Politique de Confidentialité</h3>
+          <h3 class="text-xl font-extrabold text-black uppercase tracking-tight">Politique de Confidentialite</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             <strong>Collecte des données :</strong> Les données personnelles recueillies via les formulaires de ce site (nom, prénom, email, téléphone, raison sociale) sont strictement destinées au traitement de vos demandes de renseignements ou de devis B2B.<br><br>
             <strong>Protection & Usage :</strong> Vos données ne sont en aucun cas vendues, louées ni transmises à des tiers à des fins commerciales.<br><br>

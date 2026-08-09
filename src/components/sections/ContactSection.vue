@@ -166,16 +166,16 @@
             <a href="mailto:contactbsdsport@gmail.com">contactbsdsport@gmail.com</a>
           </div>
           <div class="info-block">
-            <h3>Téléphones Club</h3>
+            <h3>Telephones Club</h3>
             <a href="tel:+33751622992">07 51 62 29 92</a>
             <a href="tel:+33646025371">06 46 02 53 71</a>
           </div>
           <div class="info-block">
-            <h3>Siège & Stades</h3>
+            <h3>Siege & Stades</h3>
             <span class="location-txt">Grenoble · Pont-de-Claix · Isère</span>
           </div>
           <div class="info-block">
-            <h3>Réseaux Sociaux</h3>
+            <h3>Reseaux Sociaux</h3>
             <div class="social-links">
               <a href="https://instagram.com/bsdsport" target="_blank" rel="noopener">Instagram</a>
               <a href="https://youtube.com/@bsdsport" target="_blank" rel="noopener">YouTube</a>
@@ -193,7 +193,7 @@
             <span>Localisation & Accès</span>
           </div>
           <h2 class="text-3xl sm:text-4xl font-varsity tracking-wider uppercase text-[#F1E7D0] mb-4">
-            Rejoignez-nous à Pont-de-Claix
+            Rejoignez-nous a Pont-de-Claix
           </h2>
           <p class="text-sm text-[#F1E7D0]/80 font-body leading-relaxed max-w-2xl mx-auto">
             Venez vous entraîner avec les équipes de BSD Sport. Nos installations et terrains vous accueillent à Pont-de-Claix, aux portes de Grenoble.
@@ -254,7 +254,7 @@
                   🚌
                 </div>
                 <div>
-                  <h3 class="font-varsity text-sm text-[#F1E7D0] uppercase tracking-wider">Accès & Transports</h3>
+                  <h3 class="font-varsity text-sm text-[#F1E7D0] uppercase tracking-wider">Acces & Transports</h3>
                   <p class="text-[11px] text-[#D9A441] font-mono">Bus & Tram TAG</p>
                 </div>
               </div>
@@ -314,9 +314,9 @@
         <router-link to="/politique-de-confidentialite" class="hover:text-white transition-colors underline-offset-4 hover:underline">
           Politique de confidentialité
         </router-link>
-        <button @click="activeLegalModal = 'reglement'" class="hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer">
+        <a href="/Réglement Intérieur.pdf" target="_blank" class="hover:text-white transition-colors underline-offset-4 hover:underline cursor-pointer">
           Règlement intérieur
-        </button>
+        </a>
       </div>
     </footer>
 
@@ -329,7 +329,7 @@
 
         <!-- MENTIONS LÉGALES -->
         <div v-if="activeLegalModal === 'mentions'" class="space-y-4">
-          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Mentions Légales</h3>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Mentions Legales</h3>
           <p class="text-xs text-[#F1E7D0]/80 leading-relaxed">
             <strong class="text-white">Éditeur du site :</strong> BSD Sport (Association loi 1901 à but non lucratif).<br>
             <strong class="text-white">Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère, France.<br>
@@ -369,7 +369,7 @@
 
         <!-- POLITIQUE DE CONFIDENTIALITÉ -->
         <div v-if="activeLegalModal === 'confidentialite'" class="space-y-4">
-          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Politique de Confidentialité</h3>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Politique de Confidentialite</h3>
           <p class="text-xs text-[#F1E7D0]/80 leading-relaxed">
             <strong class="text-white">Collecte des données :</strong> Vos informations (nom, email, message) collectées via notre formulaire sont uniquement utilisées pour traiter votre demande.<br><br>
             <strong class="text-white">Protection :</strong> Vos données restent strictement confidentielles et ne sont jamais cédées à des tiers.<br><br>
@@ -377,16 +377,6 @@
           </p>
         </div>
 
-        <!-- RÈGLEMENT INTÉRIEUR -->
-        <div v-if="activeLegalModal === 'reglement'" class="space-y-4">
-          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Règlement Intérieur BSD Sport</h3>
-          <div class="text-xs text-[#F1E7D0]/80 leading-relaxed space-y-3 font-body">
-            <p><strong class="text-white">1. Accès & Tenue :</strong> L'accès aux séances et installations exige une tenue sportive propre et appropriée (chaussures de salle d'intérieur réservées aux cours, serviette obligatoire).</p>
-            <p><strong class="text-white">2. Respect & Esprit d'Équipe :</strong> Le respect mutuel entre pratiquants et coachs est la valeur fondamentale du club. Aucune discrimination, incivilité ou comportement inapproprié ne sera toléré.</p>
-            <p><strong class="text-white">3. Matériel & Sécurité :</strong> Le matériel (kettlebells, haltères, sacs de frappe) doit être nettoyé et rangé après chaque utilisation. Il convient de respecter strictement les consignes de sécurité énoncées par les éducateurs diplômés.</p>
-            <p><strong class="text-white">4. Santé & Certificat :</strong> Chaque pratiquant doit s'assurer que sa condition physique est compatible avec la pratique du sport choisi et fournir un certificat médical si requis par la discipline.</p>
-          </div>
-        </div>
 
         <div class="mt-6 pt-4 border-t border-[#F1E7D0]/20 text-right">
           <button @click="activeLegalModal = null" class="px-5 py-2 rounded-lg bg-[#D9A441] text-black font-bold text-xs uppercase tracking-wider hover:bg-[#E5B555] transition-colors">

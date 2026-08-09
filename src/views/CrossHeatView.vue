@@ -78,7 +78,7 @@
               </div>
               <div class="p-6 relative z-10 bg-[#0A0E16]/85 border-t border-[#F1E7D0]/15">
                 <span class="stamp border-[#FF4B2E] text-[#FF4B2E] text-xs py-0.5 px-2.5 mb-2 inline-block">ÉPREUVE EN ÉQUIPE</span>
-                <h3 class="font-varsity text-xl text-[#F1E7D0] uppercase tracking-wider mb-2">Tir à la corde & Dépassement</h3>
+                <h3 class="font-varsity text-xl text-[#F1E7D0] uppercase tracking-wider mb-2">Tir a la corde & Depassement</h3>
                 <p class="text-sm text-[#F1E7D0]/80 font-body">La force mentale et l'effort collectif au cœur du WOD Cross Heat. Ici, personne n'abandonne.</p>
               </div>
             </div>
@@ -111,14 +111,14 @@
 
         <div class="inner inner-wide">
           <div class="ghost reveal">Structure du WOD</div>
-          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4.5rem)">Déroulé d'une séance</h2>
+          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4.5rem)">Deroule d'une seance</h2>
           <p class="reveal d2">Un programme structuré de 60 minutes conçu pour progresser à chaque entraînement.</p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div class="card !p-6 group hover:border-[#FF4B2E]/70 transition-all">
               <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
               <div class="w-12 h-12 rounded-xl bg-[#FF4B2E]/20 text-[#FF4B2E] border border-[#FF4B2E]/40 grid place-items-center font-display text-xl mb-4">01</div>
-              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Warm-up & Mobilité</h4>
+              <h4 class="font-varsity text-base text-[#F1E7D0] mb-1 uppercase tracking-wide">Warm-up & Mobilite</h4>
               <span class="baseline text-[#D9A441]">15 MINUTES</span>
               <p class="text-xs text-[#F1E7D0]/80 leading-relaxed font-body">Préparation articulaire et montée en température cardiaque pour aborder l'effort en toute sécurité.</p>
             </div>
@@ -161,7 +161,7 @@
 
         <div class="inner" style="max-width: 800px; margin: 0 auto">
           <div class="ghost reveal">S'entraîner à BSD Sport</div>
-          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4rem)">Rejoindre un créneau</h2>
+          <h2 class="reveal d1" style="font-size: clamp(2.2rem, 5vw, 4rem)">Rejoindre un creneau</h2>
           <p class="reveal d2">Réservez votre séance d'essai gratuite. Les places sont limitées à 12 personnes par WOD.</p>
 
           <form @submit.prevent="handleBooking" class="mt-8">
