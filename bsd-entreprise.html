@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSD Sport — Campus Sportif · Pont-de-Claix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #1a1a1a;
+            background: #f8f7f4;
+            line-height: 1.6
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        button {
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif
+        }
+
+        :root {
+            --orange: #E8610A;
+            --orange-light: #FDF0E8;
+            --orange-mid: #F5A06A;
+            --dark: #0f1117;
+            --dark2: #1a1e2a;
+            --gray-100: #f8f7f4;
+            --gray-200: #f0ede8;
+            --gray-300: #e0dcd5;
+            --gray-500: #8a8880;
+            --gray-700: #4a4845;
+            --green: #1D9E75;
+            --green-light: #E1F5EE;
+            --blue: #378ADD;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px
+        }
+
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(248, 247, 244, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-300)
+        }
+
+        nav {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 64px
+        }
+
+        .nav-logo-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1;
+            cursor: pointer
+        }
+
+        .nav-logo-text em {
+            color: var(--orange);
+            font-style: normal
+        }
+
+        .nav-logo-sub {
+            font-size: 11px;
+            color: var(--gray-500)
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 4px;
+            background: var(--gray-200);
+            border-radius: 999px;
+            padding: 4px
+        }
+
+        .nav-tab {
+            padding: 7px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--gray-700);
+            border: none;
+            background: transparent;
+            transition: all .2s;
+            cursor: pointer
+        }
+
+        .nav-tab.active {
+            background: #fff;
+            color: var(--dark);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .08)
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .nav-links-right {
+            display: flex;
+            gap: 18px;
+            list-style: none
+        }
+
+        .nav-links-right a {
+            font-size: 13px;
+            color: var(--gray-700);
+            cursor: pointer
+        }
+
+        .btn-cta {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500
+        }
+
+        .page {
+            display: none
+        }
+
+        .page.active {
+            display: block
+        }
+
+        .hero-public {
+            background: var(--dark);
+            overflow: hidden
+        }
+
+        .hero-public-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 72px 24px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: end
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            background: rgba(232, 97, 10, .15);
+            border: 1px solid rgba(232, 97, 10, .3);
+            border-radius: 999px;
+            padding: 5px 14px;
+            margin-bottom: 18px
+        }
+
+        .hero-tag span {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--orange)
+        }
+
+        .hero-public h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 62px;
+            font-weight: 900;
+            line-height: .95;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 18px
+        }
+
+        .hero-public h1 em {
+            color: var(--orange);
+            font-style: normal;
+            display: block
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 36px
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer
+        }
+
+        .btn-outline-w {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .25);
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer
+        }
+
+        .hero-activity-card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: var(--radius-lg);
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 10px
+        }
+
+        .hac-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-md);
+            background: rgba(232, 97, 10, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .hac-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 2px
+        }
+
+        .hac-detail {
+            font-size: 12px;
+            color: #6a7080
+        }
+
+        .hac-badge {
+            margin-left: auto;
+            background: rgba(232, 97, 10, .2);
+            color: var(--orange-mid);
+            border-radius: 999px;
+            padding: 3px 10px;
+            font-size: 11px;
+            font-weight: 500;
+            white-space: nowrap
+        }
+
+        .stats-bar {
+            background: var(--orange);
+            padding: 16px 24px
+        }
+
+        .stats-bar-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 4px 8px;
+            position: relative
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background: rgba(255, 255, 255, .25)
+        }
+
+        .stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .78);
+            margin-top: 2px
+        }
+
+        .section {
+            padding: 64px 24px
+        }
+
+        .section-inner {
+            max-width: 1140px;
+            margin: 0 auto
+        }
+
+        .section-alt {
+            background: var(--gray-200)
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: #fff
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 8px
+        }
+
+        .section-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.05;
+            margin-bottom: 10px
+        }
+
+        .section-desc {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.65;
+            max-width: 520px;
+            margin-bottom: 32px
+        }
+
+        .nav-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 22px;
+            transition: transform .2s, box-shadow .2s, border-color .2s;
+            cursor: pointer
+        }
+
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .07);
+            border-color: var(--orange)
+        }
+
+        .nav-card-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px
+        }
+
+        .nav-card-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--dark)
+        }
+
+        .nav-card-desc {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+            margin-bottom: 10px
+        }
+
+        .nav-card-arrow {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--orange)
+        }
+
+        .act-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 22px;
+            transition: transform .2s, box-shadow .2s, border-color .2s
+        }
+
+        .act-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .07);
+            border-color: var(--orange)
+        }
+
+        .act-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px
+        }
+
+        .act-card h3 {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 6px
+        }
+
+        .act-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5
+        }
+
+        .act-tag {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--orange);
+            background: var(--orange-light);
+            padding: 3px 10px;
+            border-radius: 999px
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px
+        }
+
+        .price-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 26px 22px;
+            position: relative;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .price-card.featured {
+            background: var(--dark);
+            border-color: var(--orange)
+        }
+
+        .price-popular {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--orange);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 14px;
+            border-radius: 999px;
+            white-space: nowrap
+        }
+
+        .price-plan {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 8px
+        }
+
+        .price-card.featured .price-plan {
+            color: #6a7080
+        }
+
+        .price-amount {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1;
+            margin-bottom: 4px
+        }
+
+        .price-card.featured .price-amount {
+            color: #fff
+        }
+
+        .price-sub {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 18px
+        }
+
+        .price-card.featured .price-sub {
+            color: #6a7080
+        }
+
+        .price-feats {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .price-feats li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--gray-700)
+        }
+
+        .price-card.featured .price-feats li {
+            color: #aaa
+        }
+
+        .check-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--orange);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .check-circle::after {
+            content: '';
+            width: 5px;
+            height: 3px;
+            border-left: 1.5px solid #fff;
+            border-bottom: 1.5px solid #fff;
+            transform: rotate(-45deg) translate(.5px, -.5px)
+        }
+
+        .btn-plan {
+            width: 100%;
+            padding: 11px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--gray-300);
+            background: transparent;
+            color: var(--dark);
+            cursor: pointer
+        }
+
+        .price-card.featured .btn-plan {
+            background: var(--orange);
+            color: #fff;
+            border-color: var(--orange)
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 44px;
+            align-items: center
+        }
+
+        .about-text p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 14px
+        }
+
+        .about-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 6px
+        }
+
+        .pill {
+            background: var(--orange-light);
+            color: #993C1D;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 999px
+        }
+
+        .partners-flex {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .partner-chip {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            padding: 7px 16px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-700)
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            align-items: start
+        }
+
+        .contact-form-block {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-xl);
+            padding: 28px
+        }
+
+        .form-group {
+            margin-bottom: 12px
+        }
+
+        .form-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-700);
+            margin-bottom: 5px;
+            display: block
+        }
+
+        .form-input {
+            width: 100%;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            padding: 10px 13px;
+            font-size: 14px;
+            color: var(--dark);
+            font-family: 'DM Sans', sans-serif;
+            outline: none
+        }
+
+        .form-input:focus {
+            border-color: var(--orange);
+            background: #fff
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px
+        }
+
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 18px
+        }
+
+        .info-card {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .info-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--orange-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .info-text strong {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 2px
+        }
+
+        .info-text span {
+            font-size: 13px;
+            color: var(--gray-500)
+        }
+
+        .social-block {
+            background: var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 14px
+        }
+
+        .social-block-title {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 5px
+        }
+
+        .social-handles {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--gray-500)
+        }
+
+        .hero-b2b {
+            background: var(--dark);
+            padding: 72px 24px 0;
+            overflow: hidden;
+            position: relative
+        }
+
+        .hero-b2b-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 40px;
+            align-items: end
+        }
+
+        .hero-b2b h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 58px;
+            font-weight: 900;
+            line-height: .95;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 18px
+        }
+
+        .hero-b2b h1 em {
+            color: var(--orange);
+            font-style: normal;
+            display: block
+        }
+
+        .hero-b2b-desc {
+            font-size: 15px;
+            color: #8a8f9e;
+            line-height: 1.65;
+            max-width: 440px;
+            margin-bottom: 24px
+        }
+
+        .hero-kpis {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px
+        }
+
+        .kpi-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: var(--radius-lg);
+            padding: 16px
+        }
+
+        .kpi-val {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1
+        }
+
+        .kpi-label {
+            font-size: 12px;
+            color: #5a5f6e;
+            margin-top: 4px;
+            line-height: 1.3
+        }
+
+        .prob-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+
+        .prob-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .prob-icon-wrap {
+            width: 34px;
+            height: 34px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .prob-card h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 3px
+        }
+
+        .prob-card p {
+            font-size: 12px;
+            color: var(--gray-500);
+            line-height: 1.5
+        }
+
+        .stats-b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px
+        }
+
+        .stat-b2b-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 20px
+        }
+
+        .stat-b2b-big {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1
+        }
+
+        .stat-b2b-desc {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 5px;
+            line-height: 1.5
+        }
+
+        .stat-b2b-src {
+            font-size: 10px;
+            color: var(--gray-500);
+            opacity: .55;
+            margin-top: 3px;
+            font-style: italic
+        }
+
+        .rse-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: start
+        }
+
+        .rse-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        .rse-step {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            flex-shrink: 0
+        }
+
+        .rse-step h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 3px
+        }
+
+        .rse-step p {
+            font-size: 12px;
+            color: var(--gray-500);
+            line-height: 1.5
+        }
+
+        .rse-odds {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .odd-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray-700)
+        }
+
+        .odd-color {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            flex-shrink: 0
+        }
+
+        .rse-report-mock {
+            background: var(--dark);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            border: 1px solid rgba(232, 97, 10, .2)
+        }
+
+        .rrm-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px
+        }
+
+        .rrm-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .badge-new {
+            background: var(--orange);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 500;
+            padding: 2px 7px;
+            border-radius: 999px
+        }
+
+        .rrm-period {
+            font-size: 11px;
+            color: #5a5f6e
+        }
+
+        .rrm-kpis {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 14px
+        }
+
+        .rrm-kpi {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: var(--radius-md);
+            padding: 10px
+        }
+
+        .rrm-kpi-val {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1
+        }
+
+        .rrm-kpi-val.green {
+            color: #5DCAA5
+        }
+
+        .rrm-kpi-val.orange {
+            color: var(--orange)
+        }
+
+        .rrm-kpi-val.white {
+            color: #fff
+        }
+
+        .rrm-kpi-label {
+            font-size: 11px;
+            color: #5a5f6e;
+            margin-top: 3px
+        }
+
+        .rrm-rows {
+            display: flex;
+            flex-direction: column
+        }
+
+        .rrm-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        .rrm-row:last-child {
+            border-bottom: none
+        }
+
+        .rrm-row-label {
+            font-size: 12px;
+            color: #6a7080
+        }
+
+        .rrm-row-val {
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff
+        }
+
+        .rrm-row-val.green {
+            color: #5DCAA5
+        }
+
+        .rrm-footer {
+            margin-top: 12px;
+            padding: 9px 11px;
+            background: rgba(232, 97, 10, .07);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(232, 97, 10, .15);
+            font-size: 11px;
+            color: #8a8f9e;
+            line-height: 1.5
+        }
+
+        .fin-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+
+        .fin-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 18px
+        }
+
+        .fin-card h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px
+        }
+
+        .fin-card p {
+            font-size: 12px;
+            color: var(--gray-500);
+            line-height: 1.5
+        }
+
+        .fin-highlight {
+            color: var(--orange);
+            font-weight: 500
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px
+        }
+
+        .proc-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            text-align: center
+        }
+
+        .proc-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1;
+            margin-bottom: 8px
+        }
+
+        .proc-card h4 {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 3px
+        }
+
+        .proc-card p {
+            font-size: 11px;
+            color: var(--gray-500);
+            line-height: 1.5
+        }
+
+        .cta-block {
+            background: var(--dark);
+            padding: 64px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .cta-inner {
+            max-width: 580px;
+            margin: 0 auto;
+            position: relative
+        }
+
+        .cta-inner h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 44px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1
+        }
+
+        .cta-inner h2 em {
+            color: var(--orange);
+            font-style: normal
+        }
+
+        .cta-inner p {
+            font-size: 15px;
+            color: #6a7080;
+            margin-bottom: 24px;
+            line-height: 1.6
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px
+        }
+
+        .cta-contact-row {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #5a5f6e
+        }
+
+        .hero-territoire {
+            background: var(--dark);
+            padding: 72px 24px 0;
+            overflow: hidden;
+            position: relative
+        }
+
+        .hero-territoire-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 40px;
+            align-items: end
+        }
+
+        .photo-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            background: var(--dark)
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            background: linear-gradient(135deg, #1a1e2a, #0f1117);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            aspect-ratio: 4/3
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+            color: #fff;
+            font-size: 11px;
+            padding: 22px 12px 9px;
+            line-height: 1.3
+        }
+
+        .axes-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .axe-card {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none
+        }
+
+        .axe-card.open {
+            border-color: var(--orange);
+            box-shadow: 0 4px 20px rgba(232, 97, 10, .12)
+        }
+
+        .axe-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px
+        }
+
+        .axe-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--gray-300);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 34px
+        }
+
+        .axe-card.open .axe-num {
+            color: var(--orange)
+        }
+
+        .axe-icon-wrap {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .axe-head-text {
+            flex: 1;
+            min-width: 0
+        }
+
+        .axe-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            line-height: 1.3
+        }
+
+        .axe-sub {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 2px
+        }
+
+        .axe-chevron {
+            color: var(--gray-500);
+            transition: transform .25s;
+            flex-shrink: 0;
+            margin-left: 8px
+        }
+
+        .axe-card.open .axe-chevron {
+            transform: rotate(180deg);
+            color: var(--orange)
+        }
+
+        .axe-body {
+            display: none;
+            padding: 0 22px 22px;
+            padding-left: 108px
+        }
+
+        .axe-card.open .axe-body {
+            display: block
+        }
+
+        .axe-body>p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 14px;
+            border-left: 2px solid var(--orange-light);
+            padding-left: 12px
+        }
+
+        .axe-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 14px
+        }
+
+        .axe-tag {
+            background: var(--gray-200);
+            border-radius: 999px;
+            padding: 4px 11px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray-700)
+        }
+
+        .axe-card.open .axe-tag {
+            background: var(--orange-light);
+            color: #7a3010
+        }
+
+        .axe-feats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px
+        }
+
+        .axe-feat {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 12px;
+            color: var(--gray-700)
+        }
+
+        .axe-check {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--orange);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .axe-check::after {
+            content: '';
+            width: 5px;
+            height: 3px;
+            border-left: 1.5px solid #fff;
+            border-bottom: 1.5px solid #fff;
+            transform: rotate(-45deg) translate(1px, 0)
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .5s ease, transform .5s ease
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .notif {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--dark);
+            color: #fff;
+            border: 1px solid rgba(232, 97, 10, .3);
+            border-radius: var(--radius-lg);
+            padding: 12px 18px;
+            font-size: 13px;
+            z-index: 999;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: all .35s;
+            pointer-events: none;
+            max-width: 260px
+        }
+
+        .notif.show {
+            transform: translateY(0);
+            opacity: 1
+        }
+
+        .notif strong {
+            color: var(--orange)
+        }
+
+        @media(max-width:900px) {
+
+            .hero-public-inner,
+            .hero-b2b-inner,
+            .hero-territoire-inner,
+            .about-grid,
+            .contact-grid,
+            .rse-grid {
+                grid-template-columns: 1fr
+            }
+
+            .stats-b2b-grid,
+            .pricing-grid,
+            .prob-grid,
+            .fin-grid,
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero-public h1,
+            .hero-b2b h1 {
+                font-size: 46px
+            }
+
+            nav {
+                padding: 0 16px
+            }
+
+            .nav-links-right {
+                display: none
+            }
+
+            .section {
+                padding: 48px 16px
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .stats-b2b-grid,
+            .pricing-grid,
+            .prob-grid,
+            .fin-grid,
+            .process-grid,
+            .hero-kpis {
+                grid-template-columns: 1fr
+            }
+
+            .nav-center {
+                gap: 2px
+            }
+
+            .nav-tab {
+                padding: 6px 12px;
+                font-size: 12px
+            }
+
+            .section-title {
+                font-size: 28px
+            }
+
+            .axe-body {
+                padding-left: 22px
+            }
+
+            .axe-num {
+                display: none
+            }
+
+            .axe-feats {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notif" id="notif"></div>
+    <div class="nav-wrapper">
+        <nav>
+            <div onclick="switchPage('public',document.querySelector('.nav-tab'))">
+                <div class="nav-logo-text">BSD<em>SPORT</em></div>
+                <div class="nav-logo-sub">Campus Sportif · Pont-de-Claix</div>
+            </div>
+            <div class="nav-center">
+                <button class="nav-tab active" onclick="switchPage('public',this)">Particuliers</button>
+                <button class="nav-tab" onclick="switchPage('entreprise',this)">Entreprises</button>
+                <button class="nav-tab" onclick="switchPage('territoire',this)">Territoire &amp; Social</button>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links-right">
+                    <li><a onclick="scrollToSection('activites')">Activités</a></li>
+                    <li><a onclick="scrollToSection('planning')">Planning</a></li>
+                    <li><a onclick="scrollToSection('contact')">Contact</a></li>
+                </ul>
+                <button class="btn-cta" id="nav-cta-btn" onclick="scrollToSection('contact')">S'inscrire</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="page active" id="page-public">
+        <div class="hero-public">
+            <div class="hero-public-inner">
+                <div>
+                    <div class="hero-tag"><span>Campus multisports · Pont-de-Claix</span></div>
+                    <h1>BSD, c'est avant tout un<br><em>créateur de lien social.</em></h1>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#8a8f9e"><span
+                                style="color:var(--orange);font-size:17px;flex-shrink:0">→</span><span>Favoriser la
+                                remise en forme et la confiance en soi.</span></li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#8a8f9e"><span
+                                style="color:var(--orange);font-size:17px;flex-shrink:0">→</span><span>Lutter contre
+                                l'isolement et les méfaits de la sédentarité.</span></li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#8a8f9e"><span
+                                style="color:var(--orange);font-size:17px;flex-shrink:0">→</span><span>Proposer des
+                                activités diverses, accessibles à tous.</span></li>
+                    </ul>
+                    <div class="hero-btns">
+                        <button class="btn-primary" onclick="scrollToSection('activites')">Découvrir les cours</button>
+                        <button class="btn-outline-w" onclick="scrollToSection('planning')">Voir le planning</button>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style="border-radius:var(--radius-xl);overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 50px rgba(0,0,0,.5)">
+                        <div id="yt-accueil"
+                            style="position:relative;padding-bottom:56.25%;height:0;cursor:pointer;background:#111"
+                            onclick="loadYoutube('yt-accueil','fRYDn_LXMIY')">
+                            <img src="https://img.youtube.com/vi/fRYDn_LXMIY/maxresdefault.jpg"
+                                onerror="this.src='https://img.youtube.com/vi/fRYDn_LXMIY/hqdefault.jpg'"
+                                alt="BSD Sport"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+                            <div
+                                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:rgba(232,97,10,.92);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <polygon points="5,3 19,12 5,21" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stats-bar-inner">
+                <div class="stat-item">
+                    <div class="stat-num">2014</div>
+                    <div class="stat-label">Fondé en</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">6+</div>
+                    <div class="stat-label">Disciplines</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">10 ans</div>
+                    <div class="stat-label">D'expertise</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Accessible à tous</div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" id="section-activites">
+            <div class="section-inner">
+                <div class="eyebrow">Nos activités</div>
+                <div class="section-title" style="margin-bottom:28px">Ce que nous proposons</div>
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+                    <div class="nav-card fade-up" onclick="scrollToSection('contact')">
+                        <div class="nav-card-icon" style="background:#FDF0E8"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg></div>
+                        <div class="nav-card-title">Cours collectifs</div>
+                        <div class="nav-card-desc">Step, Cross-Heat, Urban Training, Sports de combat</div><span
+                            class="nav-card-arrow">Découvrir →</span>
+                    </div>
+                    <div class="nav-card fade-up" style="transition-delay:.05s" onclick="scrollToSection('contact')">
+                        <div class="nav-card-icon" style="background:#E6F1FB"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#378ADD" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg></div>
+                        <div class="nav-card-title">Cours individuels</div>
+                        <div class="nav-card-desc">Coaching personnalisé adapté à vos objectifs</div><span
+                            class="nav-card-arrow" style="color:#378ADD">Découvrir →</span>
+                    </div>
+                    <div class="nav-card fade-up" style="transition-delay:.1s" onclick="scrollToSection('contact')">
+                        <div class="nav-card-icon" style="background:#E1F5EE"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2">
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                <line x1="4" y1="22" x2="4" y2="15" />
+                            </svg></div>
+                        <div class="nav-card-title">Stages</div>
+                        <div class="nav-card-desc">Sessions intensives, Boot-Camp et séjours sportifs</div><span
+                            class="nav-card-arrow" style="color:#1D9E75">Découvrir →</span>
+                    </div>
+                    <div class="nav-card fade-up" style="transition-delay:.15s" onclick="scrollToSection('tarifs')">
+                        <div class="nav-card-icon" style="background:#FDF0E8"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg></div>
+                        <div class="nav-card-title">Programmes</div>
+                        <div class="nav-card-desc">Abonnements mensuels et programmes sur mesure</div><span
+                            class="nav-card-arrow">Découvrir →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-planning">
+            <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center">
+                <div class="fade-up">
+                    <div class="eyebrow">Organisation</div>
+                    <div class="section-title">Consultez le planning</div>
+                    <p style="font-size:15px;color:var(--gray-500);line-height:1.65;margin-bottom:22px">Retrouvez tous
+                        les horaires de nos cours. Les séances sont ouvertes à tous les niveaux, sans réservation
+                        obligatoire.</p><a href="https://bsdsport.fr/planning" target="_blank"
+                        style="display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:#fff;padding:12px 24px;border-radius:999px;font-size:14px;font-weight:500">Voir
+                        le planning complet →</a>
+                </div>
+                <div class="fade-up" style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
+                    <div style="text-align:center">
+                        <div
+                            style="font-size:10px;font-weight:600;color:var(--gray-500);text-transform:uppercase;margin-bottom:7px">
+                            Lun</div>
+                        <div
+                            style="background:var(--orange-light);border:1px solid #f5c4a0;border-radius:6px;padding:7px 4px;font-size:10px;color:var(--orange);font-weight:600;margin-bottom:5px">
+                            9h00<br><span style="font-weight:400;opacity:.8">Cross</span></div>
+                        <div
+                            style="background:var(--dark2);border-radius:6px;padding:7px 4px;font-size:10px;color:#aaa;font-weight:600">
+                            18h30<br><span style="font-weight:400;opacity:.7">Step</span></div>
+                    </div>
+                    <div style="text-align:center">
+                        <div
+                            style="font-size:10px;font-weight:600;color:var(--gray-500);text-transform:uppercase;margin-bottom:7px">
+                            Mar</div>
+                        <div
+                            style="background:var(--gray-200);border:1px solid var(--gray-300);border-radius:6px;padding:7px 4px;font-size:10px;color:var(--gray-700);font-weight:600;margin-bottom:5px">
+                            10h00<br><span style="font-weight:400;opacity:.8">Step</span></div>
+                        <div
+                            style="background:var(--orange-light);border:1px solid #f5c4a0;border-radius:6px;padding:7px 4px;font-size:10px;color:var(--orange);font-weight:600">
+                            19h00<br><span style="font-weight:400;opacity:.8">Boxe</span></div>
+                    </div>
+                    <div style="text-align:center">
+                        <div
+                            style="font-size:10px;font-weight:600;color:var(--gray-500);text-transform:uppercase;margin-bottom:7px">
+                            Mer</div>
+                        <div
+                            style="background:var(--dark2);border-radius:6px;padding:7px 4px;font-size:10px;color:#aaa;font-weight:600;margin-bottom:5px">
+                            9h30<br><span style="font-weight:400;opacity:.7">Urban</span></div>
+                        <div
+                            style="background:var(--gray-200);border:1px solid var(--gray-300);border-radius:6px;padding:7px 4px;font-size:10px;color:var(--gray-700);font-weight:600">
+                            18h00<br><span style="font-weight:400;opacity:.8">Cross</span></div>
+                    </div>
+                    <div style="text-align:center">
+                        <div
+                            style="font-size:10px;font-weight:600;color:var(--gray-500);text-transform:uppercase;margin-bottom:7px">
+                            Jeu</div>
+                        <div
+                            style="background:var(--orange-light);border:1px solid #f5c4a0;border-radius:6px;padding:7px 4px;font-size:10px;color:var(--orange);font-weight:600;margin-bottom:5px">
+                            9h00<br><span style="font-weight:400;opacity:.8">Step</span></div>
+                        <div
+                            style="background:var(--dark2);border-radius:6px;padding:7px 4px;font-size:10px;color:#aaa;font-weight:600">
+                            18h30<br><span style="font-weight:400;opacity:.7">Urban</span></div>
+                    </div>
+                    <div style="text-align:center">
+                        <div
+                            style="font-size:10px;font-weight:600;color:var(--gray-500);text-transform:uppercase;margin-bottom:7px">
+                            Ven</div>
+                        <div
+                            style="background:var(--gray-200);border:1px solid var(--gray-300);border-radius:6px;padding:7px 4px;font-size:10px;color:var(--gray-700);font-weight:600;margin-bottom:5px">
+                            10h00<br><span style="font-weight:400;opacity:.8">Cross</span></div>
+                        <div
+                            style="background:var(--orange-light);border:1px solid #f5c4a0;border-radius:6px;padding:7px 4px;font-size:10px;color:var(--orange);font-weight:600">
+                            19h00<br><span style="font-weight:400;opacity:.8">Boxe</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-tarifs">
+            <div class="section-inner">
+                <div class="eyebrow">Tarifs</div>
+                <div class="section-title">Nos formules</div>
+                <p class="section-desc">Sans engagement ou abonnement — à vous de choisir.</p>
+                <div class="pricing-grid">
+                    <div class="price-card fade-up">
+                        <div class="price-plan">À la séance</div>
+                        <div class="price-amount" style="font-size:24px;line-height:1.2;margin-bottom:7px">
+                            Paiement<br>sur place</div>
+                        <div class="price-sub">Directement au cours, aucune réservation</div>
+                        <ul class="price-feats">
+                            <li><span class="check-circle"></span>Cours collectifs</li>
+                            <li><span class="check-circle"></span>Aucun engagement</li>
+                            <li><span class="check-circle"></span>Idéal pour tester</li>
+                        </ul><button class="btn-plan" onclick="scrollToSection('contact')">Se renseigner</button>
+                    </div>
+                    <div class="price-card featured fade-up" style="transition-delay:.05s">
+                        <div class="price-popular">Le plus populaire</div>
+                        <div class="price-plan">Programme mensuel</div>
+                        <div class="price-amount">Programme</div>
+                        <div class="price-sub">Accès illimité aux cours collectifs</div>
+                        <ul class="price-feats">
+                            <li><span class="check-circle"></span>Tous les cours collectifs</li>
+                            <li><span class="check-circle"></span>Suivi personnalisé</li>
+                            <li><span class="check-circle"></span>Accès bibliothèque BSD</li>
+                            <li><span class="check-circle"></span>Bilan mensuel inclus</li>
+                        </ul><button class="btn-plan" onclick="scrollToSection('contact')">Voir les prix</button>
+                    </div>
+                    <div class="price-card fade-up" style="transition-delay:.1s">
+                        <div class="price-plan">Cours individuel</div>
+                        <div class="price-amount">Sur mesure</div>
+                        <div class="price-sub">Coaching personnalisé 1:1</div>
+                        <ul class="price-feats">
+                            <li><span class="check-circle"></span>Programme dédié</li>
+                            <li><span class="check-circle"></span>Horaires flexibles</li>
+                            <li><span class="check-circle"></span>Suivi entre séances</li>
+                        </ul><button class="btn-plan" onclick="scrollToSection('contact')">Réserver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt">
+            <div class="section-inner">
+                <div class="about-grid">
+                    <div class="fade-up">
+                        <div class="eyebrow">Notre histoire</div>
+                        <div class="section-title">À propos de BSD Sport</div>
+                        <div class="about-text">
+                            <p>Notre mission est claire : rendre le sport accessible à tous, en particulier aux publics
+                                qui en sont éloignés. À travers une offre multisports, variée et ludique, nous
+                                favorisons la découverte et l'initiation, sans recherche de performance ni de
+                                compétition.</p>
+                            <p>Au-delà du sport, nous nous définissons comme un créateur de lien social : chaque action
+                                est pensée pour renforcer les valeurs humaines, l'estime de soi et la cohésion au sein
+                                de la communauté locale.</p>
+                        </div>
+                        <div class="about-pills"><span class="pill">Fondée en 2014</span><span
+                                class="pill">Pont-de-Claix</span><span class="pill">Multisports</span><span
+                                class="pill">Inclusif</span><span class="pill">Old school spirit</span></div>
+                    </div>
+                    <div class="fade-up">
+                        <div style="margin-bottom:14px">
+                            <div class="eyebrow">Notre équipe</div>
+                            <div class="section-title" style="font-size:26px">Des coachs passionnés</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:10px">
+                            <div
+                                style="background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius-lg);padding:18px;display:flex;gap:12px;align-items:flex-start">
+                                <div
+                                    style="width:42px;height:42px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;color:#fff;flex-shrink:0">
+                                    ÉS</div>
+                                <div>
+                                    <div style="font-size:14px;font-weight:500;margin-bottom:2px">Éducateurs sportifs
+                                    </div>
+                                    <div style="font-size:12px;color:var(--gray-500)">Diplômés d'État, approches
+                                        complémentaires</div>
+                                </div>
+                            </div>
+                            <div
+                                style="background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius-lg);padding:18px;display:flex;gap:12px;align-items:flex-start">
+                                <div
+                                    style="width:42px;height:42px;border-radius:50%;background:var(--dark);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;color:#fff;flex-shrink:0">
+                                    AM</div>
+                                <div>
+                                    <div style="font-size:14px;font-weight:500;margin-bottom:2px">Anciens militaires
+                                    </div>
+                                    <div style="font-size:12px;color:var(--gray-500)">Rigueur et sport de haut niveau au
+                                        service du collectif</div>
+                                </div>
+                            </div>
+                            <div
+                                style="background:var(--orange-light);border:1px solid #f5c4a0;border-radius:var(--radius-lg);padding:12px 18px;font-size:12px;color:#7a3510;line-height:1.5">
+                                <strong style="display:block;margin-bottom:2px">Partenaires</strong>Ville de
+                                Pont-de-Claix · Street Fight Shop · HB38 · Sportif JRH
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" style="padding-top:0;padding-bottom:32px">
+            <div class="section-inner" style="padding-top:32px;border-top:1px solid var(--gray-300)">
+                <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><span
+                        style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gray-500);white-space:nowrap">Ils
+                        nous font confiance</span>
+                    <div class="partners-flex"><span class="partner-chip">Préfet de l'Isère</span><span
+                            class="partner-chip">Grenoble-Alpes Métropole</span><span class="partner-chip">Ville de
+                            Pont-de-Claix</span><span class="partner-chip">GUC Formation</span><span
+                            class="partner-chip">HB38</span><span class="partner-chip">LCmi</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="background:var(--dark)" id="section-bibliotheque">
+            <div class="section-inner">
+                <div class="eyebrow">Nos actions en images</div>
+                <div class="section-title" style="color:#fff;margin-bottom:8px">Bibliothèque BSD Sport</div>
+                <p class="section-desc" style="color:#6a7080;margin-bottom:28px">Sports de combat, cross-training,
+                    outdoor, séances en salle.</p>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px">
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Boxe · Speed ball · BSD Sport</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Cross-training · Battle rope · Gymnase</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Sport outdoor · QPV · Pont-de-Claix</div>
+                    </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                    <div class="photo-card">
+                        <div class="photo-placeholder" style="aspect-ratio:16/9">📷</div>
+                        <div class="photo-caption">Préparation physique · Tatami</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-placeholder" style="aspect-ratio:16/9">📷</div>
+                        <div class="photo-caption">Atelier collectif · Salle municipale</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-contact">
+            <div class="section-inner">
+                <div class="eyebrow">Nous rejoindre</div>
+                <div class="section-title" style="margin-bottom:32px">Contactez-nous</div>
+                <div class="contact-grid">
+                    <div class="contact-form-block fade-up">
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label">Prénom *</label><input class="form-input"
+                                    type="text" placeholder="Jean"></div>
+                            <div class="form-group"><label class="form-label">Nom *</label><input class="form-input"
+                                    type="text" placeholder="Dupont"></div>
+                        </div>
+                        <div class="form-group"><label class="form-label">Email *</label><input class="form-input"
+                                type="email" placeholder="jean@email.com"></div>
+                        <div class="form-group"><label class="form-label">Je souhaite</label><select class="form-input">
+                                <option>M'inscrire à un cours collectif</option>
+                                <option>Réserver un cours individuel</option>
+                                <option>En savoir plus sur les stages</option>
+                            </select></div>
+                        <div class="form-group"><label class="form-label">Message (optionnel)</label><textarea
+                                class="form-input" rows="3" placeholder="Votre message..."></textarea></div><button
+                            class="btn-primary" style="width:100%;padding:12px;border-radius:999px">Envoyer ma demande
+                            →</button>
+                    </div>
+                    <div class="contact-info-block fade-up">
+                        <div class="info-card">
+                            <div class="info-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="#E8610A" stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 12a19.79 19.79 0 01-3.07-8.67A2 2 0 011.92 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.75a16 16 0 006.29 6.29l1.02-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                                </svg></div>
+                            <div class="info-text"><strong>Téléphone</strong><span>07 51 62 29 92 · 06 46 02 53
+                                    71</span></div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="#E8610A" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg></div>
+                            <div class="info-text"><strong>Email</strong><span><a href="mailto:votre@email.fr"
+                                        style="color:var(--orange)">votre@email.fr</a></span></div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="#E8610A" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg></div>
+                            <div class="info-text"><strong>Localisation</strong><span>Pont-de-Claix, Isère (38)</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="#E8610A" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg></div>
+                            <div class="info-text"><strong>Horaires</strong><span>Lun–Ven : 9h–20h · Sam : 9h–13h</span>
+                            </div>
+                        </div>
+                        <div class="social-block">
+                            <div class="social-block-title">Suivez-nous</div>
+                            <div class="social-handles"><a href="https://instagram.com/bsdsport"
+                                    target="_blank">@bsdsport</a><a href="https://instagram.com/bodyscult38"
+                                    target="_blank">@bodyscult38</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page-entreprise">
+        <div class="hero-b2b">
+            <div class="hero-b2b-inner">
+                <div>
+                    <div class="hero-tag"><span>QVT · RSE · Bien-être au travail · ODD</span></div>
+                    <h1>S'approprier<br>son entreprise<br><em>par le sport.</em></h1>
+                    <p class="hero-b2b-desc">BSD Sport met son expertise au service des entreprises qui placent le
+                        bien-être de leurs salariés au cœur de leur stratégie.</p>
+                    <div class="hero-btns"><button class="btn-primary" onclick="scrollToSection('contact-b2b')">Demander
+                            un diagnostic gratuit →</button><button class="btn-outline-w"
+                            onclick="showNotif('Plaquette disponible sur demande — contactez-nous')">Télécharger la
+                            plaquette</button></div>
+                </div>
+                <div class="hero-kpis">
+                    <div class="kpi-card">
+                        <div class="kpi-val">10 ans</div>
+                        <div class="kpi-label">d'expertise terrain à Pont-de-Claix</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-val">−35%</div>
+                        <div class="kpi-label">d'absentéisme constaté (IRDES &amp; OMS)</div>
+                    </div>
+                    <div class="kpi-card"
+                        style="grid-column:span 2;display:flex;align-items:center;gap:12px;padding:14px 18px"><svg
+                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2"
+                            style="flex-shrink:0">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                        <div>
+                            <div style="font-size:13px;font-weight:500;color:#fff">Rapport RSE clé-en-main inclus</div>
+                            <div style="font-size:11px;color:#5a5f6e;margin-top:2px">ODD alignés · livrable immédiat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stats-bar-inner" style="grid-template-columns:repeat(3,1fr)">
+                <div class="stat-item">
+                    <div class="stat-num">−35%</div>
+                    <div class="stat-label">d'absentéisme avec sport collectif</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">+12%</div>
+                    <div class="stat-label">de productivité chez les salariés actifs</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">60%</div>
+                    <div class="stat-label">de réduction fiscale via le mécénat</div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt">
+            <div class="section-inner">
+                <div class="eyebrow">Enjeux RH</div>
+                <div class="section-title">Vos équipes font face à des réalités communes</div>
+                <p class="section-desc">BTP, industrie, services, logistique — les mêmes problématiques humaines
+                    impactent votre performance.</p>
+                <div class="prob-grid">
+                    <div class="prob-card fade-up">
+                        <div class="prob-icon-wrap" style="background:#FDF0E8"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg></div>
+                        <div>
+                            <h4>Usure physique &amp; TMS</h4>
+                            <p>Contraintes posturales pour les équipes terrain.</p>
+                        </div>
+                    </div>
+                    <div class="prob-card fade-up">
+                        <div class="prob-icon-wrap" style="background:#E1F5EE"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l3 3" />
+                            </svg></div>
+                        <div>
+                            <h4>Sédentarité &amp; charge mentale</h4>
+                            <p>Stress chronique et manque d'activité physique.</p>
+                        </div>
+                    </div>
+                    <div class="prob-card fade-up">
+                        <div class="prob-icon-wrap" style="background:#FDF0E8"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg></div>
+                        <div>
+                            <h4>Cohésion fragilisée</h4>
+                            <p>Baisse d'engagement collectif et motivation en berne.</p>
+                        </div>
+                    </div>
+                    <div class="prob-card fade-up">
+                        <div class="prob-icon-wrap" style="background:#E6F1FB"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#378ADD" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg></div>
+                        <div>
+                            <h4>Absentéisme &amp; turn-over</h4>
+                            <p>Chaque absence non anticipée pèse sur la productivité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-offre-b2b">
+            <div class="section-inner">
+                <div class="eyebrow">Notre offre</div>
+                <div class="section-title">Nos 4 grands axes d'intervention</div>
+                <div class="axes-grid">
+                    <div class="axe-card fade-up" onclick="toggleAxe(this)">
+                        <div class="axe-header">
+                            <div class="axe-num">01</div>
+                            <div class="axe-icon-wrap" style="background:#FDF0E8"><svg width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg></div>
+                            <div class="axe-head-text">
+                                <div class="axe-title">Activité physique et sportive</div>
+                                <div class="axe-sub">Pour vos salariés</div>
+                            </div>
+                            <div class="axe-chevron"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg></div>
+                        </div>
+                        <div class="axe-body">
+                            <p>Séances régulières adaptées à tous les niveaux.</p>
+                            <div class="axe-tags"><span class="axe-tag">Sur site</span><span class="axe-tag">En
+                                    extérieur</span><span class="axe-tag">Tous niveaux</span></div>
+                        </div>
+                    </div>
+                    <div class="axe-card fade-up" onclick="toggleAxe(this)">
+                        <div class="axe-header">
+                            <div class="axe-num">02</div>
+                            <div class="axe-icon-wrap" style="background:#E1F5EE"><svg width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg></div>
+                            <div class="axe-head-text">
+                                <div class="axe-title">Conférences &amp; ateliers bien-être</div>
+                                <div class="axe-sub">Sensibilisation et prévention</div>
+                            </div>
+                            <div class="axe-chevron"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg></div>
+                        </div>
+                        <div class="axe-body">
+                            <p>Nutrition, stress, TMS, hygiène de vie.</p>
+                            <div class="axe-tags"><span class="axe-tag">Présentiel</span><span
+                                    class="axe-tag">Interactif</span></div>
+                        </div>
+                    </div>
+                    <div class="axe-card fade-up" onclick="toggleAxe(this)">
+                        <div class="axe-header">
+                            <div class="axe-num">03</div>
+                            <div class="axe-icon-wrap" style="background:#E6F1FB"><svg width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="#378ADD" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg></div>
+                            <div class="axe-head-text">
+                                <div class="axe-title">Prévention &amp; préparation physique</div>
+                                <div class="axe-sub">Mobilité, étirements, anti-TMS</div>
+                            </div>
+                            <div class="axe-chevron"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg></div>
+                        </div>
+                        <div class="axe-body">
+                            <p>Réveil musculaire, mobilité articulaire, prévention des accidents.</p>
+                            <div class="axe-tags"><span class="axe-tag">Anti-TMS</span><span class="axe-tag">Sur
+                                    mesure</span></div>
+                        </div>
+                    </div>
+                    <div class="axe-card fade-up" onclick="toggleAxe(this)">
+                        <div class="axe-header">
+                            <div class="axe-num">04</div>
+                            <div class="axe-icon-wrap" style="background:#FDF0E8"><svg width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="#E8610A" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg></div>
+                            <div class="axe-head-text">
+                                <div class="axe-title">Événements sportifs</div>
+                                <div class="axe-sub">Cohésion &amp; team building</div>
+                            </div>
+                            <div class="axe-chevron"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg></div>
+                        </div>
+                        <div class="axe-body">
+                            <p>Challenges sportifs, Boot-Camp militaire, séminaires.</p>
+                            <div class="axe-tags"><span class="axe-tag">Boot-Camp</span><span class="axe-tag">Team
+                                    Building</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-inner">
+                <div class="eyebrow">Résultats prouvés</div>
+                <div class="section-title">Des impacts concrets, documentés</div>
+                <div class="stats-b2b-grid">
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">−35%</div>
+                        <div class="stat-b2b-desc">d'absentéisme pour les entreprises avec programme sport</div>
+                        <div class="stat-b2b-src">IRDES &amp; OMS, 2022</div>
+                    </div>
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">+14%</div>
+                        <div class="stat-b2b-desc">de rentabilité grâce à la qualité de vie au travail</div>
+                        <div class="stat-b2b-src">Institut Sapiens, 2023</div>
+                    </div>
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">−50%</div>
+                        <div class="stat-b2b-desc">de réduction du stress chez les salariés actifs</div>
+                        <div class="stat-b2b-src">Univ. de Cambridge, 2023</div>
+                    </div>
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">+12%</div>
+                        <div class="stat-b2b-desc">de productivité — un salarié actif est plus efficace</div>
+                        <div class="stat-b2b-src">Alberta Centre for Active Living</div>
+                    </div>
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">−27%</div>
+                        <div class="stat-b2b-desc">de congés maladie chez les collaborateurs actifs</div>
+                        <div class="stat-b2b-src">Alberta Centre for Active Living</div>
+                    </div>
+                    <div class="stat-b2b-card fade-up">
+                        <div class="stat-b2b-big">+6 ans</div>
+                        <div class="stat-b2b-desc">d'espérance de vie grâce à l'indépendance physique</div>
+                        <div class="stat-b2b-src">OMS, 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" id="section-rse-b2b">
+            <div class="section-inner">
+                <div class="eyebrow">Rapport RSE · Nouveau</div>
+                <div class="section-title">Transformez vos actions en outil RSE</div>
+                <div class="rse-grid">
+                    <div class="fade-up">
+                        <div class="rse-steps">
+                            <div class="rse-step">
+                                <div class="step-num">1</div>
+                                <div>
+                                    <h4>Diagnostic initial</h4>
+                                    <p>Sondage collaborateurs, identification des attentes.</p>
+                                </div>
+                            </div>
+                            <div class="rse-step">
+                                <div class="step-num">2</div>
+                                <div>
+                                    <h4>Interventions documentées</h4>
+                                    <p>Suivi de participation, feedback post-séance.</p>
+                                </div>
+                            </div>
+                            <div class="rse-step">
+                                <div class="step-num">3</div>
+                                <div>
+                                    <h4>Rapport RSE périodique</h4>
+                                    <p>Bilan chiffré, témoignages, supports visuels.</p>
+                                </div>
+                            </div>
+                            <div class="rse-step">
+                                <div class="step-num">4</div>
+                                <div>
+                                    <h4>Pilotage QVT continu</h4>
+                                    <p>Indicateurs pour suivre l'impact RSE.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:20px">
+                            <div style="font-size:12px;font-weight:500;color:var(--gray-700);margin-bottom:8px">ODD
+                                alignés</div>
+                            <div class="rse-odds"><span class="odd-badge"><span class="odd-color"
+                                        style="background:#4C9F38"></span>ODD 3 · Santé</span><span
+                                    class="odd-badge"><span class="odd-color" style="background:#FF3A21"></span>ODD 8 ·
+                                    Travail décent</span><span class="odd-badge"><span class="odd-color"
+                                        style="background:#FF6925"></span>ODD 10 · Inégalités</span><span
+                                    class="odd-badge"><span class="odd-color" style="background:#00689D"></span>ODD 17 ·
+                                    Partenariats</span></div>
+                        </div>
+                    </div>
+                    <div class="rse-report-mock fade-up">
+                        <div class="rrm-header">
+                            <div class="rrm-title"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                    stroke="#E8610A" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                </svg>Rapport RSE Q1 2025<span class="badge-new">EXEMPLE</span></div>
+                            <div class="rrm-period">Janv. → Mars 2025</div>
+                        </div>
+                        <div class="rrm-kpis">
+                            <div class="rrm-kpi">
+                                <div class="rrm-kpi-val green">78%</div>
+                                <div class="rrm-kpi-label">Participation</div>
+                            </div>
+                            <div class="rrm-kpi">
+                                <div class="rrm-kpi-val white">4.7/5</div>
+                                <div class="rrm-kpi-label">Satisfaction</div>
+                            </div>
+                            <div class="rrm-kpi">
+                                <div class="rrm-kpi-val green">−22%</div>
+                                <div class="rrm-kpi-label">Absences vs N−1</div>
+                            </div>
+                            <div class="rrm-kpi">
+                                <div class="rrm-kpi-val orange">60%</div>
+                                <div class="rrm-kpi-label">Réd. fiscale</div>
+                            </div>
+                        </div>
+                        <div class="rrm-rows">
+                            <div class="rrm-row"><span class="rrm-row-label">Séances réalisées</span><span
+                                    class="rrm-row-val">12</span></div>
+                            <div class="rrm-row"><span class="rrm-row-label">ODD couverts</span><span
+                                    class="rrm-row-val green">4 / 17</span></div>
+                            <div class="rrm-row"><span class="rrm-row-label">Rapport livré</span><span
+                                    class="rrm-row-val green">✓ PDF + slides</span></div>
+                        </div>
+                        <div class="rrm-footer">Intégrable dans votre rapport RSE annuel.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-inner">
+                <div class="eyebrow">Leviers financiers</div>
+                <div class="section-title">Un investissement optimisé</div>
+                <div class="fin-grid">
+                    <div class="fin-card fade-up">
+                        <h4>Mécénat d'entreprise</h4>
+                        <p><span class="fin-highlight">60% de réduction fiscale</span> sur votre don.</p>
+                    </div>
+                    <div class="fin-card fade-up">
+                        <h4>Financement OPCO</h4>
+                        <p>Cofinancement via votre OPCO (démarche prévention).</p>
+                    </div>
+                    <div class="fin-card fade-up">
+                        <h4>Exonération de cotisations</h4>
+                        <p>Exonération partielle de charges sociales.</p>
+                    </div>
+                    <div class="fin-card fade-up">
+                        <h4>Dépenses QVT imputables</h4>
+                        <p>Actions imputables au <span class="fin-highlight">budget QVT et RSE</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt">
+            <div class="section-inner">
+                <div class="eyebrow">Notre méthode</div>
+                <div class="section-title">Comment ça fonctionne ?</div>
+                <div class="process-grid">
+                    <div class="proc-card fade-up">
+                        <div class="proc-num">01</div>
+                        <h4>Diagnostic</h4>
+                        <p>Sondage collaborateurs, enjeux RH.</p>
+                    </div>
+                    <div class="proc-card fade-up">
+                        <div class="proc-num">02</div>
+                        <h4>Programme sur mesure</h4>
+                        <p>Plan adapté à vos métiers et budget.</p>
+                    </div>
+                    <div class="proc-card fade-up">
+                        <div class="proc-num">03</div>
+                        <h4>Interventions terrain</h4>
+                        <p>Séances par nos éducateurs diplômés.</p>
+                    </div>
+                    <div class="proc-card fade-up">
+                        <div class="proc-num">04</div>
+                        <h4>Rapport RSE &amp; bilan</h4>
+                        <p>Synthèse chiffrée, ODD alignés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-block" id="section-contact-b2b">
+            <div class="cta-inner">
+                <h2>Prêt à investir<br>dans <em>vos équipes</em> ?</h2>
+                <p>Un premier échange gratuit pour construire un programme adapté — avec rapport RSE inclus.</p>
+                <div class="cta-actions"><a href="tel:+33751622992" class="btn-primary"
+                        style="padding:12px 26px;display:inline-block">Appeler maintenant →</a><a
+                        href="mailto:votre@email.fr" class="btn-outline-w"
+                        style="padding:12px 26px;display:inline-block">Demande par email</a></div>
+                <div class="cta-contact-row"><span>07 51 62 29 92</span><span>06 46 02 53
+                        71</span><span>votre@email.fr</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page-territoire">
+        <div class="hero-territoire">
+            <div class="hero-territoire-inner">
+                <div>
+                    <div class="hero-tag"><span>Contrat de Ville · QPV · Inclusion · Lien social</span></div>
+                    <h1>Le sport, un levier<br>d'<em>inclusion sociale</em><br>et de cohésion territoriale.</h1>
+                    <p class="hero-b2b-desc">BSD Sport s'engage au service des institutions et collectivités qui
+                        souhaitent faire du sport un levier d'émancipation.</p>
+                    <div class="hero-btns"><button class="btn-primary"
+                            onclick="scrollToSection('contact-territoire')">Monter un projet ensemble →</button><button
+                            class="btn-outline-w"
+                            onclick="showNotif('Dossier de présentation disponible sur demande')">Télécharger notre
+                            dossier</button></div>
+                </div>
+                <div>
+                    <div class="hero-activity-card">
+                        <div class="hac-icon" style="background:rgba(55,138,221,.2)"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#378ADD" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg></div>
+                        <div>
+                            <div class="hac-name">Quartiers prioritaires (QPV)</div>
+                            <div class="hac-detail">Ateliers sport &amp; lien social</div>
+                        </div><span class="hac-badge" style="background:rgba(55,138,221,.2);color:#7bb5e8">Contrat de
+                            Ville</span>
+                    </div>
+                    <div class="hero-activity-card">
+                        <div class="hac-icon" style="background:rgba(29,158,117,.2)"><svg width="17" height="17"
+                                viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg></div>
+                        <div>
+                            <div class="hac-name">Santé &amp; vulnérabilité</div>
+                            <div class="hac-detail">Burn-out, pathologies chroniques</div>
+                        </div><span class="hac-badge" style="background:rgba(29,158,117,.2);color:#5DCAA5">Appels à
+                            projets</span>
+                    </div>
+                    <div class="hero-activity-card">
+                        <div class="hac-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                                stroke="#E8610A" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                <line x1="9" y1="9" x2="9.01" y2="9" />
+                                <line x1="15" y1="9" x2="15.01" y2="9" />
+                            </svg></div>
+                        <div>
+                            <div class="hac-name">Mixité &amp; émancipation</div>
+                            <div class="hac-detail">Jeunesse, femmes, insertion</div>
+                        </div><span class="hac-badge">Fondations · Mécénat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stats-bar-inner" style="grid-template-columns:repeat(3,1fr)">
+                <div class="stat-item">
+                    <div class="stat-num">2014</div>
+                    <div class="stat-label">Présents sur le territoire depuis</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Actions sans condition de niveau</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">QPV</div>
+                    <div class="stat-label">Pont-de-Claix — ancrage quartier</div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" id="section-actions-territoire">
+            <div class="section-inner">
+                <div class="eyebrow">Nos publics cibles</div>
+                <div class="section-title">À qui s'adressent nos actions ?</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#E6F1FB"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#378ADD" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg></div>
+                        <h3>Quartiers prioritaires</h3>
+                        <p>Habitants des QPV en recherche de pratique accessible.</p><span class="act-tag"
+                            style="background:#E6F1FB;color:#1e5fa0">Contrat de Ville</span>
+                    </div>
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#FDF0E8"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#E8610A" stroke-width="2">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M6 20v-2a6 6 0 0 1 12 0v2" />
+                            </svg></div>
+                        <h3>Jeunesse &amp; scolaires</h3>
+                        <p>Enfants et jeunes pour qui le sport est un espace de confiance.</p><span
+                            class="act-tag">Jeunesse · Scolaire</span>
+                    </div>
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#E1F5EE"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#1D9E75" stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg></div>
+                        <h3>Personnes en santé fragile</h3>
+                        <p>Personnes en rémission ou souffrant de pathologies.</p><span class="act-tag"
+                            style="background:#E1F5EE;color:#1D9E75">Santé · Prévention</span>
+                    </div>
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#FDF0E8"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#E8610A" stroke-width="2">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg></div>
+                        <h3>Femmes éloignées du sport</h3>
+                        <p>Créneaux adaptés dans un cadre bienveillant.</p><span class="act-tag">Sport féminin ·
+                            Émancipation</span>
+                    </div>
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#E6F1FB"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#378ADD" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg></div>
+                        <h3>Publics en insertion</h3>
+                        <p>Le sport restaure l'estime de soi et ouvre des perspectives.</p><span class="act-tag"
+                            style="background:#E6F1FB;color:#1e5fa0">Insertion · RSA · ML</span>
+                    </div>
+                    <div class="act-card fade-up">
+                        <div class="act-icon" style="background:#E1F5EE"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#1D9E75" stroke-width="2">
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                <line x1="4" y1="22" x2="4" y2="15" />
+                            </svg></div>
+                        <h3>Mixité &amp; intergénérationnel</h3>
+                        <p>Projets favorisant la rencontre entre générations.</p><span class="act-tag"
+                            style="background:#E1F5EE;color:#1D9E75">Mixité · Cohésion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-dark">
+            <div class="section-inner">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+                    <div>
+                        <div class="eyebrow">Notre engagement</div>
+                        <div class="section-title" style="color:#fff;margin-bottom:18px">Le sport comme<br><em
+                                style="color:var(--orange);font-style:normal">droit, pas privilège.</em></div>
+                        <p style="font-size:15px;color:#8a8f9e;line-height:1.7;margin-bottom:24px">Depuis 2014, BSD
+                            Sport défend une conviction simple : la pratique sportive doit être accessible à chacun,
+                            quelle que soit sa condition sociale.</p><button class="btn-primary"
+                            onclick="scrollToSection('contact-territoire')">Construire un projet avec nous →</button>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:10px">
+                        <div
+                            style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:18px;display:flex;gap:12px">
+                            <div
+                                style="width:34px;height:34px;border-radius:var(--radius-md);background:rgba(232,97,10,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E8610A"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:14px;font-weight:500;color:#fff;margin-bottom:2px">Sans condition
+                                    de niveau</div>
+                                <div style="font-size:12px;color:#6a7080">Aucune expérience requise. On commence là où
+                                    on en est.</div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:18px;display:flex;gap:12px">
+                            <div
+                                style="width:34px;height:34px;border-radius:var(--radius-md);background:rgba(29,158,117,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1D9E75"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:14px;font-weight:500;color:#fff;margin-bottom:2px">Approche
+                                    bienveillante</div>
+                                <div style="font-size:12px;color:#6a7080">La performance n'est jamais l'objectif. Le
+                                    lien social, si.</div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:18px;display:flex;gap:12px">
+                            <div
+                                style="width:34px;height:34px;border-radius:var(--radius-md);background:rgba(55,138,221,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#378ADD"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:14px;font-weight:500;color:#fff;margin-bottom:2px">Ancrés dans le
+                                    quartier</div>
+                                <div style="font-size:12px;color:#6a7080">On connaît les habitants et les acteurs locaux
+                                    depuis 2014.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" id="section-partenaires-territoire">
+            <div class="section-inner">
+                <div class="eyebrow">Soutiens &amp; financements</div>
+                <div class="section-title">Des partenariats institutionnels solides</div>
+                <div style="display:flex;flex-direction:column;gap:14px">
+                    <div class="fin-card fade-up" style="border-left:3px solid #378ADD;padding:22px">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+                            <div style="width:9px;height:9px;border-radius:50%;background:#378ADD;flex-shrink:0"></div>
+                            <h4 style="margin-bottom:0;font-size:15px">Contrat de Ville — Grenoble-Alpes Métropole &amp;
+                                Préfecture de l'Isère</h4><span
+                                style="margin-left:auto;background:#E6F1FB;color:#185FA5;font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px;white-space:nowrap;flex-shrink:0">Opérateur
+                                mandaté</span>
+                        </div>
+                        <p style="font-size:13px;color:var(--gray-500);line-height:1.6">BSD Sport est mandaté pour mener
+                            des actions sportives à destination des publics fragilisés des QPV de Pont-de-Claix.</p>
+                    </div>
+                    <div class="fin-card fade-up" style="border-left:3px solid var(--orange);padding:22px">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+                            <div style="width:9px;height:9px;border-radius:50%;background:var(--orange);flex-shrink:0">
+                            </div>
+                            <h4 style="margin-bottom:0;font-size:15px">Ville de Pont-de-Claix</h4><span
+                                style="margin-left:auto;background:var(--orange-light);color:#7a3010;font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px;white-space:nowrap;flex-shrink:0">Soutien
+                                annuel</span>
+                        </div>
+                        <p style="font-size:13px;color:var(--gray-500);line-height:1.6">Soutien financier renouvelé,
+                            mise à disposition de locaux et équipements sportifs municipaux.</p>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                        <div class="fin-card fade-up" style="border-left:3px solid var(--green)">
+                            <h4>Appels à projets &amp; fondations</h4>
+                            <p>BSD Sport répond aux appels de l'ANS et d'entités publiques.</p>
+                        </div>
+                        <div class="fin-card fade-up" style="border-left:3px solid #8a6fcf">
+                            <h4>Mécénat de compétences</h4>
+                            <p>Associer une entreprise à un projet social — <span class="fin-highlight">60% de réduction
+                                    fiscale</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="background:var(--dark)">
+            <div class="section-inner">
+                <div class="eyebrow">Nos actions en images</div>
+                <div class="section-title" style="color:#fff;margin-bottom:8px">Présence terrain</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Sport en plein air · QPV · Pont-de-Claix</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Cours outdoor · Parc de Pont-de-Claix</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-placeholder">📷</div>
+                        <div class="photo-caption">Atelier collectif · Salle municipale</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-alt" style="padding-top:28px;padding-bottom:28px">
+            <div class="section-inner">
+                <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><span
+                        style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gray-500);white-space:nowrap">Partenaires
+                        institutionnels</span>
+                    <div class="partners-flex"><span class="partner-chip">Préfet de l'Isère</span><span
+                            class="partner-chip">Grenoble-Alpes Métropole</span><span class="partner-chip">Ville de
+                            Pont-de-Claix</span><span class="partner-chip">GUC Formation</span><span
+                            class="partner-chip">LCmi</span><span class="partner-chip">HB38</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-block" id="section-contact-territoire">
+            <div class="cta-inner">
+                <h2>Un projet à<br><em>construire ensemble ?</em></h2>
+                <p>Collectivité, fondation, porteur d'appel à projets — parlons-en.</p>
+                <div class="cta-actions"><a href="tel:+33751622992" class="btn-primary"
+                        style="padding:12px 26px;display:inline-block">Nous contacter →</a><a
+                        href="mailto:votre@email.fr" class="btn-outline-w"
+                        style="padding:12px 26px;display:inline-block">Demande par email</a></div>
+                <div class="cta-contact-row"><span>07 51 62 29 92</span><span>06 46 02 53
+                        71</span><span>votre@email.fr</span></div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background:#080a0e;padding:24px">
+        <div
+            style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+            <div>
+                <div
+                    style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:#fff;letter-spacing:1px">
+                    BSD<em style="color:var(--orange);font-style:normal">SPORT</em></div>
+                <div style="font-size:11px;color:#3a3f4e;margin-top:2px">Campus Sportif · Pont-de-Claix · Fondé en 2014
+                </div>
+            </div>
+            <div style="display:flex;gap:18px"><a href="#" style="font-size:11px;color:#3a3f4e">CGV</a><a href="#"
+                    style="font-size:11px;color:#3a3f4e">Confidentialité</a><a href="#"
+                    style="font-size:11px;color:#3a3f4e">Mentions légales</a></div>
+            <div style="font-size:11px;color:#3a3f4e">© 2025 BSD Sport · Tous droits réservés</div>
+        </div>
+    </footer>
+
+    <script>
+        function switchPage(page, btn) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('page-' + page).classList.add('active');
+            if (btn) btn.classList.add('active');
+            const cta = document.getElementById('nav-cta-btn');
+            const links = document.querySelectorAll('.nav-links-right a');
+            if (page === 'public') { cta.textContent = "S'inscrire"; cta.onclick = () => scrollToSection('contact'); }
+            else if (page === 'entreprise') { cta.textContent = 'Diagnostic gratuit'; cta.onclick = () => scrollToSection('contact-b2b'); }
+            else { cta.textContent = 'Nous contacter'; cta.onclick = () => scrollToSection('contact-territoire'); }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(initFadeUps, 100);
+        }
+        function scrollToSection(id) {
+            const el = document.getElementById('section-' + id);
+            if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 72; window.scrollTo({ top, behavior: 'smooth' }); }
+        }
+        let notifTimer;
+        function showNotif(msg) {
+            const el = document.getElementById('notif');
+            el.innerHTML = msg; el.classList.add('show');
+            clearTimeout(notifTimer); notifTimer = setTimeout(() => el.classList.remove('show'), 3500);
+        }
+        function toggleAxe(card) {
+            const isOpen = card.classList.contains('open');
+            document.querySelectorAll('.axe-card.open').forEach(c => c.classList.remove('open'));
+            if (!isOpen) card.classList.add('open');
+        }
+        function initFadeUps() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.page.active .fade-up').forEach(el => { el.classList.remove('visible'); obs.observe(el); });
+        }
+        function loadYoutube(containerId, videoId, start) {
+            var src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+            if (start) src += '&start=' + start;
+            document.getElementById(containerId).innerHTML = '<iframe src="' + src + '" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>';
+        }
+        document.addEventListener('DOMContentLoaded', () => setTimeout(initFadeUps, 100));
+    </script>
+</body>
+
+</html>

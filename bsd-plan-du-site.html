@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan du Site — BSD SPORT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --bg-main: #FFFFFF;
+  --bg-alt: #F8FAFC;
+  --text-black: #0F172A;
+  --text-grey: #64748B;
+  --border-light: #E2E8F0;
+  --font-corporate: 'Futura', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: linear-gradient(160deg, #FFF9C4 0%, #FFE0B2 30%, #F8BBD0 65%, #E1BEE7 100%); background-attachment: fixed; color: var(--text-black); font-family: var(--font-corporate); line-height: 1.6; }
+header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-light); padding: 1rem 2rem; }
+.header-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo-box { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-black); }
+.logo-badge { width: 38px; height: 38px; border-radius: 8px; background: #000; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.btn-white { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.4rem; border-radius: 8px; background: #F1F5F9; color: #000; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; text-decoration: none; border: 1px solid var(--border-light); }
+.hero-legal { background: var(--bg-alt); border-bottom: 1px solid var(--border-light); padding: 4rem 2rem; text-align: center; }
+.hero-legal h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card-map { background: #fff; border-radius: 16px; border: 1px solid var(--border-light); padding: 2.5rem; }
+.card-map h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem; }
+.card-map ul { list-style: none; line-height: 2; font-size: 0.9rem; font-weight: 600; color: var(--text-grey); }
+.card-map a { color: var(--text-black); text-decoration: none; }
+.card-map a:hover { text-decoration: underline; }
+footer { border-top: 1px solid var(--border-light); background: #fff; padding: 2.5rem 2rem; text-align: center; font-size: 0.8rem; color: var(--text-grey); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-box">
+      <div class="logo-badge">B</div>
+      <div>
+        <div style="font-weight:800;font-size:1.2rem">BSD SPORT</div>
+        <span style="font-size:0.62rem;color:var(--text-grey);text-transform:uppercase;font-weight:700">Arborescence Officielle</span>
+      </div>
+    </a>
+    <a href="index.html" class="btn-white">← RETOUR AU SITE PRINCIPAL</a>
+  </div>
+</header>
+
+<div class="hero-legal">
+  <span style="font-size:0.7rem;font-weight:800;text-transform:uppercase;color:var(--text-grey);margin-bottom:.5rem;display:block">NAVIGATION INTERACTIVE</span>
+  <h1>Plan du Site</h1>
+  <p>Retrouvez l'ensemble des rubriques et espaces thématiques de BSD Sport.</p>
+</div>
+
+<div class="container">
+  <div class="card-map">
+    <h2>01 · Campus Particuliers</h2>
+    <ul>
+      <li><a href="index.html#accueil">• Accueil & Présentation</a></li>
+      <li><a href="index.html#terrains">• Choix du Terrain de Jeu</a></li>
+      <li><a href="index.html#u-cross">• Cross Heat & Coaching</a></li>
+      <li><a href="index.html#u-step">• Stepp Training</a></li>
+      <li><a href="index.html#u-arts">• Sports de combat</a></li>
+      <li><a href="index.html#planning">• Planning Hebdomadaire</a></li>
+    </ul>
+  </div>
+
+  <div class="card-map">
+    <h2>02 · Espace Entreprises B2B</h2>
+    <ul>
+      <li><a href="bsd-entreprise.html#accueil">• Accueil B2B Corporate</a></li>
+      <li><a href="bsd-entreprise.html#activites">• Prestations & Team Building</a></li>
+      <li><a href="bsd-entreprise.html#planning">• Pauses Actives & Organisation</a></li>
+      <li><a href="bsd-entreprise.html#contact-b2b">• Formulaire de Devis Pro sous 24h</a></li>
+    </ul>
+  </div>
+
+  <div class="card-map">
+    <h2>03 · Territoire & Social</h2>
+    <ul>
+      <li><a href="bsd-territoire.html#accueil">• Mission Territoriale Isère</a></li>
+      <li><a href="bsd-territoire.html#demarche">• La Démarche (Sans compétition)</a></li>
+      <li><a href="bsd-territoire.html#publics">• 9 Publics Cibles (QPV, APA, Seniors)</a></li>
+      <li><a href="bsd-territoire.html#contact-terr">• Formulaire de Collaboration</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 BSD Sport. Tous droits réservés.</div>
+</footer>
+
+</body>
+</html>

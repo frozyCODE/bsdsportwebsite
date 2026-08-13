@@ -1,0 +1,10 @@
+# Ignorer les vidéos lourdes
+public/videos/ma-grosse-video.mp4
+
+# Ignorer les bases de données locales
+*.sqlite
+
+# Ignorer les dossiers de dépendances et de build (normalement déjà gérés)
+node_modules
+dist
+.next

@@ -35,10 +35,10 @@ export default {
         }
       },
       fontFamily: {
-        display: ['Anton', 'sans-serif'],
-        varsity: ['Graduate', 'serif'],
-        stencil: ['"Saira Stencil One"', 'sans-serif'],
-        body: ['Barlow', 'sans-serif'],
+        display: ['"Akira Expanded"', 'sans-serif'],
+        varsity: ['"Akira Expanded"', 'sans-serif'],
+        stencil: ['"Akira Expanded"', 'sans-serif'],
+        body: ['Futura', 'sans-serif'],
       }
     },
   },
