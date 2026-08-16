@@ -1,19 +1,29 @@
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 /**
  * Composable intégrant Lenis - La bibliothèque de défilement fluide standard de l'industrie.
- * Import dynamique sécurisé pour une compatibilité parfaite avec Vite.
+ * Réinitialise systématiquement le scroll en haut de page lors de chaque changement de route.
  */
 export function useSmoothScroll() {
   let lenis = null
   let rafId = null
+  const route = useRoute()
+
+  const scrollToTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }
 
   onMounted(async () => {
-    // Forcer le retour tout en haut au rafraîchissement (F5 / Refresh)
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual'
     }
-    window.scrollTo(0, 0)
+    scrollToTop()
 
     try {
       const { default: Lenis } = await import('lenis')
@@ -36,16 +46,27 @@ export function useSmoothScroll() {
       }
 
       rafId = requestAnimationFrame(raf)
+      window.__lenis__ = lenis
     } catch (e) {
       console.warn('Lenis smooth scroll init fallback:', e)
     }
   })
+
+  if (route) {
+    watch(
+      () => route.path,
+      () => {
+        scrollToTop()
+      }
+    )
+  }
 
   onUnmounted(() => {
     if (rafId) cancelAnimationFrame(rafId)
     if (lenis) {
       lenis.destroy()
       lenis = null
+      window.__lenis__ = null
     }
   })
 }

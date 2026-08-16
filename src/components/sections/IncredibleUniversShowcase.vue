@@ -16,7 +16,8 @@
       <div 
         v-for="u in universData" 
         :key="u.id"
-        class="univers-landscape-section relative w-full h-[56.25vw] min-h-[500px] sm:min-h-[620px] lg:min-h-[750px] max-h-[900px] flex items-center overflow-hidden border-y border-white/10 group transition-all duration-500 block"
+        @click="$router.push(u.route)"
+        class="univers-landscape-section relative w-full h-[56.25vw] min-h-[500px] sm:min-h-[620px] lg:min-h-[750px] max-h-[900px] flex items-center overflow-hidden border-y border-white/10 group transition-all duration-500 block cursor-pointer"
       >
         <!-- Photo d'arrière-plan paysage 16:9 naturelle (1920x1080) -->
         <img 
@@ -96,6 +97,18 @@ const universData = [
       'Boxe Anglaise',
       'Arts Martiaux',
       'Self-Défense'
+    ]
+  },
+  {
+    id: 'horizon-sport',
+    route: '/horizon-sport',
+    title: 'HORIZON SPORT : SEJOURS & VOYAGES',
+    description: 'Stages Muay Thai en Thailande, expeditions trekking dans les Alpes, ocean bootcamps et raids multi-sports. Vivez des evasions sportives et culturelles inoubliables.',
+    bgImage: '/montagne.jpg',
+    infoItems: [
+      'Stage Muay Thai Thailande',
+      'Expedition Alpine Isere',
+      'Ocean Bootcamp Beach'
     ]
   }
 ]

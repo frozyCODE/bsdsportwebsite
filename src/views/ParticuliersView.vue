@@ -48,7 +48,7 @@
         </h1>
 
         <p class="text-xs sm:text-base lg:text-lg text-white/80 font-body max-w-3xl mx-auto mb-10 leading-relaxed px-2">
-          Trouvez la discipline qui résonne en vous parmi nos <strong class="text-white">3 univers d'exception</strong>. Du Cross Heat & Stepp Cardio aux sports de combat et l'aventure outdoor, vivez une pratique sportive sans compromis.
+          Trouvez la discipline qui resonne en vous parmi nos <strong class="text-white">univers d'exception & sejours Horizon</strong>. Du Cross Heat & Stepp Cardio aux sports de combat, de l'aventure outdoor jusqu'aux <strong class="text-[#ff7043]">voyages sportifs internationaux</strong>, vivez une pratique sans compromis.
         </p>
 
         <!-- CTA Action Buttons -->
@@ -58,18 +58,25 @@
             @click.prevent="scrollToSection('univers-particuliers')"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 group font-bold"
           >
-            <span>EXPLORER NOS 3 UNIVERS</span>
+            <span>EXPLORER NOS UNIVERS</span>
             <svg class="w-4 h-4 transition-transform group-hover:translate-y-1 stroke-current" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
             </svg>
           </a>
 
+          <router-link 
+            to="/horizon-sport" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white/10 hover:bg-[#ff7043] border border-white/20 hover:border-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider backdrop-blur-md transition-all duration-300 font-bold group"
+          >
+            <span>VOYAGES & SEJOURS HORIZON</span>
+          </router-link>
+
           <a 
             href="#contact-particuliers" 
             @click.prevent="scrollToSection('contact-particuliers')"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white/10 hover:bg-[#ff7043] border border-white/20 hover:border-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider backdrop-blur-md transition-all duration-300 font-bold"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white/5 hover:bg-white/20 border border-white/15 text-white/90 hover:text-white font-display text-xs uppercase tracking-wider backdrop-blur-md transition-all duration-300 font-bold"
           >
-            <span>RESERVER UNE SEANCE D'ESSAI</span>
+            <span>RESERVER UNE SEANCE</span>
           </a>
         </div>
       </div>

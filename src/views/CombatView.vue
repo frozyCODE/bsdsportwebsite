@@ -23,7 +23,7 @@
     <!-- Bouton Retour Flottant en Haut à Droite -->
     <div class="fixed top-20 sm:top-24 right-4 sm:right-8 z-50">
       <router-link 
-        to="/particuliers#univers-particuliers" 
+        to="/particuliers" 
         class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2.5 rounded-full bg-black/80 hover:bg-[#ff7043] border border-white/20 text-white hover:text-black font-display text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 font-bold backdrop-blur-xl shadow-2xl group cursor-pointer"
       >
         <span class="transition-transform group-hover:-translate-x-1">←</span>

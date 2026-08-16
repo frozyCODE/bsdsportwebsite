@@ -30,6 +30,11 @@ const routes = [
     component: () => import('@/views/OutdoorView.vue')
   },
   {
+    path: '/horizon-sport',
+    name: 'horizon-sport',
+    component: () => import('@/views/HorizonView.vue')
+  },
+  {
     path: '/particuliers',
     name: 'particuliers',
     component: () => import('@/views/ParticuliersView.vue')
@@ -73,17 +78,27 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    // Si la page est rafraîchie directement (pas de navigation inter-route 'from.name'), nettoyer le hash et revenir en haut
-    if (!from.name && to.hash) {
-      if (window.location.hash) {
-        window.history.replaceState(null, null, window.location.pathname)
-      }
+    // Si la route change (page différente), aller tout en haut de la page sélectionnée (top: 0)
+    if (to.path !== from.path) {
       return { top: 0, left: 0 }
     }
+    // Ancre interne sur la même page
     if (to.hash) {
       return { el: to.hash, behavior: 'smooth' }
     }
     return { top: 0, left: 0 }
+  }
+})
+
+// Forcer le retour tout en haut de la page sélectionnée à chaque changement de page
+router.afterEach((to, from) => {
+  if (to.path !== from.path) {
+    if (window.__lenis__) {
+      window.__lenis__.scrollTo(0, { immediate: true })
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
   }
 })
 

@@ -13,7 +13,7 @@
     <!-- Sticky Sub-Nav avec Bouton Retour -->
     <div class="sticky top-0 z-40 backdrop-blur-xl bg-[#080808]/90 border-b border-white/15 px-6 py-4">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <router-link to="/particuliers#univers-particuliers" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all font-bold">
+        <router-link to="/particuliers" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all font-bold">
           ← RETOUR AUX UNIVERS
         </router-link>
         <span class="font-display text-xs uppercase tracking-[0.2em] text-[#ff7043] font-bold">CROSS HEAT ET PREPARATION</span>
@@ -37,7 +37,7 @@
 
       <div class="pt-4">
         <router-link 
-          to="/particuliers#univers-particuliers"
+          to="/particuliers"
           class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 font-bold"
         >
           <span>RETOUR A LA PAGE PARTICULIERS</span>
