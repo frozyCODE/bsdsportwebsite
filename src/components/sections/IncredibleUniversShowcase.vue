@@ -9,21 +9,20 @@
     ></div>
 
     <!-- ============================================================ -->
-    <!-- 3 UNIVERS EN GRAND FORMAT PAYSAGE PLEIN ÉCRAN -->
+    <!-- UNIVERS EN GRAND FORMAT PAYSAGE PLEIN ÉCRAN -->
     <!-- ============================================================ -->
     <div class="space-y-12 sm:space-y-16 relative z-10">
       
       <div 
         v-for="u in universData" 
         :key="u.id"
-        @click="$router.push(u.route)"
-        class="univers-landscape-section relative w-full h-[56.25vw] min-h-[500px] sm:min-h-[620px] lg:min-h-[750px] max-h-[900px] flex items-center overflow-hidden border-y border-white/10 group transition-all duration-500 block cursor-pointer"
+        class="univers-landscape-section relative w-full h-[56.25vw] min-h-[500px] sm:min-h-[620px] lg:min-h-[750px] max-h-[900px] flex items-center overflow-hidden border-y border-white/10 transition-all duration-500 block"
       >
         <!-- Photo d'arrière-plan paysage 16:9 naturelle (1920x1080) -->
         <img 
           :src="u.bgImage" 
           :alt="u.title" 
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+          class="absolute inset-0 w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/35 to-black/20"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent"></div>
@@ -66,13 +65,13 @@ const universData = [
   {
     id: 'omnisport-outdoor',
     route: '/omnisport-outdoor',
-    title: 'OMNISPORTS ET AVENTURE OUTDOOR',
-    description: 'Aqua-training dynamique, escalade de bloc, VTT et sorties trail en montagne au cœur des magnifiques paysages alpins grenoblois.',
-    bgImage: '/man-jumping-into-natural-pond.jpg',
+    title: 'OMNISPORTS',
+    description: 'Escalade de bloc, VTT et sorties trail en montagne au cœur des magnifiques paysages alpins grenoblois.',
+    bgImage: '/omnisport.jpeg',
     infoItems: [
-      'Aqua Training',
       'Escalade Bloc',
-      'VTT & Trail Isère'
+      'VTT & Trail Isère',
+      'Sports de Nature'
     ]
   },
   {
@@ -80,7 +79,7 @@ const universData = [
     route: '/cross-heat',
     title: 'CROSS HEAT & STEPP TRAINING',
     description: 'Combinaison ultime du Cross Training et du Stepp Cardio. WODs intenses, haltérophilie, gymnastique et tempo cardio entraînant pour une préparation physique complète.',
-    bgImage: '/crossheat.png',
+    bgImage: '/crossheat.jpeg',
     infoItems: [
       'Cross Training & WODs',
       'Stepp Cardio',
@@ -90,13 +89,25 @@ const universData = [
   {
     id: 'combat',
     route: '/combat',
-    title: 'SPORTS DE COMBAT ET MAITRISE',
+    title: 'SPORTS DE COMBAT',
     description: 'Boxe anglaise, arts martiaux et self-défense. Maîtrise des frappes, vitesse, stratégie et résistance physique sous la conduite d\'éducateurs diplômés d\'État.',
-    bgImage: '/01-sitjemam-muay-thai.png',
+    bgImage: '/dojo.jpeg',
     infoItems: [
       'Boxe Anglaise',
       'Arts Martiaux',
       'Self-Défense'
+    ]
+  },
+  {
+    id: 'aquatraining',
+    route: '/omnisport-outdoor',
+    title: 'AQUA-TRAINING',
+    description: 'Séances de renforcement aquatique dynamiques et ludiques. Développez votre endurance et tonifiez votre corps sans impact articulaire dans une ambiance vivifiante.',
+    bgImage: '/piscine.jpeg',
+    infoItems: [
+      'Aqua Training',
+      'Renforcement Aquatique',
+      'Endurance & Cardio'
     ]
   },
   {

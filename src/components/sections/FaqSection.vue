@@ -167,8 +167,8 @@ const faqData = [
   },
   {
     category: 'Séances & WODs',
-    question: 'Comment réserver une séance d\'essai offerte ?',
-    answer: 'Rendez-vous directement dans le formulaire de contact en bas de page ou appelez le club. Votre première séance découverte vous est offerte gratuitement sans engagement.'
+    question: 'Comment rejoindre nos séances et s\'inscrire ?',
+    answer: 'Rendez-vous directement dans le formulaire de contact en bas de page ou contactez le club. Notre équipe vous accompagnera pour valider votre inscription et choisir vos créneaux.'
   },
   {
     category: 'Séances & WODs',

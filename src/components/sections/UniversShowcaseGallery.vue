@@ -104,16 +104,14 @@
                   • {{ sport }}
                 </span>
               </div>
-            </div>
-
-            <!-- Boutons d'Action CTA -->
+                 <!-- Boutons d'Action CTA -->
             <div class="pt-4 flex flex-wrap gap-4 items-center">
               <a 
                 href="#contact-particuliers" 
                 @click.prevent="scrollToContact"
                 class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider shadow-2xl transition-all duration-300 group"
               >
-                <span>RESERVER UNE SEANCE</span>
+                <span>REJOINDRE LE CLUB</span>
                 <span class="transition-transform group-hover:translate-x-1">→</span>
               </a>
 
@@ -176,7 +174,7 @@ const universList = [
     sports: ['Cross Training', 'WOD Collectif', 'Haltérophilie', 'Gainage Core'],
     link: '/cross-heat',
     gallery: [
-      '/crossheat.png',
+      '/crossheat.jpeg',
       '/crossheat1.JPG',
       '/crossheat2.JPG'
     ]
@@ -200,27 +198,27 @@ const universList = [
     shortTitle: 'COMBAT & BOXE',
     watermarkText: 'COMBAT BOXE',
     categoryBadge: 'MAITRISE ET DISCIPLINE',
-    title: 'SPORTS DE COMBAT ET MAITRISE',
+    title: 'SPORTS DE COMBAT',
     description: 'Boxe anglaise, arts martiaux et self-défense. Maîtrise des frappes, vitesse et résistance physique sous la direction de coachs diplômés.',
     sports: ['Boxe Anglaise', 'Arts Martiaux', 'Self-Défense', 'Kick Training'],
     gallery: [
+      '/dojo.jpeg',
       '/art-martiaux.webp',
-      '/boxe-emoji.png',
-      '/crossheat.png'
+      '/boxe-emoji.png'
     ]
   },
   {
     id: 'u-omnisport-outdoor',
-    shortTitle: 'OUTDOOR & NATURE',
-    watermarkText: 'OUTDOOR NATURE',
+    shortTitle: 'OMNISPORTS',
+    watermarkText: 'OMNISPORTS',
     categoryBadge: 'NATURE ET AVENTURE',
-    title: 'OMNISPORTS ET AVENTURE OUTDOOR',
-    description: 'Aqua-training dynamique, escalade de bloc, VTT et sorties outdoor. Une pratique variée au cœur des paysages alpins grenoblois.',
-    sports: ['Aqua Training', 'Escalade Bloc', 'VTT & Trail Isère', 'Omnisports'],
+    title: 'OMNISPORTS',
+    description: 'Escalade de bloc, VTT et sorties outdoor. Une pratique variée au cœur des paysages alpins grenoblois.',
+    sports: ['Escalade Bloc', 'VTT & Trail Isère', 'Omnisports'],
     gallery: [
+      '/omnisport.jpeg',
       '/montagne.jpg',
-      '/escalade.png',
-      '/aqua-training.png'
+      '/escalade.png'
     ]
   }
 ]
