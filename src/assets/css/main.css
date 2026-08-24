@@ -242,6 +242,25 @@ body {
   outline-offset: 4px;
 }
 
+/* Classe Globale Effet Chromé Silver Métallisé */
+.chrome-silver-text {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    #ffffff 0%,
+    #e2e8f0 35%,
+    #94a3b8 70%,
+    #475569 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+}
+
 /* Banderoles Tape Marquee */
 .tape {
   position: relative;
@@ -489,7 +508,7 @@ body {
   text-transform: uppercase;
   font-size: 15rem;
   line-height: .88;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -506,14 +525,16 @@ body {
 }
 
 #hero h1 .big {
-  font-size: clamp(2rem, 5.5vw, 5.2rem);
+  font-size: clamp(2.8rem, 7.2vw, 7.8rem);
   color: var(--cream);
-  letter-spacing: -0.01em;
-  text-shadow: none;
+  letter-spacing: 0.03em;
+  text-shadow: none !important;
 }
 
 #hero h1 .l2 .big {
-  font-size: clamp(1.85rem, 5vw, 4.8rem);
+  font-size: clamp(2.6rem, 6.8vw, 7.2rem);
+  letter-spacing: 0.03em;
+  text-shadow: none !important;
 }
 
 #hero h1 .it {
@@ -1109,19 +1130,26 @@ body {
     padding: 6.5rem 4vw 4rem;
   }
 
+  #hero h1 .l1 {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
   #hero h1 .l1,
   #hero h1 .l2 {
     gap: 2vw;
   }
 
   #hero h1 .big {
-    font-size: clamp(3.6rem, 14vw, 8.5rem);
-    text-shadow: 3px 3px 0 var(--ink), 5px 5px 0 rgba(14, 23, 42, 0.95);
+    font-size: clamp(2.8rem, 6.8vw, 5.5rem);
+    letter-spacing: 0.03em;
+    text-shadow: none !important;
   }
 
   #hero h1 .l2 .big {
-    font-size: clamp(3.2rem, 12.5vw, 7.8rem);
-    text-shadow: 3px 3px 0 var(--ink), 5px 5px 0 rgba(14, 23, 42, 0.95);
+    font-size: clamp(2.6rem, 6.4vw, 5.2rem);
+    letter-spacing: 0.03em;
+    text-shadow: none !important;
   }
 
   .runner {
@@ -2877,7 +2905,15 @@ footer .stars {
     margin-top: 0.5rem;
   }
 
-  #hero h1 .l1,
+  #hero h1 .l1 {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 0.1rem;
+    width: 100%;
+  }
+
   #hero h1 .l2 {
     display: flex;
     flex-direction: row;
@@ -2889,10 +2925,11 @@ footer .stars {
   }
 
   #hero h1 .sm-ici {
-    align-self: baseline;
-    font-size: clamp(1.4rem, 6.2vw, 2.2rem);
-    letter-spacing: 0.02em;
-    margin-bottom: 0;
+    align-self: center !important;
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    letter-spacing: 0.04em;
+    margin-bottom: -0.45em !important;
+    transform: translateY(-8px);
   }
 
   #hero h1 .sm:last-child {
@@ -2902,13 +2939,14 @@ footer .stars {
   #hero h1 .big {
     font-size: clamp(2rem, 9.5vw, 3.8rem);
     line-height: 0.95;
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.85);
-    letter-spacing: -0.015em;
+    text-shadow: none !important;
+    letter-spacing: 0.03em;
   }
 
   #hero h1 .l2 .big {
     font-size: clamp(1.85rem, 8.8vw, 3.5rem);
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.85);
+    text-shadow: none !important;
+    letter-spacing: 0.03em;
   }
 
   .hero-fg-bg {
@@ -3052,22 +3090,26 @@ footer .stars {
   }
 
   #hero h1 .big {
-    font-size: clamp(1.45rem, 7.5vw, 2.8rem) !important;
+    font-size: clamp(2.2rem, 8.5vw, 4.2rem) !important;
     line-height: 0.95 !important;
     max-width: 100% !important;
     word-break: keep-all !important;
     white-space: nowrap !important;
+    letter-spacing: 0.03em !important;
+    text-shadow: none !important;
   }
 
   #hero h1 .l2 .big {
-    font-size: clamp(1.4rem, 7.2vw, 2.6rem) !important;
+    font-size: clamp(2.0rem, 8.0vw, 3.8rem) !important;
     max-width: 100% !important;
     word-break: keep-all !important;
     white-space: nowrap !important;
+    letter-spacing: 0.03em !important;
+    text-shadow: none !important;
   }
 
   #hero h1 .sm-ici {
-    font-size: clamp(1.5rem, 7.5vw, 2.5rem) !important;
+    font-size: clamp(2.0rem, 8.0vw, 3.5rem) !important;
     margin-bottom: 0.15rem !important;
     align-self: center !important;
   }

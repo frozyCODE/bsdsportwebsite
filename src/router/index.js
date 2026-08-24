@@ -40,6 +40,16 @@ const routes = [
     component: () => import('@/views/ParticuliersView.vue')
   },
   {
+    path: '/aquatraining',
+    name: 'aquatraining',
+    component: () => import('@/views/AquaTrainingView.vue')
+  },
+  {
+    path: '/programme-personnalise',
+    name: 'programme-personnalise',
+    component: () => import('@/views/CoachingView.vue')
+  },
+  {
     path: '/entreprise',
     name: 'entreprise',
     component: () => import('@/views/EntrepriseView.vue')

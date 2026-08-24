@@ -16,7 +16,7 @@
         <router-link to="/particuliers" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all font-bold">
           ← RETOUR AUX UNIVERS
         </router-link>
-        <span class="font-display text-xs uppercase tracking-[0.2em] text-[#ff7043] font-bold">CROSS HEAT ET PREPARATION</span>
+        <span class="font-display text-xs uppercase tracking-[0.2em] text-[#ff7043] font-bold">PROGRAMMES & ACCOMPAGNEMENT PERSONNALISE</span>
       </div>
     </div>
 
@@ -24,18 +24,18 @@
     <main class="relative z-10 my-auto py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/80 border border-white/20 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-lg backdrop-blur-md font-bold">
         <span class="w-2 h-2 rounded-full bg-[#ff7043] animate-pulse"></span>
-        <span>ESPACE DEDIE EN COURS DE PREPARATION</span>
+        <span>PAGE EN COURS DE CONSTRUCTION</span>
       </div>
 
       <h1 class="font-display text-3xl sm:text-6xl uppercase tracking-tight text-white leading-tight">
-        CETTE PAGE EST ACTUELLEMENT VIDE
+        ACCÈS SUR-MESURE PROCHAINEMENT DISPONIBLE
       </h1>
 
       <p class="text-sm sm:text-base text-white/70 font-body max-w-xl mx-auto leading-relaxed">
-        L'espace dédié à l'univers Cross Heat & Stepp Training est en cours de finalisation.
+        L'espace dédié aux programmes individualisés et à l'accompagnement personnalisé est en cours de création. Vous pouvez dès maintenant nous contacter directement pour établir votre bilan.
       </p>
 
-      <div class="pt-4">
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
         <router-link 
           to="/particuliers"
           class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 font-bold"

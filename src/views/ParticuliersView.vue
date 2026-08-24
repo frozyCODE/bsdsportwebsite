@@ -44,7 +44,7 @@
       <div class="relative z-10">
         <!-- Titre principal -->
         <h1 class="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight text-white mb-6 leading-none drop-shadow-lg">
-          ESPACE PARTICULIERS <span class="text-[#ff7043] block sm:inline mt-1 sm:mt-0">& ATHLETES</span>
+          ESPACE <span class="chrome-silver-text">PARTICULIERS</span> <span class="text-[#ff7043] block sm:inline mt-1 sm:mt-0">& ATHLETES</span>
         </h1>
 
         <p class="text-xs sm:text-base lg:text-lg text-white/80 font-body max-w-3xl mx-auto mb-10 leading-relaxed px-2">
@@ -67,7 +67,40 @@
       </div>
     </section>
 
-    <!-- SECTION 1: L'Expérience Horizontale Inédite des 3 Univers BSD -->
+    <!-- BANDEAU RÈGLEMENT INTÉRIEUR & TARIFS (Épuré sans contour orange ni badge) -->
+    <section class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 mt-4 mb-12">
+      <div class="p-6 sm:p-8 rounded-3xl bg-[#111111]/90 border border-white/15 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left transition-all duration-300">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center shrink-0 text-[#ff7043]">
+            <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-display text-lg sm:text-xl uppercase text-white tracking-tight">
+              REGLEMENT INTERIEUR & TARIFS DU CLUB
+            </h3>
+            <p class="text-xs sm:text-sm text-white/70 font-body">
+              Retrouvez l'intégralité des tarifs, modalités de paiement et règles du club.
+            </p>
+          </div>
+        </div>
+
+        <a 
+          href="/reglement-interieur.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider font-bold shadow-xl transition-all duration-300 shrink-0 group"
+        >
+          <span>TELECHARGER LE REGLEMENT (PDF)</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7-7 7M5 12h16"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 1: L'Expérience des Univers BSD -->
     <div id="univers-particuliers" class="relative z-10">
       <IncredibleUniversShowcase />
     </div>
@@ -78,7 +111,7 @@
     <!-- SECTION AVIS GOOGLE MEMBRES BSD SPORT -->
     <GoogleReviewsSection />
 
-    <!-- SECTION 2: Contact Form pour Particuliers (Rejoignez-nous) -->
+    <!-- SECTION 3: Contact Form pour Particuliers (Rejoignez-nous) -->
     <div id="contact-particuliers" class="relative z-10">
       <ContactSection />
     </div>
@@ -109,3 +142,24 @@ function scrollToSection(id) {
   }
 }
 </script>
+
+<style scoped>
+/* CONTOUR & LUEUR PARFAITS — DÉGRADÉ RADIAL CHROME SILVER SPHERIQUE / BOMBÉ */
+.chrome-silver-text {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    #ffffff 0%,
+    #e2e8f0 35%,
+    #94a3b8 70%,
+    #475569 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+}
+</style>

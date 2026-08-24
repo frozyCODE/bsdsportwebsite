@@ -23,7 +23,7 @@
           <!-- Titre Géant Akira Sans Accent -->
           <h2 class="font-display text-4xl sm:text-7xl lg:text-8xl uppercase tracking-tighter text-white leading-[0.95]">
             CE QUE DISENT <br />
-            <span class="text-[#ff7043]">NOS MEMBRES</span>
+            <span class="chrome-silver-text">NOS MEMBRES</span>
           </h2>
         </div>
 

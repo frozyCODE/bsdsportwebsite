@@ -2,7 +2,7 @@
   <section id="hero" class="relative bg-transparent">
 
     <!-- Positionnement abaissé & optimisé mobile / tablette (820x1180) de "Ici, Le sport Nous rassemble" -->
-    <h1 class="relative z-10 pt-6 sm:pt-14 lg:pt-20 drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)] text-center flex flex-col items-center px-4 sm:px-6 w-full max-w-full overflow-hidden">
+    <h1 class="relative z-10 pt-6 sm:pt-14 lg:pt-20 text-center flex flex-col items-center px-4 sm:px-6 w-full max-w-full overflow-hidden">
       <!-- ROW 1: Ici, + Le sport -->
       <span class="l1 reveal d1 flex flex-col lg:flex-row items-center lg:items-baseline justify-center gap-1 lg:gap-3 max-w-full">
         <span class="sm sm-ici inline-block text-center shrink-0">Ici,</span>

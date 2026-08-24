@@ -212,21 +212,8 @@
         </div>
       </div>
 
-      <!-- SECTION NOS PARTENAIRES (Au-dessus de la Map) -->
-      <PartenairesSection class="mt-20 sm:mt-32" />
-
-      <!-- SECTION REJOIGNEZ-NOUS (Seulement la Map) -->
-      <div class="rejoignez-nous-section reveal d2 mt-20 sm:mt-28 pt-16 sm:pt-20 border-t border-white/10">
-        <div class="mb-10 text-center">
-          <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-2 leading-none" style="-webkit-text-stroke: 0 !important; text-shadow: none !important; filter: none !important;">
-            REJOIGNEZ NOUS
-          </h2>
-          <p class="text-xs sm:text-sm text-white/60 font-body">
-            38800 Pont-de-Claix · Grenoble · Isère
-          </p>
-        </div>
-
-        <!-- Carte Google Maps Seule -->
+      <!-- CARTE GOOGLE MAPS DIRECTEMENT SOUS LE FORMULAIRE DE CONTACT (Sans le titre Rejoignez-nous) -->
+      <div class="map-section reveal d2 mt-12 sm:mt-16 pt-8 border-t border-white/10">
         <div class="max-w-5xl mx-auto">
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-xl bg-[#111111] min-h-[360px] sm:min-h-[440px] group">
             <iframe
@@ -247,7 +234,7 @@
                 href="https://www.google.com/maps/search/?api=1&query=BSD+Sport+Pont-de-Claix"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-[10px] sm:text-xs tracking-wider uppercase shadow-xl transition-all duration-300"
+                class="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-[10px] sm:text-xs tracking-wider uppercase shadow-xl transition-all duration-300 font-bold"
               >
                 <span>Obtenir l'itineraire</span>
               </a>
@@ -255,6 +242,9 @@
           </div>
         </div>
       </div>
+
+      <!-- SECTION NOS PARTENAIRES -->
+      <PartenairesSection class="mt-20 sm:mt-32" />
 
       <!-- SiteFooter Universel (Partage l'arrière-plan #0d0d0d et la texture de la section au-dessus) -->
       <SiteFooter class="mt-16 border-t border-white/10" />

@@ -14,7 +14,7 @@
         </div>
 
         <h3 class="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white mb-3 leading-none">
-          NOS PARTENAIRES
+          <span class="chrome-silver-text">NOS PARTENAIRES</span>
         </h3>
         <p class="text-xs sm:text-sm text-white/60 font-body max-w-xl mx-auto">
           Institutions, collectivités, fondations et entreprises engagées à nos côtés.

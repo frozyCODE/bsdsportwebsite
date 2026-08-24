@@ -28,7 +28,7 @@ const profiles = [
     styleClass: 'part',
     accentColor: '#FF4B2E',
     formTitle: 'Rejoindre la communaute BSD',
-    formTitleFormatted: '<span class="block mb-1 sm:mb-2">REJOINDRE LA</span><span class="block">COMMUNAUTE BSD</span>',
+    formTitleFormatted: '<span class="block mb-1 sm:mb-2">REJOINDRE LA</span><span class="block chrome-silver-text">COMMUNAUTE BSD</span>',
     formSubtitle: 'Renseignements & inscription.',
     submitLabel: 'ENVOYER VOTRE DEMANDE →'
   },

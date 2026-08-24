@@ -11,7 +11,7 @@
     <NavbarHeader />
 
     <!-- Sticky Sub-Nav avec Bouton Retour -->
-    <div class="sticky top-0 z-40 backdrop-blur-xl bg-[#080808]/90 border-b border-white/15 px-6 py-4">
+    <div class="sticky top-20 sm:top-24 z-40 backdrop-blur-xl bg-[#080808]/95 border-b border-white/15 px-6 py-3.5 shadow-2xl">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <router-link to="/particuliers" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all font-bold">
           ← RETOUR AUX UNIVERS

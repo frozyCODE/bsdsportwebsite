@@ -100,14 +100,14 @@ const universData = [
   },
   {
     id: 'aquatraining',
-    route: '/omnisport-outdoor',
+    route: '/aquatraining',
     title: 'AQUA-TRAINING',
-    description: 'Séances de renforcement aquatique dynamiques et ludiques. Développez votre endurance et tonifiez votre corps sans impact articulaire dans une ambiance vivifiante.',
+    description: 'Allie aquabike, renforcement musculaire et natation pour un entraînement complet. Séance proposée un dimanche par mois à la Piscine Flotibulle.',
     bgImage: '/piscine.jpeg',
     infoItems: [
-      'Aqua Training',
-      'Renforcement Aquatique',
-      'Endurance & Cardio'
+      'Aquabike & Cardio',
+      'Renforcement Musculaire',
+      'Piscine Flotibulle'
     ]
   },
   {
@@ -120,6 +120,18 @@ const universData = [
       'Stage Muay Thai Thailande',
       'Expedition Alpine Isere',
       'Ocean Bootcamp Beach'
+    ]
+  },
+  {
+    id: 'coaching-personnalise',
+    route: '/programme-personnalise',
+    title: 'PROGRAMMES & ACCOMPAGNEMENT PERSONNALISE',
+    description: 'Suivi individuel par nos préparateurs physiques certifiés. Élaboration de votre plan d\'entraînement sur-mesure, objectifs d\'athlète ou de remise en forme.',
+    bgImage: '',
+    infoItems: [
+      'Coaching Individuel',
+      'Programmation Sur-Mesure',
+      'Suivi Réathlétisation'
     ]
   }
 ]
