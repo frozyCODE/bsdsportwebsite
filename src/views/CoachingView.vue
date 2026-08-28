@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-hidden font-body select-none flex flex-col justify-between">
+  <div class="min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-x-hidden font-body select-none flex flex-col justify-between">
     
     <!-- Texture Grain Argentique -->
     <div 
@@ -8,52 +8,96 @@
       aria-hidden="true"
     ></div>
 
-    <NavbarHeader />
+    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO -->
+    <div class="absolute top-0 inset-x-0 h-[650px] sm:h-[800px] pointer-events-none overflow-hidden select-none z-0">
+      <img 
+        src="/training.jpg" 
+        alt="Coaching Fond Hero" 
+        class="w-full h-full object-cover object-center filter brightness-90 contrast-110 opacity-30"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#080808]/40 via-[#080808]/75 to-[#080808]"></div>
+    </div>
 
-    <!-- Sticky Sub-Nav avec Bouton Retour -->
-    <div class="sticky top-20 sm:top-24 z-40 backdrop-blur-xl bg-[#080808]/95 border-b border-white/15 px-6 py-3.5 shadow-2xl">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <router-link to="/particuliers" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-[#ff7043] text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all font-bold">
-          ← RETOUR AUX UNIVERS
-        </router-link>
-        <span class="font-display text-xs uppercase tracking-[0.2em] text-[#ff7043] font-bold">PROGRAMMES & ACCOMPAGNEMENT PERSONNALISE</span>
+    <!-- Logo BSD Filigrane Géant avec Vidéo -->
+    <div class="absolute top-[320px] left-1/2 -translate-x-1/2 w-[1100px] sm:w-[1700px] lg:w-[2200px] max-w-none aspect-square pointer-events-none overflow-hidden z-0 opacity-25 select-none" aria-hidden="true">
+      <div 
+        class="w-full h-full transform rotate-3 transition-transform duration-1000"
+        style="
+          -webkit-mask-image: url('/BSD LOGO PNG.png');
+          mask-image: url('/BSD LOGO PNG.png');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        "
+      >
+        <video 
+          src="/4.mov" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="w-full h-full object-cover filter grayscale contrast-105 brightness-75 opacity-75 scale-105"
+        ></video>
       </div>
     </div>
 
-    <!-- MAIN EMPTY STATE -->
-    <main class="relative z-10 my-auto py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/80 border border-white/20 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-lg backdrop-blur-md font-bold">
-        <span class="w-2 h-2 rounded-full bg-[#ff7043] animate-pulse"></span>
-        <span>PAGE EN COURS DE CONSTRUCTION</span>
+    <NavbarHeader />
+
+    <!-- BOUTON RETOUR FLÈCHE SIMPLE EN HAUT À DROITE -->
+    <div class="pt-24 sm:pt-28 px-6 sm:px-12 max-w-7xl mx-auto flex justify-end relative z-20 w-full">
+      <router-link 
+        to="/particuliers" 
+        class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#111111] border border-white/15 text-white/80 hover:text-white hover:border-white/40 transition-all duration-300 shadow-lg"
+        title="Retour aux univers"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+      </router-link>
+    </div>
+
+    <!-- MAIN EMPTY STATE AVEC ICONE DE TRAVAUX -->
+    <main class="relative z-10 my-auto py-16 px-6 max-w-3xl mx-auto text-center space-y-6">
+      
+      <!-- Icône de Travaux / Construction -->
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-3xl bg-[#111111] border border-white/15 flex items-center justify-center text-[#ff7043] shadow-2xl relative">
+        <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
       </div>
 
-      <h1 class="font-display text-3xl sm:text-6xl uppercase tracking-tight text-white leading-tight">
-        ACCÈS SUR-MESURE PROCHAINEMENT DISPONIBLE
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-sm font-bold">
+        <span>UNIVERS EN COURS DE CONSTRUCTION</span>
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
+        PROGRAMMES & ACCOMPAGNEMENT
       </h1>
 
-      <p class="text-sm sm:text-base text-white/70 font-body max-w-xl mx-auto leading-relaxed">
-        L'espace dédié aux programmes individualisés et à l'accompagnement personnalisé est en cours de création. Vous pouvez dès maintenant nous contacter directement pour établir votre bilan.
+      <p class="text-sm sm:text-base text-white/70 font-body max-w-lg mx-auto leading-relaxed">
+        Cet univers est actuellement en cours de préparation. Repassez très bientôt ou contactez-nous directement pour vos programmes sur-mesure.
       </p>
 
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="pt-4">
         <router-link 
           to="/particuliers"
-          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 font-bold"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider font-bold shadow-xl transition-all duration-300"
         >
-          <span>RETOUR A LA PAGE PARTICULIERS</span>
-          <span>→</span>
+          <span>RETOUR AUX UNIVERS</span>
         </router-link>
       </div>
     </main>
 
-    <!-- Footer minimaliste -->
-    <footer class="relative z-10 py-6 border-t border-white/10 text-center text-xs text-white/40 font-mono">
-      BSD SPORT © 2026 — CAMPUS MULTISPORTS PONT-DE-CLAIX
-    </footer>
+    <!-- Footer universel -->
+    <SiteFooter class="border-t border-white/10" />
 
   </div>
 </template>
 
 <script setup>
 import NavbarHeader from '@/components/common/NavbarHeader.vue'
+import SiteFooter from '@/components/common/SiteFooter.vue'
 </script>

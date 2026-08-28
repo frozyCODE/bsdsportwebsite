@@ -8,6 +8,43 @@
       aria-hidden="true"
     ></div>
 
+    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Considérablement plus visible) -->
+    <div class="absolute top-0 inset-x-0 h-[650px] sm:h-[800px] pointer-events-none overflow-hidden select-none z-0">
+      <img 
+        src="/piscine.jpeg" 
+        alt="Aqua Training Fond Hero" 
+        class="w-full h-full object-cover object-center filter brightness-95 contrast-110 opacity-70"
+      />
+      <!-- Fondu sombre progressif léger vers le bas -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#080808]/20 via-[#080808]/50 to-[#080808]"></div>
+    </div>
+
+    <!-- Logo BSD Filigrane Géant avec Vidéo (En dessous de l'image, apparaît et défile avec le scroll) -->
+    <div class="absolute top-[320px] left-1/2 -translate-x-1/2 w-[1100px] sm:w-[1700px] lg:w-[2200px] max-w-none aspect-square pointer-events-none overflow-hidden z-0 opacity-25 select-none" aria-hidden="true">
+      <div 
+        class="w-full h-full transform rotate-3 transition-transform duration-1000"
+        style="
+          -webkit-mask-image: url('/BSD LOGO PNG.png');
+          mask-image: url('/BSD LOGO PNG.png');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        "
+      >
+        <video 
+          src="/4.mov" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="w-full h-full object-cover filter grayscale contrast-105 brightness-75 opacity-75 scale-105"
+        ></video>
+      </div>
+    </div>
+
     <!-- NavbarHeader principale -->
     <NavbarHeader />
 
@@ -25,12 +62,12 @@
     </div>
 
     <!-- HERO HEADER SANCTIONNEL EN COULEURS NATURELLES ET NETTES -->
-    <section class="relative pt-4 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-8 max-w-5xl mx-auto text-center z-10">
+    <section class="relative pt-4 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-8 max-w-4xl mx-auto text-center z-10">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-6 shadow-sm font-bold">
-        <span>SEANCE PROPOSEE UN DIMANCHE PAR MOIS</span>
+        <span>UN DIMANCHE PAR MOIS</span>
       </div>
 
-      <h1 class="font-display text-4xl sm:text-7xl lg:text-8xl uppercase tracking-tight text-white mb-6 leading-none">
+      <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-6 leading-none">
         AQUATRAINING <br />
         <span class="chrome-silver-text text-[#ff7043] block mt-2">CARDIO & RENFORCEMENT</span>
       </h1>

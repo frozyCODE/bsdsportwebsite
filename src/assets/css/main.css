@@ -245,7 +245,7 @@ body {
 /* Classe Globale Effet Chromé Silver Métallisé */
 .chrome-silver-text {
   position: relative;
-  display: inline-block;
+  display: inline;
   color: #ffffff;
   background: radial-gradient(
     ellipse at 50% 30%,
@@ -258,6 +258,8 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
 }
 

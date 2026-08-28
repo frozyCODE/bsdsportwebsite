@@ -23,7 +23,7 @@
           <!-- Titre Géant Akira Sans Accent -->
           <h2 class="font-display text-4xl sm:text-7xl lg:text-8xl uppercase tracking-tighter text-white leading-[0.95]">
             CE QUE DISENT <br />
-            <span class="chrome-silver-text">NOS MEMBRES</span>
+            <span class="chrome-silver-text">NOS</span> <span class="chrome-silver-text">MEMBRES</span>
           </h2>
         </div>
 
@@ -64,20 +64,23 @@
         :style="{ transform: `translate3d(${currentX}px, 0, 0)` }"
       >
         
-        <!-- Cartes d'avis immobiles et 100% responsives -->
+        <!-- Cartes d'avis sur FOND BLANC PUR avec l'image exacte topo-pattern.webp -->
         <div 
           v-for="(rev, index) in infiniteReviews" 
           :key="index"
-          class="shrink-0 w-[310px] sm:w-[400px] lg:w-[420px] min-h-[480px] sm:min-h-[540px] bg-[#ebe8e1] text-black p-6 sm:p-9 rounded-[32px] flex flex-col justify-between shadow-2xl border border-black/5 relative overflow-hidden"
-          style="background-image: url('data:image/svg+xml,%3Csvg width=\'256\' height=\'256\' viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'cardGrain\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.95\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23cardGrain)\' opacity=\'0.15\'/%3E%3C/svg%3E');"
+          class="shrink-0 w-[310px] sm:w-[400px] lg:w-[420px] min-h-[480px] sm:min-h-[540px] bg-white text-black p-6 sm:p-9 rounded-[32px] flex flex-col justify-between shadow-2xl border border-black/10 relative overflow-hidden group bg-repeat bg-[length:320px_auto]"
+          style="background-image: url('/assets/topo-pattern.webp');"
         >
-          <div class="space-y-5">
-            <!-- Grand Titre Akira Bold Sans Accent Responsive (sans tronquage) -->
+          <!-- Voile très léger pour garantir la lisibilité du texte -->
+          <div class="absolute inset-0 bg-white/40 pointer-events-none z-0"></div>
+
+          <div class="space-y-5 relative z-10">
+            <!-- Grand Titre Akira Bold Sans Accent Responsive -->
             <h3 class="font-display text-xl sm:text-2xl lg:text-3xl uppercase tracking-tight text-black leading-[1.05] pt-1 break-words">
               {{ rev.title }}
             </h3>
             
-            <!-- 5 Étoiles Oranges/Rouges -->
+            <!-- 5 Étoiles Oranges -->
             <div class="flex text-[#ff7043] text-lg sm:text-xl gap-1">
               ★★★★★
             </div>
@@ -89,7 +92,7 @@
           </div>
 
           <!-- Nom de l'auteur -->
-          <div class="pt-6 border-t border-black/10">
+          <div class="pt-6 border-t border-black/15 relative z-10">
             <span class="font-body font-semibold text-sm sm:text-base text-black block">
               {{ rev.author }}
             </span>
@@ -117,42 +120,50 @@ const baseReviews = [
   {
     title: 'JE RECOMMANDE A 1000%',
     text: "Je recommande à 1000% une équipe à l'écoute de vos attentes ! Que ce soit en cours collectif ou en coaching personnel vous ne serez pas déçu ! Ils s'adaptent au niveau de chacun et proposent aussi le suivi nutritionnel donc n'hésitez même pas !!!",
-    author: 'Safia Elafani Nader'
+    author: 'Safia Elafani Nader',
+    bgSvg: '/assets/topo-card-1.svg'
   },
   {
     title: 'DES RESULTATS ET UNE CONFIANCE TOTALE',
     text: "Le coach est au top, à l'écoute de ses apprentis, de bons entraînements qui mènent à de bons résultats ! Une confiance les yeux fermés envers ce club.",
-    author: 'Méllina Maia'
+    author: 'Méllina Maia',
+    bgSvg: '/assets/topo-card-2.svg'
   },
   {
     title: "REELLEMENT A L'ECOUTE",
     text: "Des professionnels réellement à l'écoute et ayant su répondre à mes attentes et besoins. N'hésitez pas, ils vous tireront vers le haut à votre rythme.",
-    author: 'Melodi Dogan'
+    author: 'Melodi Dogan',
+    bgSvg: '/assets/topo-card-3.svg'
   },
   {
     title: 'EQUIPE PEDAGOGUE ET PROFESSIONNELLE',
     text: "Je recommande, équipe pédagogue, professionnelle, à l'écoute. Soucieuse de bien faire, avec un accompagnement au plus près de mes demandes ! Au top merci !!",
-    author: 'Amel'
+    author: 'Amel',
+    bgSvg: '/assets/topo-card-4.svg'
   },
   {
     title: 'TRES MOTIVANTE ET EFFICACE',
     text: "Super équipe sportive, très à l'écoute et très motivante ! Communication, Qualité et Professionnalisme au rendez-vous.",
-    author: 'Merouan DALI'
+    author: 'Merouan DALI',
+    bgSvg: '/assets/topo-card-5.svg'
   },
   {
     title: 'SUPERBE AMBIANCE ET BONS COACHS',
     text: "Superbe ambiance, équipe à l'écoute et efficace, je recommande vivement à tous ceux qui veulent progresser !",
-    author: 'Ryan Amor'
+    author: 'Ryan Amor',
+    bgSvg: '/assets/topo-card-1.svg'
   },
   {
     title: 'EXCELLENT COLLECTIF ET MOTIVATION',
     text: "Très bon coach avec énormément de motivation et un excellent collectif au quotidien.",
-    author: 'Salah Elf'
+    author: 'Salah Elf',
+    bgSvg: '/assets/topo-card-2.svg'
   },
   {
     title: 'COACHING ET RESULTATS SATISFAISANTS',
     text: "Recommande à 100%, coach très à l'écoute à la demande du client et des résultats satisfaisants !",
-    author: 'Shigetora'
+    author: 'Shigetora',
+    bgSvg: '/assets/topo-card-3.svg'
   }
 ]
 

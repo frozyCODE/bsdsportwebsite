@@ -1,5 +1,5 @@
 <template>
-  <div class="horizon-page min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-x-hidden font-body select-none">
+  <div class="horizon-page min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-x-hidden font-body select-none flex flex-col justify-between">
     
     <!-- Texture Grain Argentique Brutaliste -->
     <div 
@@ -8,271 +8,97 @@
       aria-hidden="true"
     ></div>
 
-    <!-- Glow Orange Ambient -->
-    <div class="fixed top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#ff7043]/12 blur-[160px] pointer-events-none" aria-hidden="true"></div>
+    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Considérablement plus visible) -->
+    <div class="absolute top-0 inset-x-0 h-[650px] sm:h-[800px] pointer-events-none overflow-hidden select-none z-0">
+      <img 
+        src="/montagne.jpg" 
+        alt="Horizon Sport Fond Hero" 
+        class="w-full h-full object-cover object-center filter brightness-95 contrast-110 opacity-70"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#080808]/20 via-[#080808]/50 to-[#080808]"></div>
+    </div>
+
+    <!-- Logo BSD Filigrane Géant avec Vidéo -->
+    <div class="absolute top-[320px] left-1/2 -translate-x-1/2 w-[1100px] sm:w-[1700px] lg:w-[2200px] max-w-none aspect-square pointer-events-none overflow-hidden z-0 opacity-25 select-none" aria-hidden="true">
+      <div 
+        class="w-full h-full transform rotate-3 transition-transform duration-1000"
+        style="
+          -webkit-mask-image: url('/BSD LOGO PNG.png');
+          mask-image: url('/BSD LOGO PNG.png');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        "
+      >
+        <video 
+          src="/4.mov" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="w-full h-full object-cover filter grayscale contrast-105 brightness-75 opacity-75 scale-105"
+        ></video>
+      </div>
+    </div>
 
     <!-- Header Principal -->
     <NavbarHeader />
 
-    <!-- Bouton Retour Flottant sous le Header Principal (z-50) -->
-    <div class="fixed top-20 sm:top-24 left-4 sm:left-8 z-50">
+    <!-- BOUTON RETOUR FLÈCHE SIMPLE EN HAUT À DROITE -->
+    <div class="pt-24 sm:pt-28 px-6 sm:px-12 max-w-7xl mx-auto flex justify-end relative z-20 w-full">
       <router-link 
         to="/particuliers" 
-        class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-black/85 hover:bg-[#ff7043] border border-white/20 text-white hover:text-black font-display text-xs uppercase tracking-wider transition-all duration-300 font-bold backdrop-blur-xl shadow-2xl group cursor-pointer"
+        class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#111111] border border-white/15 text-white/80 hover:text-white hover:border-white/40 transition-all duration-300 shadow-lg"
+        title="Retour aux univers"
       >
-        <span class="transition-transform group-hover:-translate-x-1">←</span>
-        <span>RETOUR AUX UNIVERS</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
       </router-link>
     </div>
 
-    <!-- HERO / SECTIONS CONTENT (pt-28 pour passer sous la Navbar) -->
-    <main class="relative z-10 pt-28 sm:pt-36 pb-20 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto space-y-16 sm:space-y-24">
+    <!-- MAIN EMPTY STATE AVEC ICONE DE TRAVAUX -->
+    <main class="relative z-10 my-auto py-16 px-6 max-w-3xl mx-auto text-center space-y-6">
       
-      <!-- EN-TETE HORIZON SPORT -->
-      <div class="text-center max-w-4xl mx-auto space-y-6">
-        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111111] border border-[#ff7043]/40 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.25em] font-bold shadow-lg">
-          <span class="w-2 h-2 rounded-full bg-[#ff7043] animate-pulse"></span>
-          <span>HORIZON BY BSD SPORT · EXPEDITIONS INTERNATIONALES</span>
-        </div>
-
-        <h1 class="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight text-white leading-none">
-          EMBARQUEZ POUR NOS <br class="hidden sm:inline" />
-          <span class="text-[#ff7043]">SEJOURS & VOYAGES</span> SPORTIFS
-        </h1>
-
-        <p class="text-xs sm:text-base lg:text-lg text-white/80 font-body max-w-3xl mx-auto leading-relaxed">
-          Repoussez vos limites hors des frontieres. BSD Sport organise des expeditions et des bootcamps d'exception a l'etranger et en pleine nature, combinant entrainement intensif, aventure et immersion culturelle.
-        </p>
+      <!-- Icône de Travaux / Construction -->
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-3xl bg-[#111111] border border-white/15 flex items-center justify-center text-[#ff7043] shadow-2xl relative">
+        <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
       </div>
 
-      <!-- FILTRES DE DESTINATIONS -->
-      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-        <button
-          v-for="cat in categories"
-          :key="cat.id"
-          @click="selectedCategory = cat.id"
-          class="px-4 py-2.5 rounded-full font-display text-[11px] sm:text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer border"
-          :class="selectedCategory === cat.id 
-            ? 'bg-[#ff7043] text-black border-[#ff7043] font-bold shadow-xl scale-105' 
-            : 'bg-white/5 hover:bg-white/10 text-white/70 border-white/15 hover:text-white'"
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-sm font-bold">
+        <span>UNIVERS EN COURS DE CONSTRUCTION</span>
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
+        HORIZON BY BSD SPORT
+      </h1>
+
+      <p class="text-sm sm:text-base text-white/70 font-body max-w-lg mx-auto leading-relaxed">
+        Les expéditions outdoor et voyages sportifs d'exception sont actuellement en cours de préparation. Revenez bientôt pour découvrir nos prochains séjours.
+      </p>
+
+      <div class="pt-4">
+        <router-link 
+          to="/particuliers"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider font-bold shadow-xl transition-all duration-300"
         >
-          {{ cat.label }}
-        </button>
+          <span>RETOUR AUX UNIVERS</span>
+        </router-link>
       </div>
-
-      <!-- GRILLE DES VOYAGES & EXPEDITIONS -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div 
-          v-for="trip in filteredTrips" 
-          :key="trip.id"
-          class="group relative bg-[#111111] border border-white/15 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-[#ff7043]/60 flex flex-col justify-between"
-        >
-          <!-- Photo du sejour avec Overlay -->
-          <div class="relative h-64 sm:h-80 overflow-hidden">
-            <img 
-              :src="trip.image" 
-              :alt="trip.title"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-black/40 to-transparent"></div>
-            
-            <!-- Badges Haut -->
-            <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[#ff7043] font-display text-[10px] uppercase tracking-widest font-bold">
-                {{ trip.tag }}
-              </span>
-              <span class="px-3 py-1.5 rounded-full bg-[#ff7043] text-black font-display text-[10px] uppercase tracking-widest font-bold shadow-md">
-                {{ trip.duration }}
-              </span>
-            </div>
-
-            <!-- Titre sur l'image -->
-            <div class="absolute bottom-4 left-6 right-6">
-              <span class="text-xs font-display uppercase tracking-widest text-[#ff7043] font-bold block mb-1">
-                LOCATION // {{ trip.location }}
-              </span>
-              <h3 class="font-display text-xl sm:text-3xl text-white uppercase tracking-tight leading-tight">
-                {{ trip.title }}
-              </h3>
-            </div>
-          </div>
-
-          <!-- Corps de carte -->
-          <div class="p-6 sm:p-8 space-y-6 flex-1 flex flex-col justify-between">
-            <p class="text-xs sm:text-sm text-white/80 font-body leading-relaxed">
-              {{ trip.description }}
-            </p>
-
-            <!-- Points Forts Inclus -->
-            <div class="space-y-2 pt-4 border-t border-white/10">
-              <span class="text-[10px] font-display uppercase tracking-wider text-white/50 block font-bold">Ce qui vous attend :</span>
-              <div class="grid grid-cols-2 gap-2">
-                <div 
-                  v-for="(feature, idx) in trip.features" 
-                  :key="idx"
-                  class="flex items-center gap-2 text-xs text-white/90 font-body"
-                >
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff7043] shrink-0"></span>
-                  <span>{{ feature }}</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Footer Carte & CTA -->
-            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div class="flex flex-col">
-                <span class="text-[10px] uppercase font-display tracking-wider text-white/50">Prochaine Session</span>
-                <span class="text-xs font-bold text-white font-body">{{ trip.nextSession }}</span>
-              </div>
-
-              <router-link 
-                to="/particuliers#contact-particuliers"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-[11px] uppercase tracking-wider font-bold transition-all duration-300 group/btn shadow-lg cursor-pointer"
-              >
-                <span>RESERVER CE VOYAGE</span>
-                <span class="transition-transform group-hover/btn:translate-x-1">→</span>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BANNIERE ENGAGEMENT & POURQUOI PARTIR AVEC BSD -->
-      <div class="bg-[#111111] border border-white/15 rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-          <div class="lg:col-span-7 space-y-4">
-            <span class="text-xs font-display uppercase tracking-widest text-[#ff7043] font-bold">
-              LA PROMESSE BSD HORIZON
-            </span>
-            <h2 class="font-display text-2xl sm:text-4xl text-white uppercase tracking-tight leading-tight">
-              UNE IMMERSION SPORTIVE CLES EN MAIN & SANS COMPROMIS
-            </h2>
-            <p class="text-xs sm:text-base text-white/75 font-body leading-relaxed">
-              Que vous veniez seul(e) ou en groupe, nos sejours sont concus pour vous faire vivre des aventures inoubliables. Encadrement professionnel par vos coachs diplomes BSD Sport, logistique complete, hebergements premium et esprit de groupe soude.
-            </p>
-          </div>
-
-          <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div class="bg-black/50 border border-white/10 p-4 rounded-2xl space-y-1">
-              <span class="text-xs font-display text-[#ff7043] uppercase font-bold block">01 // COACHS</span>
-              <h3 class="font-display text-xs uppercase text-white font-bold">EQUIPE BSD</h3>
-              <p class="text-[11px] text-white/60">Accompagnement continu sur le terrain</p>
-            </div>
-            <div class="bg-black/50 border border-white/10 p-4 rounded-2xl space-y-1">
-              <span class="text-xs font-display text-[#ff7043] uppercase font-bold block">02 // TRIBU</span>
-              <h3 class="font-display text-xs uppercase text-white font-bold">ESPRIT GROUPE</h3>
-              <p class="text-[11px] text-white/60">Cohesion et moments partages</p>
-            </div>
-            <div class="bg-black/50 border border-white/10 p-4 rounded-2xl space-y-1">
-              <span class="text-xs font-display text-[#ff7043] uppercase font-bold block">03 // CLE EN MAIN</span>
-              <h3 class="font-display text-xs uppercase text-white font-bold">LOGISTIQUE TOTAL</h3>
-              <p class="text-[11px] text-white/60">Logement, transport & programmes</p>
-            </div>
-            <div class="bg-black/50 border border-white/10 p-4 rounded-2xl space-y-1">
-              <span class="text-xs font-display text-[#ff7043] uppercase font-bold block">04 // CHALLENGE</span>
-              <h3 class="font-display text-xs uppercase text-white font-bold">DEPASSEMENT</h3>
-              <p class="text-[11px] text-white/60">Progression garantie & souvenirs uniques</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </main>
 
-    <!-- Footer minimaliste -->
-    <footer class="relative z-10 py-6 border-t border-white/10 text-center text-xs text-white/40 font-mono">
-      BSD SPORT © 2026 — HORIZON EXPEDITIONS
-    </footer>
+    <!-- Footer universel -->
+    <SiteFooter class="border-t border-white/10" />
 
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
 import NavbarHeader from '@/components/common/NavbarHeader.vue'
-
-const selectedCategory = ref('all')
-
-const categories = [
-  { id: 'all', label: 'Toutes les Expeditions' },
-  { id: 'international', label: 'International & Thailande' },
-  { id: 'montagne', label: 'Montagne & Trek' },
-  { id: 'ocean', label: 'Surf & Ocean Bootcamp' }
-]
-
-const trips = [
-  {
-    id: 'muay-thai-thailande',
-    category: 'international',
-    title: 'STAGE MUAY THAI & IMMERSION THAILANDE',
-    location: 'Phuket & Chiang Mai, Thailande',
-    tag: 'International · Immersion',
-    duration: '10 Jours / 9 Nuits',
-    image: '/01-sitjemam-muay-thai.png',
-    description: 'Vivez l\'intensite d\'un entrainement traditionnel au coeur de la Thailande. Deux sessions quotidiennes en camp de boxe professionnel, preparation physique sur plage tropicale, recuperation et decouverte culturelle.',
-    features: [
-      'Entrainement biquotidien avec masters',
-      'WODs sur la plage & Cardiotraining',
-      'Hebergement & Transferts inclus',
-      'Soins de recuperation & Massage thai'
-    ],
-    nextSession: 'Automne 2026 (Inscriptions ouvertes)'
-  },
-  {
-    id: 'expedition-alpine',
-    category: 'montagne',
-    title: 'EXPEDITION ALPINE & TREKKING BIVOUAC',
-    location: 'Massif de Belledonne & Ecrins, Isere',
-    tag: 'Montagne · Outdoor',
-    duration: '4 Jours / 3 Nuits',
-    image: '/montagne.jpg',
-    description: 'Une aventure grandeur nature au depart de Grenoble. Trail running en altitude, franchissement de cols mythiques, bivouac sous les etoiles et cohesion autour du feu de camp.',
-    features: [
-      'Guide de haute montagne & Coach BSD',
-      'Materiel de bivouac & Repas traiteur',
-      'Renforcement fonctionnel en altitude',
-      'Ascension de sommets alpins'
-    ],
-    nextSession: 'Ete 2026 (Session Juin & Juillet)'
-  },
-  {
-    id: 'ocean-bootcamp',
-    category: 'ocean',
-    title: 'OCEAN BOOTCAMP & CROSS RETREAT',
-    location: 'Cote Basque / Portugal',
-    tag: 'Evasion · Surf & Fit',
-    duration: '7 Jours / 6 Nuits',
-    image: '/man-jumping-into-natural-pond.jpg',
-    description: 'Combinez la puissance du Cross-Training avec l\'energie de l\'ocean. WODs explosifs sur le sable, cours de surf quotidien, nutrition sportive et session Mindset & Recovery.',
-    features: [
-      'WODs quotidiens sur la plage',
-      'Cours de Surf tous niveaux avec pro',
-      'Villa de standing vue ocean',
-      'Ateliers dietetique & Recuperation'
-    ],
-    nextSession: 'Septembre 2026 (Places limitees)'
-  },
-  {
-    id: 'raid-vtt-extreme',
-    category: 'montagne',
-    title: 'RAID VTT & CHALLENGE MULTI-SPORTS',
-    location: 'Gorges du Verdon & Hautes-Alpes',
-    tag: 'Outdoor Extreme',
-    duration: '5 Jours / 4 Nuits',
-    image: '/senior-woman-electric-mountainbike.jpg',
-    description: 'Traversee engages sur sentiers escarpes, via ferrata spectaculaire, parcours d\'orientation par equipe et defis d\'endurance au coeur de paysages grandioses.',
-    features: [
-      'VTT tout suspendu haute performance',
-      'Assistance logistique & Vehicule suiveur',
-      'Epreuves multi-sports encadrees',
-      'Hebergements en gites authentiques'
-    ],
-    nextSession: 'Mai & Octobre 2026'
-  }
-]
-
-const filteredTrips = computed(() => {
-  if (selectedCategory.value === 'all') return trips
-  return trips.filter(t => t.category === selectedCategory.value)
-})
+import SiteFooter from '@/components/common/SiteFooter.vue'
 </script>

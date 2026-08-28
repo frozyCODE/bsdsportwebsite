@@ -127,7 +127,7 @@ const universData = [
     route: '/programme-personnalise',
     title: 'PROGRAMMES & ACCOMPAGNEMENT PERSONNALISE',
     description: 'Suivi individuel par nos préparateurs physiques certifiés. Élaboration de votre plan d\'entraînement sur-mesure, objectifs d\'athlète ou de remise en forme.',
-    bgImage: '',
+    bgImage: '/training.jpg',
     infoItems: [
       'Coaching Individuel',
       'Programmation Sur-Mesure',
