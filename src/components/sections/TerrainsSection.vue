@@ -37,10 +37,10 @@
       ></div>
     </div>
 
-    <!-- Background Decorative Videos (Seulement sur très grands écrans 2xl pour ne JAMAIS toucher les éléments centraux) -->
+    <!-- Background Decorative Videos (Disponibles sur MacBook et PC de bureau dès lg / 1024px) -->
     <!-- Left Video 1 (Top Left - Vidéo 4.mov) -->
     <div 
-      class="hidden 2xl:block absolute top-[14%] left-[2%] w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute top-[14%] left-[2%] w-[150px] xl:w-[180px] 2xl:w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/4.mov'"
       @mouseleave="activeBgVideo = null"
@@ -51,7 +51,7 @@
 
     <!-- Left Video 2 (Bottom Left - Vidéo 1.mov) -->
     <div 
-      class="hidden 2xl:block absolute bottom-[14%] left-[3%] w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute bottom-[14%] left-[3%] w-[150px] xl:w-[180px] 2xl:w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/1.mov'"
       @mouseleave="activeBgVideo = null"
@@ -62,7 +62,7 @@
 
     <!-- Left Video 3 (Middle Left - Vidéo 7.mov) -->
     <div 
-      class="hidden 2xl:block absolute top-[39%] left-[8%] w-[180px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute top-[39%] left-[6%] xl:left-[8%] w-[140px] xl:w-[160px] 2xl:w-[180px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/7.mov'"
       @mouseleave="activeBgVideo = null"
@@ -73,7 +73,7 @@
 
     <!-- Right Video 1 (Top Right - Vidéo 2.mov) -->
     <div 
-      class="hidden 2xl:block absolute top-[14%] right-[2%] w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute top-[14%] right-[2%] w-[150px] xl:w-[180px] 2xl:w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/2.mov'"
       @mouseleave="activeBgVideo = null"
@@ -84,7 +84,7 @@
 
     <!-- Right Video 2 (Middle Right - Vidéo 6.mov) -->
     <div 
-      class="hidden 2xl:block absolute top-[39%] right-[8%] w-[180px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute top-[39%] right-[6%] xl:right-[8%] w-[140px] xl:w-[160px] 2xl:w-[180px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/6.mov'"
       @mouseleave="activeBgVideo = null"
@@ -95,7 +95,7 @@
 
     <!-- Right Video 3 (Bottom Right - Vidéo 3.mov) -->
     <div 
-      class="hidden 2xl:block absolute bottom-[12%] right-[3%] w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
+      class="hidden lg:block absolute bottom-[12%] right-[3%] w-[150px] xl:w-[180px] 2xl:w-[200px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-0 cursor-pointer border border-transparent hover:border-white/40 transition-all duration-500"
       :class="activeBgVideo ? 'opacity-0 scale-95 pointer-events-auto' : 'opacity-90 scale-100 hover:scale-108'"
       @mouseenter="activeBgVideo = '/3.mov'"
       @mouseleave="activeBgVideo = null"
