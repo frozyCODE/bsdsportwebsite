@@ -175,14 +175,29 @@
             </div>
           </template>
 
-          <!-- Champ Message Commun -->
-          <div class="field">
-            <label for="f-msg">Message & Presentation de votre demande</label>
-            <textarea id="f-msg" v-model="form.message" rows="4" placeholder="Précisez votre projet..." required></textarea>
+          <!-- Champ Honeypot Anti-Spam (Caché aux humains, piège pour les robots spammers) -->
+          <div class="hidden" aria-hidden="true">
+            <input type="text" v-model="form.honeypot" tabindex="-1" autocomplete="off" />
           </div>
 
-          <button class="btn submit-btn" type="submit">
-            {{ currentProfile.submitLabel }}
+          <!-- Message de Succès / Erreur sous le formulaire -->
+          <div v-if="submitSuccess" class="mb-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-body font-medium flex items-center gap-3">
+            <span class="text-base">✓</span>
+            <span>Votre message a été envoyé avec succès ! Notre équipe vous recontacte dans les plus brefs délais.</span>
+          </div>
+
+          <div v-if="submitError" class="mb-4 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs sm:text-sm font-body font-medium flex items-center gap-3">
+            <span class="text-base">⚠️</span>
+            <span>{{ submitError }}</span>
+          </div>
+
+          <button 
+            class="btn submit-btn flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed" 
+            type="submit"
+            :disabled="isSubmitting"
+          >
+            <span v-if="isSubmitting" class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+            <span>{{ isSubmitting ? 'ENVOI EN COURS...' : currentProfile.submitLabel }}</span>
           </button>
         </form>
 
@@ -332,6 +347,10 @@ const activeLegalModal = ref(null)
 const { currentProfile, profiles, setProfile } = useProfile()
 const uiStore = useUiStore()
 
+const isSubmitting = ref(false)
+const submitSuccess = ref(false)
+const submitError = ref('')
+
 const form = reactive({
   nom: '',
   email: '',
@@ -341,15 +360,62 @@ const form = reactive({
   company: '',
   partType: '',
   budget: '',
-  message: ''
+  message: '',
+  honeypot: '' // Champ piège pour les robots spammers
 })
 
-function handleSubmit() {
-  uiStore.showToast(`Demande envoyée (${currentProfile.value.title}) — Nous vous recontactons rapidement !`)
-  form.nom = ''
-  form.email = ''
-  form.tel = ''
-  form.message = ''
+async function handleSubmit() {
+  submitError.value = ''
+  submitSuccess.value = false
+  isSubmitting.value = true
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        profileTitle: currentProfile.value.title,
+        nom: form.nom,
+        email: form.email,
+        tel: form.tel,
+        univers: form.univers,
+        objectif: form.objectif,
+        company: form.company,
+        partType: form.partType,
+        budget: form.budget,
+        message: form.message,
+        honeypot: form.honeypot
+      })
+    })
+
+    const data = await response.json()
+
+    if (response.ok && data.success) {
+      submitSuccess.value = true
+      uiStore.showToast(`Message envoyé avec succès ! (${currentProfile.value.title})`)
+      
+      // Réinitialiser les champs
+      form.nom = ''
+      form.email = ''
+      form.tel = ''
+      form.message = ''
+      form.company = ''
+      form.budget = ''
+      form.objectif = ''
+      form.partType = ''
+    } else {
+      submitError.value = data.error || "Une erreur s'est produite lors de l'envoi."
+      uiStore.showToast(submitError.value)
+    }
+  } catch (err) {
+    console.error('Erreur soumission formulaire:', err)
+    submitError.value = "Erreur de connexion au serveur. Veuillez vérifier votre réseau."
+    uiStore.showToast("Erreur lors de l'envoi du formulaire")
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
