@@ -8,10 +8,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { profileTitle, nom, email, tel, univers, objectif, company, partType, budget, message, honeypot } = req.body
+    // S'assurer que le body est correctement parsé
+    const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {})
+    const { profileTitle, nom, email, tel, univers, objectif, company, partType, budget, message, honeypot } = body
 
     // 1. PROTECTION SÉCURITÉ HONEYPOT (Anti-bot / Anti-Spam automatique)
-    if (honeypot && honeypot.trim() !== '') {
+    if (honeypot && String(honeypot).trim() !== '') {
       return res.status(200).json({ success: true, message: 'Message traité' })
     }
 
