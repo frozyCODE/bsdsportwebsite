@@ -17,14 +17,18 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: true, message: 'Message traité' })
     }
 
-    // 2. VALIDATION DES CHAMPS
-    if (!nom || !email || !message) {
-      return res.status(400).json({ success: false, error: 'Veuillez remplir les champs obligatoires (nom, email, message).' })
+    // 2. VALIDATION ET RECUPERATION DES CHAMPS
+    const clientNom = (nom || body.name || '').trim()
+    const clientEmail = (email || body.mail || '').trim()
+    const clientMessage = (message || body.msg || objectif || partType || 'Demande d\'information via le site BSD Sport').trim()
+
+    if (!clientNom || !clientEmail) {
+      return res.status(400).json({ success: false, error: 'Veuillez renseigner votre nom et votre adresse email.' })
     }
 
     // Validation du format Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(clientEmail)) {
       return res.status(400).json({ success: false, error: 'Format d\'adresse email invalide.' })
     }
 
@@ -78,7 +82,7 @@ export default async function handler(req, res) {
                   <td style="padding: 30px; color: #f1e7d0;">
                     
                     <h1 style="font-size: 20px; font-weight: 800; color: #ffffff; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 0.5px;">
-                      Nouveau Message de ${nom}
+                      Nouveau Message de ${clientNom}
                     </h1>
 
                     <!-- GRILLE D'INFORMATIONS DU CLIENT -->
@@ -88,7 +92,7 @@ export default async function handler(req, res) {
                           NOM & PRÉNOM
                         </td>
                         <td style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; color: #ffffff; font-weight: 600;">
-                          ${nom}
+                          ${clientNom}
                         </td>
                       </tr>
                       <tr>
@@ -96,7 +100,7 @@ export default async function handler(req, res) {
                           EMAIL
                         </td>
                         <td style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; color: #ff7043; font-weight: 600;">
-                          <a href="mailto:${email}" style="color: #ff7043; text-decoration: none;">${email}</a>
+                          <a href="mailto:${clientEmail}" style="color: #ff7043; text-decoration: none;">${clientEmail}</a>
                         </td>
                       </tr>
                       <tr>
@@ -135,7 +139,7 @@ export default async function handler(req, res) {
                         MESSAGE DU DEMANDEUR :
                       </span>
                       <div style="background-color: #181818; padding: 20px; border-radius: 12px; border-left: 4px solid #ff7043; color: #ffffff; font-size: 14px; line-height: 1.7; white-space: pre-wrap;">
-                        ${message}
+                        ${clientMessage}
                       </div>
                     </div>
 
@@ -143,8 +147,8 @@ export default async function handler(req, res) {
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 30px;">
                       <tr>
                         <td align="center">
-                          <a href="mailto:${email}?subject=Re:%20Votre%20demande%20BSD%20Sport" style="display: inline-block; padding: 14px 30px; background-color: #ff7043; color: #000000; font-size: 13px; font-weight: 800; text-decoration: none; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255, 112, 67, 0.4);">
-                            Répondre directement à ${nom} →
+                          <a href="mailto:${clientEmail}?subject=Re:%20Votre%20demande%20BSD%20Sport" style="display: inline-block; padding: 14px 30px; background-color: #ff7043; color: #000000; font-size: 13px; font-weight: 800; text-decoration: none; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255, 112, 67, 0.4);">
+                            Répondre directement à ${clientNom} →
                           </a>
                         </td>
                       </tr>
