@@ -4,6 +4,14 @@
 
 @font-face {
   font-family: 'Akira Expanded';
+  src: url('/FuturaLT-Bold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  unicode-range: U+00C0-00FF, U+0152-0153, U+0178, U+2019;
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
   src: url('/Akira Expanded Demo.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
@@ -55,9 +63,9 @@
   --c-stages: #84CC16;
   --c-prog: #94A3B8;
 
-  --display: 'Akira Expanded', sans-serif;
-  --varsity: 'Akira Expanded', sans-serif;
-  --stencil: 'Akira Expanded', sans-serif;
+  --display: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
+  --varsity: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
+  --stencil: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
   --body: 'Futura', sans-serif;
 }
 
