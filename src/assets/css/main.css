@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('/akira-expanded-bold.ttf') format('truetype');
+  src: url('/Akira Expanded Demo.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
@@ -61,16 +61,7 @@
   --body: 'Futura', sans-serif;
 }
 
-/* ÉLARGISSEMENT & ÉPAISSEUR EXTRÊMES (MASSIVE FAT & ULTRA-WIDE) */
-.font-display, [class*="font-display"], .eyebrow {
-  display: inline-block;
-  transform: scaleX(1.42);
-  transform-origin: center;
-  letter-spacing: 0.14em;
-  font-weight: 900 !important;
-  -webkit-text-stroke: 1.5px currentColor;
-  paint-order: stroke fill;
-}
+
 
 * {
   margin: 0;
