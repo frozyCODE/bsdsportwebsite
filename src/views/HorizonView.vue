@@ -8,10 +8,10 @@
       aria-hidden="true"
     ></div>
 
-    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Considérablement plus visible) -->
+    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Visuel authentique de la sélection /horizon-1.jpg) -->
     <div class="absolute top-0 inset-x-0 h-[650px] sm:h-[800px] pointer-events-none overflow-hidden select-none z-0">
       <img 
-        src="/montagne.jpg" 
+        src="/horizon-1.jpg" 
         alt="Horizon Sport Fond Hero" 
         class="w-full h-full object-cover object-center filter brightness-95 contrast-110 opacity-70"
       />
@@ -60,9 +60,36 @@
       </router-link>
     </div>
 
-    <!-- CONTENU PRINCIPAL DE LA PAGE HORIZON SPORT (Séjours et voyages) -->
-    <main class="relative z-10 pt-4 pb-12">
-      <HorizonSection />
+    <!-- MAIN EMPTY STATE AVEC ICONE DE TRAVAUX (En cours de construction) -->
+    <main class="relative z-10 my-auto py-16 px-6 max-w-3xl mx-auto text-center space-y-6">
+      
+      <!-- Icône de Travaux / Construction -->
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-3xl bg-[#111111] border border-white/15 flex items-center justify-center text-[#ff7043] shadow-2xl relative">
+        <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-sm font-bold">
+        <span>UNIVERS EN COURS DE CONSTRUCTION</span>
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
+        HORIZON BY BSD SPORT
+      </h1>
+
+      <p class="text-sm sm:text-base text-white/70 font-body max-w-lg mx-auto leading-relaxed">
+        Les expéditions outdoor et voyages sportifs d'exception sont actuellement en cours de préparation. Revenez bientôt pour découvrir nos prochains séjours.
+      </p>
+
+      <div class="pt-4">
+        <router-link 
+          to="/particuliers"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider font-bold shadow-xl transition-all duration-300"
+        >
+          <span>RETOUR AUX UNIVERS</span>
+        </router-link>
+      </div>
     </main>
 
     <!-- Footer universel -->
@@ -74,5 +101,4 @@
 <script setup>
 import NavbarHeader from '@/components/common/NavbarHeader.vue'
 import SiteFooter from '@/components/common/SiteFooter.vue'
-import HorizonSection from '@/components/sections/HorizonSection.vue'
 </script>
