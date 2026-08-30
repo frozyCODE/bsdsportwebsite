@@ -4,14 +4,6 @@
 
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('/FuturaLT-Bold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  unicode-range: U+00C0-00FF, U+0152-0153, U+0178, U+2019;
-}
-
-@font-face {
-  font-family: 'Akira Expanded';
   src: url('/Akira Expanded Demo.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
@@ -63,9 +55,9 @@
   --c-stages: #84CC16;
   --c-prog: #94A3B8;
 
-  --display: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
-  --varsity: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
-  --stencil: 'Akira Expanded', 'Futura', 'Montserrat', sans-serif;
+  --display: 'Akira Expanded', sans-serif;
+  --varsity: 'Akira Expanded', sans-serif;
+  --stencil: 'Akira Expanded', sans-serif;
   --body: 'Futura', sans-serif;
 }
 
@@ -108,6 +100,40 @@ body {
   display: none;
   width: 0;
   height: 0;
+}
+
+/* ACCENTS DESSINÉS EN CSS SUR LA POLICE AKIRA EXPANDED DEMO */
+.acc-e, .acc-a, .acc-u {
+  position: relative;
+  display: inline-block;
+}
+
+/* Accent Aigu (É) */
+.acc-e-aigu::before {
+  content: '';
+  position: absolute;
+  top: -0.05em;
+  left: 50%;
+  transform: translateX(-10%) rotate(28deg);
+  width: 0.28em;
+  height: 0.09em;
+  background-color: currentColor;
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+/* Accent Grave (È / À) */
+.acc-e-grave::before, .acc-a-grave::before {
+  content: '';
+  position: absolute;
+  top: -0.05em;
+  left: 50%;
+  transform: translateX(-90%) rotate(-28deg);
+  width: 0.28em;
+  height: 0.09em;
+  background-color: currentColor;
+  border-radius: 1px;
+  pointer-events: none;
 }
 
 /* ============ Utilitaires ============ */
