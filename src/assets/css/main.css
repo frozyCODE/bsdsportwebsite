@@ -61,13 +61,15 @@
   --body: 'Futura', sans-serif;
 }
 
-/* Élargissement ULTRA-FAT & ULTRA-LARGE de la police akira-expanded-bold.ttf */
+/* ÉLARGISSEMENT & ÉPAISSEUR EXTRÊMES (MASSIVE FAT & ULTRA-WIDE) */
 .font-display, [class*="font-display"], .eyebrow {
   display: inline-block;
-  transform: scaleX(1.18);
+  transform: scaleX(1.42);
   transform-origin: center;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   font-weight: 900 !important;
+  -webkit-text-stroke: 1.5px currentColor;
+  paint-order: stroke fill;
 }
 
 * {
