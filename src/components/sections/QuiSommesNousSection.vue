@@ -5,8 +5,8 @@
       <!-- Section Header -->
       <div class="text-center max-w-5xl mx-auto mb-12 sm:mb-16">
         
-        <!-- Grand Titre Éléguant (Responsive mobile optimisé sur UNE SEULE LIGNE) -->
-        <h2 class="reveal font-display text-3xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap uppercase tracking-tight text-[#F1E7D0] mb-6 sm:mb-8 leading-none drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+        <!-- Grand Titre Éléguant (Parfaitement centré) -->
+        <h2 class="reveal font-display text-3xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight text-[#F1E7D0] mb-6 sm:mb-8 leading-none text-center mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
           NOTRE HISTOIRE
         </h2>
         

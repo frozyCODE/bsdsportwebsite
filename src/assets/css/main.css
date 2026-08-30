@@ -61,11 +61,13 @@
   --body: 'Futura', sans-serif;
 }
 
-/* Élargissement automatique de la police akira-expanded-bold.ttf pour retrouver la largeur exacte d'Akira Demo */
+/* Élargissement ULTRA-FAT & ULTRA-LARGE de la police akira-expanded-bold.ttf */
 .font-display, [class*="font-display"], .eyebrow {
-  font-stretch: 145%;
-  letter-spacing: 0.08em;
-  font-weight: 800;
+  display: inline-block;
+  transform: scaleX(1.18);
+  transform-origin: center;
+  letter-spacing: 0.12em;
+  font-weight: 900 !important;
 }
 
 * {
