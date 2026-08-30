@@ -1,5 +1,4 @@
-// api/contact.js - Serverless Function Vercel Sécurisée
-// Exécutée côté serveur Node.js sur Vercel (Les clés SMTP ne sont JAMAIS exposées au navigateur)
+import nodemailer from 'nodemailer'
 
 export default async function handler(req, res) {
   // Accepter uniquement les requêtes POST
@@ -206,7 +205,6 @@ export default async function handler(req, res) {
       })
     }
 
-    const nodemailer = await import('nodemailer')
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
       port: Number(SMTP_PORT),
@@ -220,8 +218,8 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: `"BSD Sport Formulaire" <${SMTP_USER}>`,
       to: RECIPIENT_EMAIL,
-      replyTo: email,
-      subject: `[BSD Sport] Nouveau message de ${nom} (${profileTitle || 'Général'})`,
+      replyTo: clientEmail,
+      subject: `[BSD Sport] Nouveau message de ${clientNom} (${profileTitle || 'Général'})`,
       html: emailHtmlTemplate,
     })
 
