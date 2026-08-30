@@ -102,40 +102,6 @@ body {
   height: 0;
 }
 
-/* ACCENTS DESSINÉS EN CSS SUR LA POLICE AKIRA EXPANDED DEMO */
-.acc-e, .acc-a, .acc-u {
-  position: relative;
-  display: inline-block;
-}
-
-/* Accent Aigu (É) */
-.acc-e-aigu::before {
-  content: '';
-  position: absolute;
-  top: -0.05em;
-  left: 50%;
-  transform: translateX(-10%) rotate(28deg);
-  width: 0.28em;
-  height: 0.09em;
-  background-color: currentColor;
-  border-radius: 1px;
-  pointer-events: none;
-}
-
-/* Accent Grave (È / À) */
-.acc-e-grave::before, .acc-a-grave::before {
-  content: '';
-  position: absolute;
-  top: -0.05em;
-  left: 50%;
-  transform: translateX(-90%) rotate(-28deg);
-  width: 0.28em;
-  height: 0.09em;
-  background-color: currentColor;
-  border-radius: 1px;
-  pointer-events: none;
-}
-
 /* ============ Utilitaires ============ */
 .eyebrow {
   font-family: var(--varsity);

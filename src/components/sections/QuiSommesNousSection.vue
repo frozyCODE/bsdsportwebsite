@@ -13,7 +13,7 @@
         <!-- Présentation avec Coussin de Verre Dépoli Translucide & Style Skewed Coral Orange #ff7043 -->
         <div class="reveal d1 relative max-w-4xl mx-auto bg-[#0A0E16]/45 sm:bg-[#0A0E16]/55 border border-[#F1E7D0]/20 p-5 sm:p-9 md:p-10 rounded-2xl sm:rounded-3xl backdrop-blur-xl shadow-2xl text-center sm:text-left transition-all duration-300 hover:border-[#ff7043]/50">
           <div class="inline-block px-3 py-1 rounded-md bg-[#ff7043]/15 border border-[#ff7043]/40 text-[0.7rem] sm:text-xs font-mono uppercase tracking-widest text-[#ff7043] font-bold mb-3 sm:mb-4">
-            <span class="inline-block skew-x-[-6deg] font-display">10 ANS <span class="acc-a acc-a-grave">A</span> GRENOBLE & PONT-DE-CLAIX</span>
+            <span class="inline-block skew-x-[-6deg] font-display">10 ANS A GRENOBLE & PONT-DE-CLAIX</span>
           </div>
           <p class="text-base sm:text-xl md:text-2xl text-[#F1E7D0] font-body leading-relaxed drop-shadow-md">
             Depuis plus de 10 ans, <span class="inline-block text-[#ff7043] font-display uppercase tracking-wide skew-x-[-6deg] text-lg sm:text-2xl md:text-3xl border-b-2 border-[#ff7043] pb-0.5">BSD SPORT</span> fait du sport un outil concret : remise en forme, dépassement de soi, lien social. Une seule règle : que chacun trouve sa place, quel que soit son point de départ.
@@ -49,7 +49,7 @@
               </span>
             </div>
             <p class="text-[#F1E7D0]/90 text-sm sm:text-base font-body leading-relaxed drop-shadow-sm">
-              Ancrée à Pont-de-Claix depuis plus de 10 ans, notre association travaille avec les acteurs du territoire — entreprises, collectivités, structures éducatives — pour faire bouger l'IS<span class="acc-e acc-e-grave">E</span>RE par le sport.
+              Ancrée à Pont-de-Claix depuis plus de 10 ans, notre association travaille avec les acteurs du territoire — entreprises, collectivités, structures éducatives — pour faire bouger l'Isère par le sport.
             </p>
           </div>
         </div>
@@ -75,8 +75,8 @@
       <div class="reveal d2 max-w-4xl mx-auto py-4 sm:py-5 px-6 sm:px-8 rounded-full bg-[#0A0E16]/50 sm:bg-[#0A0E16]/65 border border-[#ff7043]/40 backdrop-blur-xl text-center shadow-2xl">
         <p class="font-body text-[0.7rem] sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#F1E7D0] font-bold drop-shadow-sm">
           <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">RIGUEUR</span> · 
-          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">D<span class="acc-e acc-e-aigu">E</span>PASSEMENT</span> · 
-          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONVIVIALIT<span class="acc-e acc-e-aigu">E</span></span> · 
+          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">DEPASSEMENT</span> · 
+          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONVIVIALITE</span> · 
           <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONFIANCE</span>
         </p>
       </div>
