@@ -280,6 +280,7 @@
             <strong class="text-white">Siège Social :</strong> Campus Sportif, 38800 Pont-de-Claix, Isère, France.<br>
             <strong class="text-white">Telephone :</strong> 07 51 62 29 92 · 06 46 02 53 71<br>
             <strong class="text-white">Email :</strong> contact@bsdsport.fr<br>
+            <strong class="text-white">Conception & Développement Web :</strong> DSG (<a href="mailto:gabrieldasilvalogin@gmail.com" class="text-[#ff7043] underline">gabrieldasilvalogin@gmail.com</a>).<br>
             <strong class="text-white">Directeur de la publication :</strong> Équipe de Direction BSD Sport.<br>
             <strong class="text-white">Hébergement :</strong> Vercel Inc., 440 N Barranca Ave #4133 Covina, CA 91723.<br>
             <strong class="text-white">Propriété intellectuelle :</strong> L'ensemble des contenus, visuels et éléments graphiques de BSD Sport sont protégés.

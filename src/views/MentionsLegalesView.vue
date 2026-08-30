@@ -82,6 +82,11 @@
             <a href="mailto:contactbsdsport@gmail.com" class="text-[#ff7043] font-medium hover:underline">contactbsdsport@gmail.com</a>
           </div>
 
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-2 border-b border-white/5">
+            <span class="text-xs uppercase tracking-wider text-white/40 font-display min-w-[200px]">Développement & Design</span>
+            <span class="text-white font-medium">DSG (<a href="mailto:gabrieldasilvalogin@gmail.com" class="text-[#ff7043] underline">gabrieldasilvalogin@gmail.com</a>)</span>
+          </div>
+
           <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-2">
             <span class="text-xs uppercase tracking-wider text-white/40 font-display min-w-[200px]">Directeur de publication</span>
             <span class="text-white font-medium">Équipe de Direction BSD Sport</span>
