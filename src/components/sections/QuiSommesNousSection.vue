@@ -16,7 +16,7 @@
             <span class="inline-block skew-x-[-6deg] font-display">10 ANS A GRENOBLE & PONT-DE-CLAIX</span>
           </div>
           <p class="text-base sm:text-xl md:text-2xl text-[#F1E7D0] font-body leading-relaxed drop-shadow-md">
-            Depuis plus de 10 ans, <span class="inline-block text-[#ff7043] font-display uppercase tracking-wide skew-x-[-6deg] text-lg sm:text-2xl md:text-3xl border-b-2 border-[#ff7043] pb-0.5">BSD SPORT</span> réunit des passionnés autour d'une même vision : un entraînement authentique, exigeant et accessible à tous.
+            Depuis plus de 10 ans, <span class="inline-block text-[#ff7043] font-display uppercase tracking-wide skew-x-[-6deg] text-lg sm:text-2xl md:text-3xl border-b-2 border-[#ff7043] pb-0.5">BSD SPORT</span> fait du sport un outil concret : remise en forme, dépassement de soi, lien social. Une seule règle : que chacun trouve sa place, quel que soit son point de départ.
           </p>
         </div>
       </div>
@@ -33,9 +33,6 @@
                 L'ESPRIT DU CLUB
               </span>
             </div>
-            <h3 class="font-display text-xl sm:text-3xl uppercase text-white mb-3 drop-shadow-md">
-              PAS DE BLA-BLA, DE L'EFFORT
-            </h3>
             <p class="text-[#F1E7D0]/90 text-sm sm:text-base font-body leading-relaxed drop-shadow-sm">
               Ici, l'exigence du ring et du terrain rencontre la convivialité des séances de groupe. Que vous soyez là pour vous dépasser ou reprendre le sport, vous trouverez un cadre motivant.
             </p>
@@ -51,11 +48,8 @@
                 ANCRAGE LOCAL
               </span>
             </div>
-            <h3 class="font-display text-xl sm:text-3xl uppercase text-white mb-3 drop-shadow-md">
-              10 ANS A GRENOBLE & ISERE
-            </h3>
             <p class="text-[#F1E7D0]/90 text-sm sm:text-base font-body leading-relaxed drop-shadow-sm">
-              Ancrée à Pont-de-Claix, notre association collabore au quotidien avec les acteurs locaux, les entreprises et les collectivités pour faire bouger le territoire par le sport.
+              Ancrée à Pont-de-Claix depuis plus de 10 ans, notre association travaille avec les acteurs du territoire — entreprises, collectivités, structures éducatives — pour faire bouger l'Isère par le sport.
             </p>
           </div>
         </div>
@@ -69,24 +63,21 @@
                 POUR TOUS LES NIVEAUX
               </span>
             </div>
-            <h3 class="font-display text-xl sm:text-3xl uppercase text-white mb-3 drop-shadow-md">
-              UNE COMMUNAUTE OUVERTE
-            </h3>
             <p class="text-[#F1E7D0]/90 text-sm sm:text-base font-body leading-relaxed drop-shadow-sm">
-              Athlètes préparant une échéance, salariés en cohésion, jeunes ou seniors : nos coachs s'adaptent à votre niveau pour vous accompagner en toute sécurité vers vos objectifs.
+              Athlètes en préparation, salariés en cohésion, femmes, jeunes ou seniors : nos coachs s'adaptent à votre profil pour vous accompagner en toute sécurité vers vos objectifs.
             </p>
           </div>
         </div>
 
       </div>
 
-      <!-- Bannière Devise Aérienne (Responsive mobile) -->
+      <!-- Bannière Valeurs Validées -->
       <div class="reveal d2 max-w-4xl mx-auto py-4 sm:py-5 px-6 sm:px-8 rounded-full bg-[#0A0E16]/50 sm:bg-[#0A0E16]/65 border border-[#ff7043]/40 backdrop-blur-xl text-center shadow-2xl">
         <p class="font-body text-[0.7rem] sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#F1E7D0] font-bold drop-shadow-sm">
           <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">RIGUEUR</span> · 
-          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">RESPECT</span> · 
-          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONVIVIALITE</span> · 
-          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">PERFORMANCE</span>
+          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">DÉPASSEMENT</span> · 
+          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONVIVIALITÉ</span> · 
+          <span class="inline-block text-[#ff7043] font-display skew-x-[-6deg]">CONFIANCE</span>
         </p>
       </div>
 
