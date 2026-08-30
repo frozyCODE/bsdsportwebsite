@@ -184,30 +184,13 @@ const categories = [
 
 const trips = [
   {
-    id: 'muay-thai-thailande',
-    category: 'international',
-    title: 'STAGE MUAY THAI & IMMERSION THAILANDE',
-    location: 'Phuket & Chiang Mai, Thailande',
-    tag: 'International · Immersion',
-    duration: '10 Jours / 9 Nuits',
-    image: '/01-sitjemam-muay-thai.png',
-    description: 'Vivez l\'intensite d\'un entrainement traditionnel au coeur de la Thailande. Deux sessions quotidiennes en camp de boxe professionnel, preparation physique sur plage tropicale, recuperation et decouverte culturelle.',
-    features: [
-      'Entrainement biquotidien avec masters',
-      'WODs sur la plage & Cardiotraining',
-      'Hebergement & Transferts inclus',
-      'Soins de recuperation & Massage thai'
-    ],
-    nextSession: 'Automne 2026 (Inscriptions ouvertes)'
-  },
-  {
     id: 'expedition-alpine',
     category: 'montagne',
     title: 'EXPEDITION ALPINE & TREKKING BIVOUAC',
     location: 'Massif de Belledonne & Ecrins, Isere',
     tag: 'Montagne · Outdoor',
     duration: '4 Jours / 3 Nuits',
-    image: '/montagne.jpg',
+    image: '/horizon-1.jpg',
     description: 'Une aventure grandeur nature au depart de Grenoble. Trail running en altitude, franchissement de cols mythiques, bivouac sous les etoiles et cohesion autour du feu de camp.',
     features: [
       'Guide de haute montagne & Coach BSD',
@@ -218,13 +201,47 @@ const trips = [
     nextSession: 'Ete 2026 (Session Juin & Juillet)'
   },
   {
+    id: 'stage-bootcamp-nature',
+    category: 'montagne',
+    title: 'STAGE IMMERSION & HARD TRAINING OUTDOOR',
+    location: 'Grands Espaces & Lacs Alpins',
+    tag: 'Bootcamp · Performance',
+    duration: '3 Jours / 2 Nuits',
+    image: '/horizon-2.jpg',
+    description: 'Immersion totale en pleine nature combinant ateliers de depassement, franchissement d\'obstacles et cohésion de groupe au cœur des montagnes.',
+    features: [
+      'Sessions d\'entrainement commando outdoor',
+      'Traversees de lacs & Trail d\'altitude',
+      'Hebergement en chalet traditionnel',
+      'Encadrement dedie par l\'equipe BSD'
+    ],
+    nextSession: 'Printemps & Ete 2026'
+  },
+  {
+    id: 'muay-thai-thailande',
+    category: 'international',
+    title: 'STAGE MUAY THAI & IMMERSION THAILANDE',
+    location: 'Phuket & Chiang Mai, Thailande',
+    tag: 'International · Immersion',
+    duration: '10 Jours / 9 Nuits',
+    image: '/horizon-3.jpg',
+    description: 'Vivez l\'intensite d\'un entrainement traditionnel au coeur de la Thailande. Deux sessions quotidiennes en camp de boxe professionnel, preparation physique sur plage tropicale, recuperation et decouverte culturelle.',
+    features: [
+      'Entrainement biquotidien avec masters',
+      'WODs sur la plage & Cardiotraining',
+      'Hebergement & Transferts inclus',
+      'Soins de recuperation & Massage thai'
+    ],
+    nextSession: 'Automne 2026 (Inscriptions ouvertes)'
+  },
+  {
     id: 'ocean-bootcamp',
     category: 'ocean',
     title: 'OCEAN BOOTCAMP & CROSS RETREAT',
     location: 'Cote Basque / Portugal',
     tag: 'Evasion · Surf & Fit',
     duration: '7 Jours / 6 Nuits',
-    image: '/man-jumping-into-natural-pond.jpg',
+    image: '/horizon-4.jpg',
     description: 'Combinez la puissance du Cross-Training avec l\'energie de l\'ocean. WODs explosifs sur le sable, cours de surf quotidien, nutrition sportive et session Mindset & Recovery.',
     features: [
       'WODs quotidiens sur la plage',
@@ -233,23 +250,6 @@ const trips = [
       'Ateliers dietetique & Recuperation'
     ],
     nextSession: 'Septembre 2026 (Places limitees)'
-  },
-  {
-    id: 'raid-vtt-extreme',
-    category: 'montagne',
-    title: 'RAID VTT & CHALLENGE MULTI-SPORTS',
-    location: 'Gorges du Verdon & Hautes-Alpes',
-    tag: 'Outdoor Extreme',
-    duration: '5 Jours / 4 Nuits',
-    image: '/senior-woman-electric-mountainbike.jpg',
-    description: 'Traversee engages sur sentiers escarpes, via ferrata spectaculaire, parcours d\'orientation par equipe et defis d\'endurance au coeur de paysages grandioses.',
-    features: [
-      'VTT tout suspendu haute performance',
-      'Assistance logistique & Vehicule suiveur',
-      'Epreuves multi-sports encadrees',
-      'Hebergements en gites authentiques'
-    ],
-    nextSession: 'Mai & Octobre 2026'
   }
 ]
 
