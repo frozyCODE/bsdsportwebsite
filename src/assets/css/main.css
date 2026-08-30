@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('/Akira Expanded Demo.otf') format('opentype');
+  src: url('/akira-expanded-bold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
