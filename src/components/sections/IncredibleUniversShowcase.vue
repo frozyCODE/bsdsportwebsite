@@ -115,7 +115,7 @@ const universData = [
     route: '/horizon-sport',
     title: 'HORIZON SPORT : SEJOURS & VOYAGES',
     description: 'Stages Muay Thai en Thailande, expeditions trekking dans les Alpes, ocean bootcamps et raids multi-sports. Vivez des evasions sportives et culturelles inoubliables.',
-    bgImage: '/montagne.jpg',
+    bgImage: '/horizon-2.jpg',
     infoItems: [
       'Stage Muay Thai Thailande',
       'Expedition Alpine Isere',

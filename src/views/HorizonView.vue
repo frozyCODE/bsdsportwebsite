@@ -8,10 +8,10 @@
       aria-hidden="true"
     ></div>
 
-    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Visuel authentique de la sélection /horizon-1.jpg) -->
+    <!-- IMAGE DE SPORT EN ARRIÈRE-PLAN DU HERO (Photo d'origine du début /montagne.jpg) -->
     <div class="absolute top-0 inset-x-0 h-[650px] sm:h-[800px] pointer-events-none overflow-hidden select-none z-0">
       <img 
-        src="/horizon-1.jpg" 
+        src="/montagne.jpg" 
         alt="Horizon Sport Fond Hero" 
         class="w-full h-full object-cover object-center filter brightness-95 contrast-110 opacity-70"
       />
