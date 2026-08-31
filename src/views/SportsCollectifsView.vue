@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-x-hidden font-body select-none">
+  <div class="min-h-screen bg-[#080808] text-[#F1E7D0] relative overflow-x-hidden font-body select-none flex flex-col justify-between">
     
     <!-- Texture de Grain Argentique Brutaliste -->
     <div 
@@ -8,24 +8,14 @@
       aria-hidden="true"
     ></div>
 
-    <!-- Image de fond du Hero avec fondu sombre -->
-    <div class="absolute top-0 inset-x-0 h-[600px] sm:h-[750px] pointer-events-none overflow-hidden select-none z-0">
-      <img 
-        src="/crossheat.jpeg" 
-        alt="Sports Collectifs Fond Hero" 
-        class="w-full h-full object-cover object-center filter brightness-75 contrast-110 opacity-50"
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-[#080808]/40 via-[#080808]/70 to-[#080808]"></div>
-    </div>
-
     <!-- Glow Orange Subtil -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] bg-[#ff7043]/15 blur-[160px] pointer-events-none z-0"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[1000px] h-[500px] bg-[#ff7043]/15 blur-[170px] pointer-events-none z-0"></div>
 
     <!-- Header Navigation Globale -->
     <NavbarHeader />
 
     <!-- BOUTON RETOUR EN HAUT À DROITE -->
-    <div class="pt-24 sm:pt-28 px-6 sm:px-12 max-w-7xl mx-auto flex justify-end relative z-20">
+    <div class="pt-24 sm:pt-28 px-6 sm:px-12 max-w-7xl mx-auto flex justify-end relative z-20 w-full">
       <router-link 
         to="/" 
         class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#111111] border border-white/15 text-white/80 hover:text-white hover:border-white/40 transition-all duration-300 shadow-lg"
@@ -37,166 +27,101 @@
       </router-link>
     </div>
 
-    <!-- HERO HEADER ACCROCHEUR -->
-    <section class="relative pt-4 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-8 max-w-5xl mx-auto text-center z-10 space-y-6">
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-xl backdrop-blur-md font-bold">
-        <span class="w-2 h-2 rounded-full bg-[#ff7043] animate-pulse"></span>
-        <span>ENTRAÎNEMENTS DE GROUPE & ESPRIT D'ÉQUIPE</span>
-      </div>
-
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight text-white leading-tight drop-shadow-2xl">
-        SPORTS <span class="chrome-silver-text text-[#ff7043]">COLLECTIFS</span>
-      </h1>
-
-      <p class="text-base sm:text-xl text-white/80 font-body max-w-3xl mx-auto leading-relaxed">
-        Découvrez toutes nos disciplines collectives : Omnisports, Cross Training & Stepp, Arts Martiaux et Aqua-Training. <br class="hidden sm:block" />
-        <span class="text-[#ff7043] font-bold">Cliquez sur une carte du carrousel pour la retourner</span> et afficher le lieu, les horaires et les détails des cours !
-      </p>
-    </section>
-
-    <!-- SECTION CARROUSEL DYNAMIQUE DE CARTES 3D RETOURNABLES -->
-    <section class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 pb-24 sm:pb-36 space-y-12">
+    <!-- MAIN CARROUSEL HYPER DYNAMIQUE DEFILEMENT INFINI -->
+    <main class="relative z-10 my-auto py-12 sm:py-20 w-full overflow-hidden space-y-12">
       
-      <!-- En-tête de section -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-6">
-        <div>
-          <span class="font-display text-xs uppercase tracking-widest text-[#ff7043] font-bold block mb-1">CARROUSEL INTERACTIF</span>
-          <h2 class="font-display text-2xl sm:text-4xl text-white uppercase tracking-tight">
-            VOS 4 DISCIPLINES COLLECTIVES
-          </h2>
+      <!-- Titre d'en-tête de Carrousel Nette -->
+      <div class="text-center max-w-4xl mx-auto px-6 space-y-3">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#111111] border border-white/15 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-xl backdrop-blur-md font-bold">
+          <span class="w-2 h-2 rounded-full bg-[#ff7043] animate-pulse"></span>
+          <span>DISCIPLINES ENTRAINEMENTS DE GROUPE</span>
         </div>
-        <div class="flex items-center gap-2 text-xs font-display text-white/70 uppercase tracking-wider bg-white/5 border border-white/10 px-4 py-2 rounded-full">
-          <span>💡 TOUCHER / CLIQUER SUR UNE CARTE POUR RETOURNER ↺</span>
-        </div>
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-tight drop-shadow-2xl">
+          SPORTS <span class="chrome-silver-text text-[#ff7043]">COLLECTIFS</span>
+        </h1>
       </div>
 
-      <!-- Carrousel Grille dynamique -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-        <div 
-          v-for="sport in sportsCollectifsData" 
-          :key="sport.id"
-          class="flip-card-container h-[540px] cursor-pointer group"
-          @click="flipCard(sport.id)"
-        >
+      <!-- CARROUSEL SANS HOVER AVEC DÉFILLEMENT CONTINU INFINI ET FLÈCHES -->
+      <div class="relative w-full overflow-hidden">
+        
+        <!-- Track de défillement infini en CSS continu -->
+        <div class="marquee-track flex gap-6 sm:gap-8 w-max">
+          <!-- Duplication x3 des cartes pour assurer la continuité infinie sans coupure -->
           <div 
-            class="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-3d shadow-2xl rounded-3xl"
-            :class="{ 'is-flipped': flippedCards[sport.id] }"
+            v-for="(sport, index) in sportsQuad" 
+            :key="index"
+            class="w-[320px] sm:w-[380px] lg:w-[420px] shrink-0 rounded-3xl overflow-hidden border border-white/15 bg-[#111111] p-6 sm:p-8 flex flex-col justify-between h-[520px] sm:h-[560px] shadow-2xl relative"
           >
-            <!-- RECTO (Face Avant) -->
-            <div class="flip-card-front absolute inset-0 w-full h-full rounded-3xl overflow-hidden border border-white/15 bg-[#111111] flex flex-col justify-between p-6 sm:p-8 backface-hidden">
-              <img 
-                :src="sport.image" 
-                :alt="sport.title" 
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30"></div>
+            <!-- Background Image -->
+            <img 
+              :src="sport.image" 
+              :alt="sport.title" 
+              class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/35 pointer-events-none"></div>
 
-              <!-- Tag Haut -->
-              <div class="relative z-10 flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-[#111111]/90 border border-white/20 text-[#ff7043] font-display text-[10px] uppercase font-bold backdrop-blur-md">
-                  {{ sport.badge }}
-                </span>
-                <span class="w-8 h-8 rounded-full bg-black/70 border border-white/20 text-white flex items-center justify-center font-display text-xs shadow-lg">
-                  ↺
-                </span>
-              </div>
-
-              <!-- Info Bas Recto -->
-              <div class="relative z-10 space-y-3">
-                <h3 class="font-display text-2xl sm:text-3xl text-white uppercase tracking-tight leading-none drop-shadow-md">
-                  {{ sport.title }}
-                </h3>
-                <p class="text-xs text-white/80 font-body line-clamp-3 leading-relaxed">
-                  {{ sport.shortDesc }}
-                </p>
-                
-                <div class="pt-2 flex items-center justify-between text-xs font-display text-[#ff7043] font-bold uppercase tracking-wider border-t border-white/15">
-                  <span>VOIR INFOS & HORAIRES</span>
-                  <span>→</span>
-                </div>
-              </div>
+            <!-- Top Tag -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="px-3.5 py-1 rounded-full bg-black/80 border border-white/20 text-[#ff7043] font-display text-[10px] sm:text-xs uppercase font-bold backdrop-blur-md">
+                {{ sport.badge }}
+              </span>
             </div>
 
-            <!-- VERSO (Face Arrière retournée) -->
-            <div class="flip-card-back absolute inset-0 w-full h-full rounded-3xl overflow-hidden border border-[#ff7043]/50 bg-[#0d0d0d] p-6 sm:p-8 flex flex-col justify-between backface-hidden transform-rotate-y-180 shadow-2xl">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                  <span class="font-display text-xs uppercase tracking-widest text-[#ff7043] font-bold">
-                    DÉTAILS DISCIPLINE
-                  </span>
-                  <span class="text-xs font-display text-white/60">RETOURNER ↺</span>
-                </div>
+            <!-- Infos Contenu Complètes (Affichées directement sans besoin de retourner ou toucher) -->
+            <div class="relative z-10 space-y-4">
+              <h2 class="font-display text-2xl sm:text-3xl text-white uppercase tracking-tight leading-none drop-shadow-md">
+                {{ sport.title }}
+              </h2>
+              
+              <p class="text-xs sm:text-sm text-white/80 font-body leading-relaxed">
+                {{ sport.fullDesc }}
+              </p>
 
-                <h3 class="font-display text-xl text-white uppercase tracking-tight">
-                  {{ sport.title }}
-                </h3>
-
-                <p class="text-xs text-white/80 font-body leading-relaxed">
-                  {{ sport.fullDesc }}
-                </p>
-
-                <!-- Lieu -->
-                <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span class="text-[10px] font-display uppercase tracking-widest text-[#ff7043] font-bold block">LIEU D'ENTRAÎNEMENT</span>
-                  <p class="text-xs text-white font-medium">{{ sport.location }}</p>
-                  <p class="text-[10px] text-white/60">{{ sport.address }}</p>
-                </div>
-
-                <!-- Horaires -->
-                <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span class="text-[10px] font-display uppercase tracking-widest text-[#ff7043] font-bold block">HORAIRES & CRÉNEAUX</span>
-                  <ul class="space-y-1 text-xs text-white/90 font-body">
-                    <li v-for="(h, idx) in sport.schedules" :key="idx" class="flex justify-between">
-                      <span class="font-bold text-white">{{ h.day }} :</span>
-                      <span class="text-[#ff7043] font-display font-bold">{{ h.time }}</span>
-                    </li>
-                  </ul>
-                </div>
+              <!-- Lieu & Adresse -->
+              <div class="p-3 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md space-y-1">
+                <span class="text-[10px] font-display uppercase tracking-widest text-[#ff7043] font-bold block">📍 {{ sport.location }}</span>
+                <p class="text-[11px] text-white/70">{{ sport.address }}</p>
               </div>
 
-              <!-- CTA Verso -->
-              <div class="pt-3 border-t border-white/10">
+              <!-- Horaires -->
+              <div class="p-3 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md space-y-1">
+                <span class="text-[10px] font-display uppercase tracking-widest text-[#ff7043] font-bold block">⏰ CRÉNEAUX</span>
+                <ul class="space-y-1 text-xs text-white font-body">
+                  <li v-for="(h, idx) in sport.schedules" :key="idx" class="flex justify-between">
+                    <span class="font-bold text-white/90">{{ h.day }} :</span>
+                    <span class="text-[#ff7043] font-display font-bold">{{ h.time }}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- CTA Bouton vers Page Dédiée -->
+              <div class="pt-2">
                 <router-link 
                   :to="sport.route"
-                  @click.stop
-                  class="block w-full text-center py-3 rounded-full bg-[#ff7043] hover:bg-white text-black font-display text-xs uppercase tracking-wider font-bold transition-all shadow-lg"
+                  class="block w-full text-center py-3 rounded-full bg-[#ff7043] text-black font-display text-xs uppercase tracking-wider font-bold shadow-xl transition-colors"
                 >
                   DECOUVRIR LA PAGE DEDIEE →
                 </router-link>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
 
-      <!-- Bouton d'action bas de page -->
-      <div class="text-center pt-8 border-t border-white/10">
-        <router-link 
-          to="/particuliers#contact-particuliers"
-          class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white/10 hover:bg-[#ff7043] border border-white/20 text-white hover:text-black font-display text-xs uppercase tracking-wider font-bold transition-all duration-300"
-        >
-          <span>S'INSCRIRE OU DEMANDER UNE SEANCE D'ESSAI</span>
-        </router-link>
-      </div>
-
-    </section>
+    </main>
 
     <!-- Footer universel -->
-    <SiteFooter class="border-t border-white/10" />
+    <SiteFooter class="border-t border-white/10 relative z-10" />
 
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed } from 'vue'
 import NavbarHeader from '@/components/common/NavbarHeader.vue'
 import SiteFooter from '@/components/common/SiteFooter.vue'
-
-const flippedCards = ref({})
-
-const flipCard = (id) => {
-  flippedCards.value[id] = !flippedCards.value[id]
-}
 
 const sportsCollectifsData = [
   {
@@ -205,8 +130,7 @@ const sportsCollectifsData = [
     title: 'OMNISPORTS',
     badge: 'MULTISPORTS',
     image: '/omnisport.jpeg',
-    shortDesc: 'Basket-ball, Badminton, Futsal et séances de stretching de récupération.',
-    fullDesc: 'Priorité aux sports de ballon collectifs (lundi) et aux sports de raquette avec stretching (mardi).',
+    fullDesc: 'Priorité aux sports de ballon (lundi) et aux sports de raquette avec stretching (mardi).',
     location: 'Gymnase Malik Cherchari',
     address: '28 Rue des Cités Mon Logis, 38800 Pont de Claix',
     schedules: [
@@ -220,8 +144,7 @@ const sportsCollectifsData = [
     title: 'CROSS HEAT & STEPP',
     badge: 'CARDIO & RENFO',
     image: '/crossheat.jpeg',
-    shortDesc: 'Combinaison ultime de WODs Cross Training, Haltérophilie et Stepp Cardio.',
-    fullDesc: 'Cardio intense, renforcement musculaire et exercices fonctionnels en groupe.',
+    fullDesc: 'Combinaison de WODs Cross Training, Haltérophilie et Stepp Cardio intense.',
     location: 'Parc Auguste Borel',
     address: 'Montée Georges Tord, 38800 Pont de Claix',
     schedules: [
@@ -235,8 +158,7 @@ const sportsCollectifsData = [
     title: 'SPORTS DE COMBAT',
     badge: 'BOXE & GRAPPLING',
     image: '/dojo.jpeg',
-    shortDesc: 'Boxe anglaise, grappling et self-défense sous la conduite de coachs certifiés.',
-    fullDesc: 'Maîtrise des frappes, vitesse, stratégie, corps à corps et résistance physique.',
+    fullDesc: 'Boxe anglaise, grappling et self-défense encadrés par des éducateurs diplômés d\'État.',
     location: 'Complexe Malik Cherchari',
     address: '28 Rue des Cités Mon Logis, 38800 Pont de Claix',
     schedules: [
@@ -250,8 +172,7 @@ const sportsCollectifsData = [
     title: 'AQUA-TRAINING',
     badge: 'SESSION MENSUELLE',
     image: '/piscine.jpeg',
-    shortDesc: 'Combinaison d\'aquabike, renforcement musculaire aquatique et natation.',
-    fullDesc: 'Séance exclusive un dimanche par mois à la Piscine Flotibulle.',
+    fullDesc: 'Aquabike, renforcement musculaire aquatique et natation pour un entraînement complet.',
     location: 'Piscine Flotibulle',
     address: 'Rue de la Liberté, 38800 Pont de Claix',
     schedules: [
@@ -259,23 +180,29 @@ const sportsCollectifsData = [
     ]
   }
 ]
+
+// Quadruplication des données pour le carrousel infini fluide sans trou
+const sportsQuad = computed(() => [
+  ...sportsCollectifsData,
+  ...sportsCollectifsData,
+  ...sportsCollectifsData,
+  ...sportsCollectifsData
+])
 </script>
 
 <style scoped>
-.transform-style-3d {
-  transform-style: preserve-3d;
+/* Animation de défillement continu hyper dynamique et fluide */
+.marquee-track {
+  animation: infiniteMarquee 28s linear infinite;
+  will-change: transform;
 }
 
-.backface-hidden {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.transform-rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-.is-flipped {
-  transform: rotateY(180deg);
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 </style>
