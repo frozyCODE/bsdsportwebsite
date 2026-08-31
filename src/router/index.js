@@ -40,6 +40,11 @@ const routes = [
     component: () => import('@/views/ParticuliersView.vue')
   },
   {
+    path: '/sports-collectifs',
+    name: 'sports-collectifs',
+    component: () => import('@/views/SportsCollectifsView.vue')
+  },
+  {
     path: '/aquatraining',
     name: 'aquatraining',
     component: () => import('@/views/AquaTrainingView.vue')
