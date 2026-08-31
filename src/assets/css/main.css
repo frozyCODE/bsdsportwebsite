@@ -244,24 +244,25 @@ body {
   outline-offset: 4px;
 }
 
-/* Classe Globale Effet Chromé Silver Métallisé */
+/* Classe Globale Effet Chromé Silver Métallisé Éclatant (100% Rempli & Non Tronqué) */
 .chrome-silver-text {
   position: relative;
-  display: inline;
+  display: inline-block;
   color: #ffffff;
-  background: radial-gradient(
-    ellipse at 50% 30%,
+  background: linear-gradient(
+    135deg,
     #ffffff 0%,
-    #e2e8f0 35%,
+    #e2e8f0 25%,
+    #ffffff 45%,
     #94a3b8 70%,
-    #475569 100%
+    #cbd5e1 85%,
+    #ffffff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  padding-right: 0.08em;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
 }
 

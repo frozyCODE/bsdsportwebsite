@@ -144,22 +144,25 @@ function scrollToSection(id) {
 </script>
 
 <style scoped>
-/* CONTOUR & LUEUR PARFAITS — DÉGRADÉ RADIAL CHROME SILVER SPHERIQUE / BOMBÉ */
+/* CONTOUR & LUEUR PARFAITS — DÉGRADÉ CHROMÉ SILVER FLUIDE (NON TRONQUÉ) */
 .chrome-silver-text {
   position: relative;
   display: inline-block;
   color: #ffffff;
-  background: radial-gradient(
-    ellipse at 50% 30%,
+  background: linear-gradient(
+    135deg,
     #ffffff 0%,
-    #e2e8f0 35%,
+    #e2e8f0 25%,
+    #ffffff 45%,
     #94a3b8 70%,
-    #475569 100%
+    #cbd5e1 85%,
+    #ffffff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  padding-right: 0.08em;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
 }
 </style>
